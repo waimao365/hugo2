@@ -1,0 +1,357 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="​
+安装主题（next） git clone https://github.com/theme-next/hexo-theme-next themes/next
+下载主题解压后放到themes目录
+编辑主目录的_config.yml 查找language 设置 language: zh-CN
+"><title>hexo安装后的使用教程</title>
+<link rel=canonical href=https://example.com/posts/1.html>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="hexo安装后的使用教程">
+<meta property="og:description" content="​
+安装主题（next） git clone https://github.com/theme-next/hexo-theme-next themes/next
+下载主题解压后放到themes目录
+编辑主目录的_config.yml 查找language 设置 language: zh-CN
+">
+<meta property="og:url" content="https://example.com/posts/1.html">
+<meta property="og:site_name" content="it迷">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="hexo"><meta property="article:tag" content="网站"><meta property="article:tag" content="博客"><meta property="article:published_time" content="2019-09-09T14:37:42+00:00"><meta property="article:modified_time" content="2019-09-09T14:37:42+00:00">
+<meta name=twitter:title content="hexo安装后的使用教程">
+<meta name=twitter:description content="​
+安装主题（next） git clone https://github.com/theme-next/hexo-theme-next themes/next
+下载主题解压后放到themes目录
+编辑主目录的_config.yml 查找language 设置 language: zh-CN
+">
+</head>
+<body class=article-page>
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+on-phone--column extended">
+<aside class="sidebar left-sidebar sticky">
+<button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<span class=hamburger-box>
+<span class=hamburger-inner></span>
+</span>
+</button>
+<header class=site-info>
+<figure class=site-avatar>
+<img src=/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png width=300 height=300 class=site-logo loading=lazy alt=Avatar>
+<span class=emoji>🍥</span>
+</figure>
+<h1 class=site-name><a href=https://example.com>it迷</a></h1>
+<h2 class=site-description>it爱好者的小站</h2>
+</header>
+<ol class=menu id=main-menu>
+<li>
+<a href=/ target=_blank><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>Home</span>
+</a>
+</li>
+<li>
+<a href=/about/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+<span>About</span>
+</a>
+</li>
+<li>
+<a href=/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>Archives</span>
+</a>
+</li>
+<li>
+<a href=/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>Search</span>
+</a>
+</li>
+<li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>暗色模式</span>
+</li>
+</ol>
+</aside>
+<main class="main full-width">
+<article class=main-article>
+<header class=article-header>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/hexo/>
+hexo
+</a>
+<a href=/categories/%E7%BD%91%E7%AB%99/>
+网站
+</a>
+<a href=/categories/%E5%8D%9A%E5%AE%A2/>
+博客
+</a>
+</header>
+<h2 class=article-title>
+<a href=/posts/1.html>hexo安装后的使用教程</a>
+</h2>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Sep 09, 2019</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 2 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<p>​</p>
+<h1 id=安装主题next>安装主题（next）</h1>
+<p>git clone <a class=link href=https://github.com/theme-next/hexo-theme-next target=_blank rel=noopener>https://github.com/theme-next/hexo-theme-next</a> themes/next</p>
+<p>下载主题解压后放到themes目录<br>
+编辑主目录的_config.yml 查找language 设置 language: zh-CN</p>
+<p>搜索Schemes
+切换到 scheme: Gemini
+搜索menu找到如下配置项，将about、tags、categories前的#号去掉</p>
+<p>更新hexo或者主题可以复制 备份好的source 文件夹替换，新安装的博客可以按照下面教程重新安装</p>
+<h1 id=添加分类>添加分类</h1>
+<p>1、创建“分类”选项<br>
+1.1 生成“分类”页并添加tpye属性<br>
+打开命令行，进入博客所在文件夹。执行命令</p>
+<pre><code>hexo new page categories
+
+</code></pre><p>成功后会提示：</p>
+<pre><code>INFO  Created: ~/Documents/blog/source/categories/index.md
+
+</code></pre><p>根据上面的路径，找到index.md这个文件，打开后默认内容是这样的：</p>
+<pre><code>---
+title: 文章分类
+date: 2019-04-07 0:30:00
+---
+
+</code></pre><p>添加type: &ldquo;categories"到内容中，添加后是这样的：</p>
+<pre><code>---
+title: 文章分类
+date: 2019-04-07 0:30:00
+type: &quot;categories&quot;
+---
+
+</code></pre><p>保存并关闭文件。</p>
+<h1 id=给文章添加categories属性>给文章添加“categories”属性</h1>
+<p>打开需要添加分类的文章，为其添加categories属性。下方的categories: web前端表示添加这篇文章到“web前端”这个分类。注意：hexo一篇文章只能属于一个分类，也就是说如果在“- web前端”下方添加“-xxx”，hexo不会产生两个分类，而是把分类嵌套（即该文章属于 “- web前端”下的 “-xxx ”分类）。</p>
+<pre><code>---
+title: jQuery对表单的操作及更多应用
+date: 2019-04-07 0:31:22
+categories: 
+- web前端
+---
+
+</code></pre><p>至此，成功给文章添加分类，点击首页的“分类”可以看到该分类下的所有文章。当然，只有添加了categories: xxx的文章才会被收录到首页的“分类”中。</p>
+<h1 id=创建标签选项>创建“标签”选项</h1>
+<p>生成“标签”页并添加tpye属性<br>
+打开命令行，进入博客所在文件夹。执行命令</p>
+<pre><code>hexo new page tags
+
+</code></pre><p>找到 source/tags/index.md<br>
+添加type: &ldquo;tags"到内容中，添加后是这样的</p>
+<pre><code>---
+title: 文章分类
+date: 2019-04-07 0:33:55
+type: &quot;tags&quot;
+---
+
+</code></pre><p>保存并关闭文件。</p>
+<h1 id=给文章添加标签和分类>给文章添加标签和分类</h1>
+<pre><code>title: title #文章標題
+date: 2019-04-07 00:43:12 #文章生成時間
+categories: &quot;Hexo教程&quot; #文章分類目錄 可以省略
+tags: #文章標籤 可以省略
+     - 标签1
+     - 标签2
+ description: #你對本頁的描述 可以省略
+
+</code></pre><h1 id=添加菜单>添加菜单</h1>
+<p>编辑主题的_config.yml，查找menu，去掉 tags categories about 前面的#号就可以了</p>
+<h1 id=显示摘要-阅读全文>显示摘要 阅读全文</h1>
+<p>在文章下面添加，建议在3到5行处添加
+&lt; !&ndash;more&ndash;></p>
+<h1 id=添加版权>添加版权</h1>
+<p>搜索 creative_commons
+sidebar: false 改成 sidebar: true
+post: false 改成 post: true</p>
+<h1 id=文章url固定链接修改博客根目录的_configyml>文章Url固定链接（修改博客根目录的_config.yml）</h1>
+<p>查找 permalink: :year/:month/:day/:title/
+替换成
+permalink: archives/:abbrlink.html
+写文章加上 abbrlink: 1（数字越大的，就是越新的文章）</p>
+<h1 id=置顶>置顶</h1>
+<p><a class=link href=https://github.com/netcan/hexo-generator-index-pin-top target=_blank rel=noopener>支持置顶的仓库</a></p>
+<p>可以直接用以下命令安装</p>
+<p>$ npm uninstall hexo-generator-index &ndash;save
+$ npm install hexo-generator-index-pin-top &ndash;save
+然后在需要置顶的文章的Front-matter中加上top: true即可。</p>
+<p>设置置顶标志
+打开：/blog/themes/next/layout/_macro 目录下的post.swig文件
+查找</p>
+<pre><code> &lt;div class=&quot;post-meta&quot;&gt;  
+</code></pre><p>下面添加</p>
+<pre><code>           {% if post.top %}
+            &lt;i class=&quot;fa fa-thumb-tack&quot;&gt;&lt;/i&gt;
+            &lt;font color=7D26CD&gt;置顶&lt;/font&gt;
+            &lt;span class=&quot;post-meta-divider&quot;&gt;|&lt;/span&gt;
+           {% endif %}
+
+</code></pre><p>需要置顶文章需要添加 top: true</p>
+<h1 id=添加不蒜子访问统计>添加不蒜子访问统计</h1>
+<p>是否开启访问量统计功能(不蒜子)
+busuanzi:
+enable: true
+修改next主题的模板文件
+需要修改的模板文件是theme/next/layout/_partials/footer.swig
+在最后面添加</p>
+<pre><code>{% if theme.footer.counter %}
+    &lt;script async src=&quot;//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;
+
+    &lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;总访问量&lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;
+    &lt;span class=&quot;post-meta-divider&quot;&gt;|&lt;/span&gt;
+    &lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;总访客&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;人&lt;/span&gt;
+    &lt;span class=&quot;post-meta-divider&quot;&gt;|&lt;/span&gt;
+
+{% endif %}
+
+</code></pre><h1 id=添加评论>添加评论</h1>
+<p>Github大礼包：gitment， gitalk（推荐），gitter（推荐）; 三个都支持Markdown；基于leancloud的无后端评论系统：Valine（推荐，支持Markdown）
+本站使用
+Valine+Leancloud 国际版 <a class=link href=https://console.leancloud.app target=_blank rel=noopener>https://console.leancloud.app</a>
+在存储->结构化数据创建一个class并命名为comment。
+在设置->应用Keys可以看到自动生成的AppID和AppKey,填到下面对应的位置就可以了</p>
+<pre><code>valine:
+  enable: ture
+  appid: xxxxxxx
+  appkey: xxxxxx
+
+</code></pre><h1 id=添加阅读人数真实人数>添加阅读人数（真实人数）</h1>
+<p>id和key 也可以用上面Leancloud 国际版 的AppID和AppKey,</p>
+<pre><code>leancloud_visitors:
+  enable: true
+  app_id: xxxxx
+  app_key: xxxxxx
+
+</code></pre><h1 id=添加阅读人数之不蒜子虚高人数>添加阅读人数之不蒜子（虚高人数）</h1>
+<p>打开不蒜子</p>
+<pre><code>busuanzi_count:
+  enable: ture
+  
+</code></pre><p>打开 next\layout_partials 找到footer.swig文件，在最下面添加</p>
+<pre><code>
+{% if theme.footer.counter %}
+    &lt;script async src=&quot;//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;
+
+    &lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;总访问量&lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;
+    &lt;span class=&quot;post-meta-divider&quot;&gt;|&lt;/span&gt;
+    &lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;总访客&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;人&lt;/span&gt;
+    &lt;span class=&quot;post-meta-divider&quot;&gt;|&lt;/span&gt;
+
+{% endif %}
+
+
+</code></pre>
+</section>
+<footer class=article-footer>
+<section class=article-tags>
+<a href=/tags/hexo/>hexo</a>
+<a href=/tags/%E7%BD%91%E7%AB%99/>网站</a>
+<a href=/tags/%E5%8D%9A%E5%AE%A2/>博客</a>
+</section>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article>
+<a href=/posts/4.html>
+<div class=article-details>
+<h2 class=article-title>hexo博客优化之文章置顶+置顶标签</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/posts/2.html>
+<div class=article-details>
+<h2 class=article-title>github搭建hexo博客和绑定域名的详细过程</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/posts/31.html>
+<div class=article-details>
+<h2 class=article-title>Hugo+Github Actions实现自动化部署博客</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/posts/30.htm>
+<div class=article-details>
+<h2 class=article-title>hugo静态博客部署到github的脚本</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/posts/26.html>
+<div class=article-details>
+<h2 class=article-title>ubuntu安装hugo教程</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2020 -
+2021 it迷
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.1.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>

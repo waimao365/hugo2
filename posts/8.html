@@ -1,0 +1,221 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="N1安装好omv后， 进入系统，常规设置，修改web管理员密码，需要安装的lnmp搭建网站的话，还需要修改端口，自动登出时间可以设置为1天。 进入磁盘，文件管理，挂着ext4格式的U盘或者硬盘（其他格式的不能修改权限比如777 755等）
+"><title>N1安装omv后安装docker+transmission+lnmp搭建网站</title>
+<link rel=canonical href=https://example.com/posts/8.html>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="N1安装omv后安装docker+transmission+lnmp搭建网站">
+<meta property="og:description" content="N1安装好omv后， 进入系统，常规设置，修改web管理员密码，需要安装的lnmp搭建网站的话，还需要修改端口，自动登出时间可以设置为1天。 进入磁盘，文件管理，挂着ext4格式的U盘或者硬盘（其他格式的不能修改权限比如777 755等）
+">
+<meta property="og:url" content="https://example.com/posts/8.html">
+<meta property="og:site_name" content="it迷">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="斐讯N1"><meta property="article:tag" content="omv"><meta property="article:tag" content="docker"><meta property="article:tag" content="lnmp"><meta property="article:published_time" content="2019-12-08T18:31:42+00:00"><meta property="article:modified_time" content="2019-12-08T18:31:42+00:00">
+<meta name=twitter:title content="N1安装omv后安装docker+transmission+lnmp搭建网站">
+<meta name=twitter:description content="N1安装好omv后， 进入系统，常规设置，修改web管理员密码，需要安装的lnmp搭建网站的话，还需要修改端口，自动登出时间可以设置为1天。 进入磁盘，文件管理，挂着ext4格式的U盘或者硬盘（其他格式的不能修改权限比如777 755等）
+">
+</head>
+<body class=article-page>
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+on-phone--column extended">
+<aside class="sidebar left-sidebar sticky">
+<button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<span class=hamburger-box>
+<span class=hamburger-inner></span>
+</span>
+</button>
+<header class=site-info>
+<figure class=site-avatar>
+<img src=/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png width=300 height=300 class=site-logo loading=lazy alt=Avatar>
+<span class=emoji>🍥</span>
+</figure>
+<h1 class=site-name><a href=https://example.com>it迷</a></h1>
+<h2 class=site-description>it爱好者的小站</h2>
+</header>
+<ol class=menu id=main-menu>
+<li>
+<a href=/ target=_blank><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>Home</span>
+</a>
+</li>
+<li>
+<a href=/about/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+<span>About</span>
+</a>
+</li>
+<li>
+<a href=/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>Archives</span>
+</a>
+</li>
+<li>
+<a href=/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>Search</span>
+</a>
+</li>
+<li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>暗色模式</span>
+</li>
+</ol>
+</aside>
+<main class="main full-width">
+<article class=main-article>
+<header class=article-header>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/%E6%96%90%E8%AE%AFn1/>
+斐讯N1
+</a>
+</header>
+<h2 class=article-title>
+<a href=/posts/8.html>N1安装omv后安装docker+transmission+lnmp搭建网站</a>
+</h2>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Dec 08, 2019</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 1 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<p>N1安装好omv后，
+进入系统，常规设置，修改web管理员密码，需要安装的lnmp搭建网站的话，还需要修改端口，自动登出时间可以设置为1天。
+进入磁盘，文件管理，挂着ext4格式的U盘或者硬盘（其他格式的不能修改权限比如777 755等）</p>
+<p>进入共享文件夹，设置共享，设置ftp nfs smb 等
+进入omv-extars，打开docker ce
+进入插件安装transmissionbt ，webdav docker
+启动容器，设置路径数据盘，避免8G内存不够用</p>
+<p>安装transmission-web 看官方的教程</p>
+<p><a class=link href=https://github.com/ronggang/transmission-web-control/wiki/Linux-Installation-CN target=_blank rel=noopener>https://github.com/ronggang/transmission-web-control/wiki/Linux-Installation-CN</a></p>
+<p>安装最新发布版本</p>
+<p>docker安装portainer</p>
+<blockquote>
+<p>docker run -d -p 9888:9000<br>
+&ndash;restart=always<br>
+-v /var/run/docker.sock:/var/run/docker.sock<br>
+&ndash;name prtainer-test<br>
+docker.io/portainer/portainer</p>
+</blockquote>
+<p>docker run -d -p 9888:9000 &ndash;restart=always &ndash;name portainer -v /var/run/docker.sock:/var/run/docker.sock -v /Users/lee/dev/docker_file/portainer/data:/data docker.io/portainer/portainer
+安装lnmp（我试过通过docker安装deibian后安装lnmp和宝塔，omv是改过端口的，安装后omv还是打不开，所以我选择直接安装）
+宝塔会占内存，经常安装出错，所以我选择安装lnmp无人值守安装
+<a class=link href=https://lnmp.org/auto.html target=_blank rel=noopener>https://lnmp.org/auto.html</a> 选择版本
+无人值守安装命令：
+wget <a class=link href=http://soft.vpser.net/lnmp/lnmp1.6.tar.gz target=_blank rel=noopener>http://soft.vpser.net/lnmp/lnmp1.6.tar.gz</a> -cO lnmp1.6.tar.gz && tar zxf lnmp1.6.tar.gz && cd lnmp1.6 && LNMP_Auto=&ldquo;y&rdquo; DBSelect=&ldquo;3&rdquo; DB_Root_Password=&ldquo;lnmp.org&rdquo; InstallInnodb=&ldquo;y&rdquo; PHPSelect=&ldquo;8&rdquo; SelectMalloc=&ldquo;1&rdquo; ./install.sh lnmp
+默认数据库密码是lnmp.org 大家可以先修改
+一切都是自动的，大概要2个小时，安装好后，打开NI的ip
+在首页可以看到 查看本地环境: 探针 phpinfo phpMyAdmin
+再参考
+LNMP添加、删除虚拟主机及伪静态使用教程
+<a class=link href=https://lnmp.org/faq/lnmp-vhost-add-howto.html target=_blank rel=noopener>https://lnmp.org/faq/lnmp-vhost-add-howto.html</a>
+安装好后，先停止 nginx
+lnmp nginx stop
+移动wwwroot文件夹到数据盘比如我的数据盘目录是/sharedfolders/2t/www
+mv /home/wwwroot /sharedfolders/2t/www
+将数据盘的wwwroot印射回/home/wwwroot
+ln -s /sharedfolders/2t/www/wwwroot /home/wwwroot
+这样网站的数据就不占N1的空间了，都是在外接的数据盘上面了（必须ext4格式）
+添加域名后/home/wwwroot/目录回有一个域名的目录，在里面上传php程序安装，（比如我的这个博客typecho）</p>
+<p>下面是lnmp相关的命令
+添加主机</p>
+<p>lnmp vhost add
+修改添加的主机的端口
+/usr/local/nginx/conf/vhost</p>
+<p>重启lnmp start|stop|restart 启动停止重新启动</p>
+<p>lnmp restart
+lnmp nginx restart</p>
+<p>列出网站(虚拟主机)
+执行：lnmp vhost list</p>
+<p>删除网站(虚拟主机)
+执行：lnmp vhost del</p>
+</section>
+<footer class=article-footer>
+<section class=article-tags>
+<a href=/tags/%E6%96%90%E8%AE%AFn1/>斐讯N1</a>
+<a href=/tags/omv/>omv</a>
+<a href=/tags/docker/>docker</a>
+<a href=/tags/lnmp/>lnmp</a>
+</section>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article>
+<a href=/posts/7.html>
+<div class=article-details>
+<h2 class=article-title>斐讯N1安Armbian安装OMV安装nginx+mysql安装typecho全过程</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/posts/6.html>
+<div class=article-details>
+<h2 class=article-title>斐讯N1 docker安装homeassistant 配置斐讯dc1智能插座</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2020 -
+2021 it迷
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.1.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>

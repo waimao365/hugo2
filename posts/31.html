@@ -1,0 +1,328 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="本地电脑和github之间的连接 打开电脑文件夹 用户名/.ssh （查看，勾选隐藏的项目）
+右键 Git Bash Here
+输入
+ssh-keygen -tecdsa
+输入一个新的名称，比如 id_rsa_github 回车两次
+在ssh文件夹 复制公匙 id_rsa_github.pub里面的内容到
+SSH and GPG keys (github.com)
+new SSG key 粘贴进去
+github项目，设置，secrest ，点击 NEW repository secret
+命名ACTIONS_DEPLOY_KEY
+粘贴私匙 id_rsa_github 里面的内容
+创建blog hugo new site blog
+安装主题
+进入blog目录
+git clone https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
+进入blog\themes\hugo-theme-stack\exampleSite
+把里面的文件全部复制到博客根目录
+git init
+git add &amp;ndash;all
+git commit -m “a1”
+如此出现错误可以删除git init在重新初始化
+rm -rf .git
+git init
+git remote add origin git@github.com:waimao365/hugo.git
+如果出现错误可以先删除之前的"><title>Hugo+Github Actions实现自动化部署博客</title>
+<link rel=canonical href=https://example.com/posts/31.html>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Hugo+Github Actions实现自动化部署博客">
+<meta property="og:description" content="本地电脑和github之间的连接 打开电脑文件夹 用户名/.ssh （查看，勾选隐藏的项目）
+右键 Git Bash Here
+输入
+ssh-keygen -tecdsa
+输入一个新的名称，比如 id_rsa_github 回车两次
+在ssh文件夹 复制公匙 id_rsa_github.pub里面的内容到
+SSH and GPG keys (github.com)
+new SSG key 粘贴进去
+github项目，设置，secrest ，点击 NEW repository secret
+命名ACTIONS_DEPLOY_KEY
+粘贴私匙 id_rsa_github 里面的内容
+创建blog hugo new site blog
+安装主题
+进入blog目录
+git clone https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
+进入blog\themes\hugo-theme-stack\exampleSite
+把里面的文件全部复制到博客根目录
+git init
+git add &amp;ndash;all
+git commit -m “a1”
+如此出现错误可以删除git init在重新初始化
+rm -rf .git
+git init
+git remote add origin git@github.com:waimao365/hugo.git
+如果出现错误可以先删除之前的">
+<meta property="og:url" content="https://example.com/posts/31.html">
+<meta property="og:site_name" content="it迷">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="hugo"><meta property="article:tag" content="github"><meta property="article:tag" content="网站"><meta property="article:published_time" content="2021-08-23T08:18:30+00:00"><meta property="article:modified_time" content="2021-08-23T08:18:30+00:00">
+<meta name=twitter:title content="Hugo+Github Actions实现自动化部署博客">
+<meta name=twitter:description content="本地电脑和github之间的连接 打开电脑文件夹 用户名/.ssh （查看，勾选隐藏的项目）
+右键 Git Bash Here
+输入
+ssh-keygen -tecdsa
+输入一个新的名称，比如 id_rsa_github 回车两次
+在ssh文件夹 复制公匙 id_rsa_github.pub里面的内容到
+SSH and GPG keys (github.com)
+new SSG key 粘贴进去
+github项目，设置，secrest ，点击 NEW repository secret
+命名ACTIONS_DEPLOY_KEY
+粘贴私匙 id_rsa_github 里面的内容
+创建blog hugo new site blog
+安装主题
+进入blog目录
+git clone https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
+进入blog\themes\hugo-theme-stack\exampleSite
+把里面的文件全部复制到博客根目录
+git init
+git add &amp;ndash;all
+git commit -m “a1”
+如此出现错误可以删除git init在重新初始化
+rm -rf .git
+git init
+git remote add origin git@github.com:waimao365/hugo.git
+如果出现错误可以先删除之前的">
+</head>
+<body class=article-page>
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+on-phone--column extended">
+<aside class="sidebar left-sidebar sticky">
+<button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<span class=hamburger-box>
+<span class=hamburger-inner></span>
+</span>
+</button>
+<header class=site-info>
+<figure class=site-avatar>
+<img src=/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png width=300 height=300 class=site-logo loading=lazy alt=Avatar>
+<span class=emoji>🍥</span>
+</figure>
+<h1 class=site-name><a href=https://example.com>it迷</a></h1>
+<h2 class=site-description>it爱好者的小站</h2>
+</header>
+<ol class=menu id=main-menu>
+<li>
+<a href=/ target=_blank><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>Home</span>
+</a>
+</li>
+<li>
+<a href=/about/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+<span>About</span>
+</a>
+</li>
+<li>
+<a href=/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>Archives</span>
+</a>
+</li>
+<li>
+<a href=/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>Search</span>
+</a>
+</li>
+<li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>暗色模式</span>
+</li>
+</ol>
+</aside>
+<main class="main full-width">
+<article class=main-article>
+<header class=article-header>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/hugo/>
+hugo
+</a>
+<a href=/categories/github/>
+Github
+</a>
+<a href=/categories/%E7%BD%91%E7%AB%99/>
+网站
+</a>
+</header>
+<h2 class=article-title>
+<a href=/posts/31.html>Hugo+Github Actions实现自动化部署博客</a>
+</h2>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Aug 23, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 1 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h1 id=本地电脑和github之间的连接>本地电脑和github之间的连接</h1>
+<p>打开电脑文件夹 用户名/.ssh （查看，勾选隐藏的项目）</p>
+<p>右键 Git Bash Here</p>
+<p>输入</p>
+<p>ssh-keygen -tecdsa</p>
+<p>输入一个新的名称，比如 id_rsa_github
+回车两次</p>
+<p>在ssh文件夹 复制公匙 id_rsa_github.pub里面的内容到</p>
+<p><a class=link href=https://github.com/settings/keys target=_blank rel=noopener>SSH and GPG keys (github.com)</a></p>
+<p>new SSG key 粘贴进去</p>
+<p>github项目，设置，secrest ，点击 NEW repository secret</p>
+<p>命名ACTIONS_DEPLOY_KEY</p>
+<p>粘贴私匙 id_rsa_github 里面的内容</p>
+<h1 id=创建blog>创建blog</h1>
+<p>hugo new site blog</p>
+<p>安装主题</p>
+<p>进入blog目录</p>
+<p>git clone <a class=link href=https://github.com/CaiJimmy/hugo-theme-stack/ target=_blank rel=noopener>https://github.com/CaiJimmy/hugo-theme-stack/</a> themes/hugo-theme-stack</p>
+<p>进入blog\themes\hugo-theme-stack\exampleSite</p>
+<p>把里面的文件全部复制到博客根目录</p>
+<p>git init</p>
+<p>git add &ndash;all</p>
+<p>git commit -m “a1”</p>
+<p>如此出现错误可以删除git init在重新初始化</p>
+<p>rm -rf .git</p>
+<p>git init</p>
+<p>git remote add origin <a class=link href=mailto:git@github.com>git@github.com</a>:waimao365/hugo.git</p>
+<p>如果出现错误可以先删除之前的</p>
+<p>git remote rm origin</p>
+<p>git push -u origin master</p>
+<p>如果出现错误可以强制上次</p>
+<p>git push -f origin master</p>
+<p>在blog根目录创建</p>
+<pre><code>.github\workflows\gh-pages.yml
+</code></pre><p>内容如下</p>
+<pre><code>name: Hugo Build and Deploy
+on:
+  push:
+    branches:
+      - master
+        jobs:
+    build-deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v1  # v2 does not have submodules option now
+          with:
+            submodules: true
+                  - name: Setup Hugo
+            uses: peaceiris/actions-hugo@v2
+            with:
+              hugo-version: latest # 应用最新的hugo
+              extended: true # 我的主题需要应用hugo-extende
+                        - name: Build
+              run: hugo --gc --minify
+                              - name: Deploy
+                uses: peaceiris/actions-gh-pages@v3
+                with:
+                  deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }} #这里在repo settings里填入SSH私钥
+                  external_repository: waimao365/hugo # &lt;- 改成自己的 user github page
+                  publish_dir: ./public # &lt;- 指定成品放置文件夹
+                  publish_branch: gh-pages # &lt;- 远端repo目标分支
+</code></pre>
+</section>
+<footer class=article-footer>
+<section class=article-tags>
+<a href=/tags/hugo/>hugo</a>
+<a href=/tags/github/>Github</a>
+<a href=/tags/%E7%BD%91%E7%AB%99/>网站</a>
+</section>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article>
+<a href=/posts/30.htm>
+<div class=article-details>
+<h2 class=article-title>hugo静态博客部署到github的脚本</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/posts/22.html>
+<div class=article-details>
+<h2 class=article-title>hugo搭建和使用教程</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/posts/36.html>
+<div class=article-details>
+<h2 class=article-title>这是一个forestry.io的模板</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/posts/26.html>
+<div class=article-details>
+<h2 class=article-title>ubuntu安装hugo教程</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/posts/20.html>
+<div class=article-details>
+<h2 class=article-title>k2p老毛子固件绑定域名之 cloudflare.com</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2020 -
+2021 it迷
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.1.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>

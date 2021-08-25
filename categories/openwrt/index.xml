@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>openwrt on it迷</title><link>https://example.com/categories/openwrt/</link><description>Recent content in openwrt on it迷</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 02 Jun 2020 15:55:32 +0000</lastBuildDate><atom:link href="https://example.com/categories/openwrt/index.xml" rel="self" type="application/rss+xml"/><item><title>n1终极玩法Armbian-5.77安装docker宝塔openwrt和HomeAssistant</title><link>https://example.com/posts/23.html</link><pubDate>Tue, 02 Jun 2020 15:55:32 +0000</pubDate><guid>https://example.com/posts/23.html</guid><description>&lt;h1 id="安装armbian-577">安装Armbian-5.77&lt;/h1>
+&lt;p>&lt;a class="link" href="https://www.right.com.cn/forum/thread-510423-1-1.html" target="_blank" rel="noopener"
+>https://www.right.com.cn/forum/thread-510423-1-1.html&lt;/a>&lt;/p>
+&lt;h2 id="下载armbian-577写入u盘">下载Armbian-5.77写入U盘&lt;/h2>
+&lt;h2 id="替换低负载的dtb">替换低负载的dtb&lt;/h2>
+&lt;p>meson-gxl-s905d-phicomm-n1-xiangsm.dtb&lt;/p>
+&lt;h2 id="开启bbr">开启bbr&lt;/h2>
+&lt;p>在/etc/sysctl.conf末尾添加下面两行:&lt;br>
+net.core.default_qdisc=fq
+net.ipv4.tcp_congestion_control=bbr&lt;/p></description></item></channel></rss>

@@ -1,0 +1,245 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="斐讯N1 docker安装homeassistant 配置斐讯dc1智能插座
+默认代码
+docker run -d --restart=always --name=&amp;quot;home-assistant&amp;quot; -e TZ=Asia/Shanghai -v /var/lib/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:latest "><title>斐讯N1 docker安装homeassistant 配置斐讯dc1智能插座</title>
+<link rel=canonical href=https://example.com/posts/6.html>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="斐讯N1 docker安装homeassistant  配置斐讯dc1智能插座">
+<meta property="og:description" content="斐讯N1 docker安装homeassistant 配置斐讯dc1智能插座
+默认代码
+docker run -d --restart=always --name=&amp;quot;home-assistant&amp;quot; -e TZ=Asia/Shanghai -v /var/lib/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:latest ">
+<meta property="og:url" content="https://example.com/posts/6.html">
+<meta property="og:site_name" content="it迷">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="斐讯N1"><meta property="article:tag" content="homeassistant"><meta property="article:tag" content="docker"><meta property="article:tag" content="斐讯DC1"><meta property="article:published_time" content="2019-09-16T12:52:42+00:00"><meta property="article:modified_time" content="2019-09-16T12:52:42+00:00">
+<meta name=twitter:title content="斐讯N1 docker安装homeassistant  配置斐讯dc1智能插座">
+<meta name=twitter:description content="斐讯N1 docker安装homeassistant 配置斐讯dc1智能插座
+默认代码
+docker run -d --restart=always --name=&amp;quot;home-assistant&amp;quot; -e TZ=Asia/Shanghai -v /var/lib/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:latest ">
+</head>
+<body class=article-page>
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+on-phone--column extended">
+<aside class="sidebar left-sidebar sticky">
+<button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<span class=hamburger-box>
+<span class=hamburger-inner></span>
+</span>
+</button>
+<header class=site-info>
+<figure class=site-avatar>
+<img src=/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png width=300 height=300 class=site-logo loading=lazy alt=Avatar>
+<span class=emoji>🍥</span>
+</figure>
+<h1 class=site-name><a href=https://example.com>it迷</a></h1>
+<h2 class=site-description>it爱好者的小站</h2>
+</header>
+<ol class=menu id=main-menu>
+<li>
+<a href=/ target=_blank><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>Home</span>
+</a>
+</li>
+<li>
+<a href=/about/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+<span>About</span>
+</a>
+</li>
+<li>
+<a href=/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>Archives</span>
+</a>
+</li>
+<li>
+<a href=/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>Search</span>
+</a>
+</li>
+<li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>暗色模式</span>
+</li>
+</ol>
+</aside>
+<main class="main full-width">
+<article class=main-article>
+<header class=article-header>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/%E6%96%90%E8%AE%AFn1/>
+斐讯N1
+</a>
+</header>
+<h2 class=article-title>
+<a href=/posts/6.html>斐讯N1 docker安装homeassistant 配置斐讯dc1智能插座</a>
+</h2>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Sep 16, 2019</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 1 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<p>斐讯N1 docker安装homeassistant 配置斐讯dc1智能插座</p>
+<p>默认代码</p>
+<pre><code>docker run -d --restart=always --name=&quot;home-assistant&quot; -e TZ=Asia/Shanghai -v /var/lib/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:latest
+
+</code></pre><p>homeassistant:latest表示最新版的 用0.88.1顺手了，配置文件也有了，就不想安装最新版本的了。新版也试用过，不太好用<br>
+刚开始用的代码是</p>
+<pre><code>docker run -d --restart=always --name=&quot;home-assistant&quot; -e TZ=Asia/Shanghai -v /var/lib/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:0.88.1
+
+</code></pre><p>没几天发现N1omv不能登陆，查询到内存储存已满，查找到var/lib/docker/homeassistant/config 里面有一个home-assistant_v2.db文件占了2G多，而且会不断的变大，更改 /docker/homeassistant的安装目录到移动硬盘<br>
+这个是我的docker的安装目录，/sharedfolders/2t/docker<br>
+所以修改后的代码就是把/var/lib/docker更换成/sharedfolders/2t/docker</p>
+<pre><code>docker run -d --restart=always --name=&quot;home-assistant&quot; -e TZ=Asia/Shanghai -v /sharedfolders/2t/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:0.88.1
+
+</code></pre><p>下载DCI配网工具
+给DC1配置好网络，要在路由里面找到DC1的ip就算完成了</p>
+<p>下载 20190628 HA Docker - DC1 M1.rar 里面有配置说明的<br>
+蓝奏云网盘下载 <a class=link href=https://www.lanzous.com/b987569 target=_blank rel=noopener>https://www.lanzous.com/b987569</a><br>
+下载的文件里面有配置说明的，我也简单说下，把custom_components、M1（悟空净化器）、packages上传到/homeassistant根目录，下面内容复制进configuration.yaml底部<br>
+homeassistant:<br>
+packages: !include_dir_named packages<br>
+斐讯K2老毛子固件路由。高级设置，内部网络，DHCP服务器，自定义配置文件 “hosts”<br>
+增加以下两句<br>
+192.168.123.24 Smartplugconnect.phicomm.com<br>
+192.168.123.24 aircat.phicomm.com<br>
+备注：192.168.123.24是我的斐讯N1的ip<br>
+修改packages/phicomm_dc1m.yaml<br>
+ip修改成你在路由器里面看到DC1的ip</p>
+<p>配置根目录的automations.yaml<br>
+我设置了饮水机06.30开 00.30关 打印机18.00开 00.00关，下面是代码</p>
+<pre><code>- alias: switch_on 06.30
+  initial_state: true
+  trigger:
+  - platform: time
+    at: '06:30:00'
+  action:
+  - service: switch.turn_on 
+    entity_id: switch.dc1_s1_template
+- alias: switch_off 00.30
+  initial_state: true
+  trigger:
+  - platform: time
+    at: '00:30:00'
+  action:
+  - service: switch.turn_off
+    entity_id: switch.dc1_s1_template
+
+
+- alias: switch_on 18.00
+  initial_state: true
+  trigger:
+  - platform: time
+    at: '18:00:00'
+  action:
+  - service: switch.turn_on
+    entity_id: switch.dc1_3_s3_template
+- alias: switch_off 00.00
+  initial_state: true
+  trigger:
+  - platform: time
+    at: '00:00:00'
+  action:
+  - service: switch.turn_off
+    entity_id: switch.dc1_3_s3_template
+
+
+</code></pre><p>配置过程发现问题解决的的3个方法<br>
+1、斐讯DCI拔插头断电，再接电<br>
+2、重启homeassistant<br>
+3、退出homeassistant账户，重新登陆</p>
+<p>可以在docker重启homeassistant ，也可以在网页重启，配置好文件后可以按下图更改，0.88.1配置是这样的，新版貌似没有配置检查。<br>
+<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMTkvMDkvMTYvNzFxSWZnT2N0WFFFckI1LnBuZw?x-oss-process=image/format,png" alt=dc1配置.png></p>
+</section>
+<footer class=article-footer>
+<section class=article-tags>
+<a href=/tags/%E6%96%90%E8%AE%AFn1/>斐讯N1</a>
+<a href=/tags/homeassistant/>homeassistant</a>
+<a href=/tags/docker/>docker</a>
+<a href=/tags/%E6%96%90%E8%AE%AFdc1/>斐讯DC1</a>
+</section>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article>
+<a href=/posts/8.html>
+<div class=article-details>
+<h2 class=article-title>N1安装omv后安装docker+transmission+lnmp搭建网站</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/posts/7.html>
+<div class=article-details>
+<h2 class=article-title>斐讯N1安Armbian安装OMV安装nginx+mysql安装typecho全过程</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2020 -
+2021 it迷
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.1.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>

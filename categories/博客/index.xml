@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>博客 on it迷</title><link>https://example.com/categories/%E5%8D%9A%E5%AE%A2/</link><description>Recent content in 博客 on it迷</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 09 Sep 2019 14:37:42 +0000</lastBuildDate><atom:link href="https://example.com/categories/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml"/><item><title>hexo安装后的使用教程</title><link>https://example.com/posts/1.html</link><pubDate>Mon, 09 Sep 2019 14:37:42 +0000</pubDate><guid>https://example.com/posts/1.html</guid><description>&lt;p>​&lt;/p>
+&lt;h1 id="安装主题next">安装主题（next）&lt;/h1>
+&lt;p>git clone &lt;a class="link" href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener"
+>https://github.com/theme-next/hexo-theme-next&lt;/a> themes/next&lt;/p>
+&lt;p>下载主题解压后放到themes目录&lt;br>
+编辑主目录的_config.yml 查找language 设置 language: zh-CN&lt;/p></description></item></channel></rss>

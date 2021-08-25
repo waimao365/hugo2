@@ -1,0 +1,299 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="ubuntu安装hugo 安装git 官网 https://git-scm.com/download/linux
+sudo apt-get install git
+安装go https://golang.org/dl/ （有可能被墙）
+"><title>ubuntu安装hugo教程</title>
+<link rel=canonical href=https://example.com/posts/26.html>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="ubuntu安装hugo教程">
+<meta property="og:description" content="ubuntu安装hugo 安装git 官网 https://git-scm.com/download/linux
+sudo apt-get install git
+安装go https://golang.org/dl/ （有可能被墙）
+">
+<meta property="og:url" content="https://example.com/posts/26.html">
+<meta property="og:site_name" content="it迷">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="hugo"><meta property="article:tag" content="linux"><meta property="article:tag" content="ubuntu"><meta property="article:tag" content="网站"><meta property="article:published_time" content="2021-02-15T15:55:32+00:00"><meta property="article:modified_time" content="2021-02-15T15:55:32+00:00">
+<meta name=twitter:title content="ubuntu安装hugo教程">
+<meta name=twitter:description content="ubuntu安装hugo 安装git 官网 https://git-scm.com/download/linux
+sudo apt-get install git
+安装go https://golang.org/dl/ （有可能被墙）
+">
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://example.com class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div>
+<main class="main full-width">
+<article class=main-article>
+<header class=article-header>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/hugo/>
+hugo
+</a>
+<a href=/categories/linux/>
+linux
+</a>
+<a href=/categories/ubuntu/>
+ubuntu
+</a>
+<a href=/categories/%E7%BD%91%E7%AB%99/>
+网站
+</a>
+</header>
+<h2 class=article-title>
+<a href=/posts/26.html>ubuntu安装hugo教程</a>
+</h2>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Feb 15, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 2 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h2 id=ubuntu安装hugo>ubuntu安装hugo</h2>
+<h3 id=安装git>安装git</h3>
+<p>官网 <a class=link href=https://git-scm.com/download/linux target=_blank rel=noopener>https://git-scm.com/download/linux</a></p>
+<p>sudo apt-get install git</p>
+<h3 id=安装go>安装go</h3>
+<p><a class=link href=https://golang.org/dl/ target=_blank rel=noopener>https://golang.org/dl/</a> （有可能被墙）</p>
+<p>下载go1.15.8.linux-amd64.tar.gz</p>
+<pre><code>sudo tar -C /usr/local -xzf go1.15.8.linux-amd64.tar.gz
+</code></pre><pre><code>export PATH=$PATH:/usr/local/go/bin
+</code></pre><p>查看版本</p>
+<pre><code>go version
+</code></pre><h3 id=下载hugo>下载hugo</h3>
+<p><a class=link href=https://github.com/gohugoio/hugo/releases target=_blank rel=noopener>https://github.com/gohugoio/hugo/releases</a></p>
+<p>下载 hugo_extended_0.80.0_Linux-64bit.deb</p>
+<p>终端输入</p>
+<pre><code>sudo dpkg -i hugo_extended_0.80.0_Linux-64bit.deb
+</code></pre><p>查看版本</p>
+<pre><code>hugo version
+</code></pre><p>创建blog</p>
+<pre><code>hugo new site blog
+</code></pre><h3 id=安装主题>安装主题</h3>
+<p>去官网下载主题 <a class=link href=https://themes.gohugo.io target=_blank rel=noopener>https://themes.gohugo.io</a></p>
+<p>我下载的是even <a class=link href=https://themes.gohugo.io/hugo-theme-even target=_blank rel=noopener>https://themes.gohugo.io/hugo-theme-even</a></p>
+<p>再推荐一个主题 <a class=link href=https://github.com/uPagge/uBlogger target=_blank rel=noopener>https://github.com/uPagge/uBlogger</a></p>
+<p>cd /blog</p>
+<pre><code>git clone https://github.com/olOwOlo/hugo-theme-even themes/even
+</code></pre><p>在exampleSite目录找到config.toml和content 复制到D:\blog目录下</p>
+<p>在blog根目录下，终端输入下面代码</p>
+<pre><code>hugo --theme=even --baseUrl=&quot;http://waimao365.github.io/&quot; --buildDrafts
+</code></pre><p>#even改成你的主题</p>
+<h3 id=本地预览>本地预览</h3>
+<pre><code>cd /blog
+hugo
+hugo server
+</code></pre><p>http://localhost:1313</p>
+<h3 id=建立本地和github仓库的连接>建立本地和github仓库的连接</h3>
+<p>输入github的帐户名和邮箱</p>
+<pre><code>git config --global user.name &quot;waimao8&quot;
+git config --global user.email &quot;88888@qq.com&quot;
+</code></pre><p>查看设置的用户名和密码</p>
+<pre><code>git config --list
+</code></pre><p>生成 SSH key 与 github 联系</p>
+<pre><code>ssh-keygen -t rsa -C “888888@qq.com”
+</code></pre><p>一路回车 ubuntu设置显示隐藏文件，在用户目录找到.ssh</p>
+<p>打开id_rsa.pub，复制里面的内容。 然后登录github，如果没有就注册一个账号，登录后右上角 头像 -> Settings —> SSH nd GPG keys —> New SSH key。把公钥(id_rsa.pub)粘贴到 key 中，填好 title 并点击 Add SSH key</p>
+<p>关联完之后可以在终端输入</p>
+<pre><code>ssh git@github.com
+</code></pre><h3 id=heading></h3>
+<h3 id=上传到github>上传到github</h3>
+<p>cd到 /public
+依次输入</p>
+<pre><code>git init
+git add .
+git commit -m “yyyy/mm/dd-hh:mm”
+git remote add origin git@github.com:waimao365/lubutu18.git
+git push -u origin master
+</code></pre><h3 id=自动部署脚本>自动部署脚本</h3>
+<p><a class=link href=https://www.dazhuanlan.com/2019/10/14/5da3e834e0c1d/ target=_blank rel=noopener>https://www.dazhuanlan.com/2019/10/14/5da3e834e0c1d/</a></p>
+<p><a class=link href=https://github.com/coderzh/coderzh-hugo-blog/blob/master/deploy.py target=_blank rel=noopener>https://github.com/coderzh/coderzh-hugo-blog/blob/master/deploy.py</a></p>
+<h2 id=常见错误处理>常见错误处理</h2>
+<h3 id=fatal-远程-origin-已经存在>fatal: 远程 origin 已经存在</h3>
+<p>此时只需要将远程配置删除，重新添加即可；</p>
+<p>git remote rm origin</p>
+<h3 id=-rejected--------master---master-non-fast-forward>! [rejected] master -> master (non-fast-forward)</h3>
+<p>本地生成ReadMe文件</p>
+<pre><code>git pull --rebase origin master 
+git push origin master
+</code></pre><p>如果不行，可以强制上传覆盖远程文件（慎用）</p>
+<pre><code>git push -f origin master
+</code></pre><h2 id=其他>其他</h2>
+<h3 id=安装typora写文章>安装typora写文章</h3>
+<p><a class=link href=https://www.typora.io/#linux target=_blank rel=noopener>https://www.typora.io/#linux</a></p>
+<h3 id=安装visual-studio-code写文章>安装Visual Studio Code写文章</h3>
+<p><a class=link href=https://code.visualstudio.com/ target=_blank rel=noopener>https://code.visualstudio.com/</a></p>
+<p><a class=link href=https://code.visualstudio.com/ target=_blank rel=noopener>https://code.visualstudio.com/</a></p>
+<p>Visual Studio Code设置中文</p>
+<p>打开进入软件，Ctrl + Shift + P，切入到命令行模式。输入“Configure Language”</p>
+<h3 id=安装-notepad-编辑主题文件>安装 Notepad++ 编辑主题文件</h3>
+<pre><code>sudo add-apt-repository ppa:notepadqq-team/notepadqq
+sudo apt-get update
+sudo apt-get install notepadqq
+</code></pre><p>卸载方法:</p>
+<pre><code>sudo apt-get remove notepadqq
+sudo add-apt-repository --removeppa:notepadqq-team/notepadqq
+</code></pre>
+</section>
+<footer class=article-footer>
+<section class=article-tags>
+<a href=/tags/hugo/>hugo</a>
+<a href=/tags/linux/>linux</a>
+<a href=/tags/ubuntu/>ubuntu</a>
+<a href=/tags/%E7%BD%91%E7%AB%99/>网站</a>
+</section>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article>
+<a href=/posts/31.html>
+<div class=article-details>
+<h2 class=article-title>Hugo+Github Actions实现自动化部署博客</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/posts/30.htm>
+<div class=article-details>
+<h2 class=article-title>hugo静态博客部署到github的脚本</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/posts/25.html>
+<div class=article-image>
+<img src=https://i.loli.net/2021/08/17/wSN734P98MgFE6A.jpg loading=lazy data-key data-hash=https://i.loli.net/2021/08/17/wSN734P98MgFE6A.jpg>
+</div>
+<div class=article-details>
+<h2 class=article-title>老爷机的福音lubuntu18.04</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/posts/22.html>
+<div class=article-details>
+<h2 class=article-title>hugo搭建和使用教程</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/posts/29.html>
+<div class=article-details>
+<h2 class=article-title>利用脚本安装archlinux教程</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2020 -
+2021 it迷
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.1.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#ubuntu安装hugo>ubuntu安装hugo</a>
+<ol>
+<li><a href=#安装git>安装git</a></li>
+<li><a href=#安装go>安装go</a></li>
+<li><a href=#下载hugo>下载hugo</a></li>
+<li><a href=#安装主题>安装主题</a></li>
+<li><a href=#本地预览>本地预览</a></li>
+<li><a href=#建立本地和github仓库的连接>建立本地和github仓库的连接</a></li>
+<li><a href=#heading></a></li>
+<li><a href=#上传到github>上传到github</a></li>
+<li><a href=#自动部署脚本>自动部署脚本</a></li>
+</ol>
+</li>
+<li><a href=#常见错误处理>常见错误处理</a>
+<ol>
+<li><a href=#fatal-远程-origin-已经存在>fatal: 远程 origin 已经存在</a></li>
+<li><a href=#-rejected--------master---master-non-fast-forward>! [rejected] master -> master (non-fast-forward)</a></li>
+</ol>
+</li>
+<li><a href=#其他>其他</a>
+<ol>
+<li><a href=#安装typora写文章>安装typora写文章</a></li>
+<li><a href=#安装visual-studio-code写文章>安装Visual Studio Code写文章</a></li>
+<li><a href=#安装-notepad-编辑主题文件>安装 Notepad++ 编辑主题文件</a></li>
+</ol>
+</li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>

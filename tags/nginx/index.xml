@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>nginx on it迷</title><link>https://example.com/tags/nginx/</link><description>Recent content in nginx on it迷</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 08 Dec 2019 18:28:42 +0000</lastBuildDate><atom:link href="https://example.com/tags/nginx/index.xml" rel="self" type="application/rss+xml"/><item><title>斐讯N1安Armbian安装OMV安装nginx+mysql安装typecho全过程</title><link>https://example.com/posts/7.html</link><pubDate>Sun, 08 Dec 2019 18:28:42 +0000</pubDate><guid>https://example.com/posts/7.html</guid><description>&lt;h1 id="安装armbian">安装armbian&lt;/h1>
+&lt;p>测试了很多版本的Armbian+omv，OMV经常会报错，改用了XQ7的N1首个支持FullCone Nat的Armbian系统，非常好用
+下面是链接
+&lt;a class="link" href="https://www.right.com.cn/forum/thread-788004-1-1.html" target="_blank" rel="noopener"
+>https://www.right.com.cn/forum/thread-788004-1-1.html&lt;/a>&lt;/p></description></item></channel></rss>
