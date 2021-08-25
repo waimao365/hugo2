@@ -89,10 +89,7 @@ net.ipv4.tcp_congestion_control=bbr&lt;/p></description></item><item><title>hugo
 安装日常软件，开发者选项里面，系统可用用内存一般在200左右&lt;/p></description></item><item><title>k2p老毛子固件绑定域名之 cloudflare.com</title><link>https://example.com/posts/20.html</link><pubDate>Fri, 03 Jan 2020 13:10:32 +0000</pubDate><guid>https://example.com/posts/20.html</guid><description>&lt;p>k2p老毛子固件绑定域名之 cloudflare.com&lt;/p>
 &lt;p>使用 Cloudflare 实现顶级个人域名的 ddns 服务。 &lt;a class="link" href="https://www.cloudflare.com" target="_blank" rel="noopener"
 >https://www.cloudflare.com&lt;/a>&lt;/p>
-&lt;p>使用前需要安装 curl 程序，可以安装opt后输入 opkg install curl 敲回车键安装启用opt&lt;/p></description></item><item><title>关于微店购物的相关问题</title><link>https://example.com/posts/19.html</link><pubDate>Fri, 27 Dec 2019 13:10:32 +0000</pubDate><guid>https://example.com/posts/19.html</guid><description>&lt;h1 id="关于微店回复慢">关于微店回复慢&lt;/h1>
-&lt;p>因实体批发比较繁忙，经常回复会比较慢，谢理解！大家可以先看下下面的相关解答哈！有不清楚的还可以咨询我们的哈！&lt;/p>
-&lt;h1 id="关于发货">关于发货&lt;/h1>
-&lt;p>默认中通，晚上十一点左右统一发货，一般当天下午接的单，当天就可以发的。为避免大家心累，不接急单哈！！！&lt;/p></description></item><item><title>LG V30韩版 ROOT详细教程</title><link>https://example.com/posts/18.html</link><pubDate>Mon, 23 Dec 2019 15:18:30 +0000</pubDate><guid>https://example.com/posts/18.html</guid><description>&lt;h1 id="前言">前言&lt;/h1>
+&lt;p>使用前需要安装 curl 程序，可以安装opt后输入 opkg install curl 敲回车键安装启用opt&lt;/p></description></item><item><title>LG V30韩版 ROOT详细教程</title><link>https://example.com/posts/18.html</link><pubDate>Mon, 23 Dec 2019 15:18:30 +0000</pubDate><guid>https://example.com/posts/18.html</guid><description>&lt;h1 id="前言">前言&lt;/h1>
 &lt;p>2019年最火的洋垃圾LG V30，骁龙835cpu（从此告别发烧），4G内存，64G储存，能满足日用生活，能玩游戏，2k屏幕，hifi，极高的性价比。&lt;/p></description></item><item><title>解决安卓手机卡顿 安装google商店官方软件的方法</title><link>https://example.com/posts/17.html</link><pubDate>Mon, 23 Dec 2019 12:20:32 +0000</pubDate><guid>https://example.com/posts/17.html</guid><description>&lt;p>下载play.google.com商店软件的方法
 国内安卓软件多数都是比较流氓，内存占用大，弹广告，要想手机流畅运行，建议尽量使用google商店下载的软件。&lt;/p>
 &lt;p>下面提到的所以资源可以到蓝奏云网盘下载，无广告，速度飞快&lt;/p></description></item><item><title>黑苹果给安卓手机刷入twrp recovery教程</title><link>https://example.com/posts/16.html</link><pubDate>Wed, 18 Dec 2019 01:00:32 +0000</pubDate><guid>https://example.com/posts/16.html</guid><description>&lt;h1 id="手机设置">手机设置&lt;/h1>
