@@ -61,7 +61,7 @@ deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }} #这里在repo settings里填入SS
 external_repository: waimao365/hugo # &amp;lt;- 改成自己的 user github page
 publish_dir: ./public # &amp;lt;- 指定成品放置文件夹
 publish_branch: gh-pages # &amp;lt;- 远端repo目标分支
-&lt;/code>&lt;/pre></description></item><item><title>hugo静态博客部署到github的脚本</title><link>https://example.com/posts/30.htm</link><pubDate>Mon, 12 Apr 2021 08:18:30 +0000</pubDate><guid>https://example.com/posts/30.htm</guid><description>&lt;h2 id="hugo部署到github">hugo部署到github&lt;/h2>
+&lt;/code>&lt;/pre>&lt;p>建议大家建立两个项目，一个私人，一个公开，以上内容都在私人的项目操作，只需要将上面代码的倒数第三行改成公开的项目就可以了&lt;/p></description></item><item><title>hugo静态博客部署到github的脚本</title><link>https://example.com/posts/30.htm</link><pubDate>Mon, 12 Apr 2021 08:18:30 +0000</pubDate><guid>https://example.com/posts/30.htm</guid><description>&lt;h2 id="hugo部署到github">hugo部署到github&lt;/h2>
 &lt;p>建立本地和github仓库的连接
 输入github的帐户名和邮箱&lt;/p>
 &lt;pre>&lt;code>git config --global user.name &amp;quot;waimao8&amp;quot;
