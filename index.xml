@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>it迷</title><link>https://example.com/</link><description>Recent content on it迷</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 23 Aug 2021 08:18:30 +0000</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo+Github Actions实现自动化部署博客</title><link>https://example.com/posts/31.html</link><pubDate>Mon, 23 Aug 2021 08:18:30 +0000</pubDate><guid>https://example.com/posts/31.html</guid><description>&lt;h1 id="本地电脑和github之间的连接">本地电脑和github之间的连接&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>it迷</title><link>https://hugo2.vercel.app/</link><description>Recent content on it迷</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 23 Aug 2021 08:18:30 +0000</lastBuildDate><atom:link href="https://hugo2.vercel.app/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo+Github Actions实现自动化部署博客</title><link>https://hugo2.vercel.app/posts/31.html</link><pubDate>Mon, 23 Aug 2021 08:18:30 +0000</pubDate><guid>https://hugo2.vercel.app/posts/31.html</guid><description>&lt;h1 id="本地电脑和github之间的连接">本地电脑和github之间的连接&lt;/h1>
 &lt;p>打开电脑文件夹 用户名/.ssh （查看，勾选隐藏的项目）&lt;/p>
 &lt;p>右键 Git Bash Here&lt;/p>
 &lt;p>输入&lt;/p>
@@ -61,7 +61,7 @@ deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }} #这里在repo settings里填入SS
 external_repository: waimao365/hugo # &amp;lt;- 改成自己的 user github page
 publish_dir: ./public # &amp;lt;- 指定成品放置文件夹
 publish_branch: gh-pages # &amp;lt;- 远端repo目标分支
-&lt;/code>&lt;/pre>&lt;p>建议大家建立两个项目，一个私人，一个公开，以上内容都在私人的项目操作，只需要将上面代码的倒数第三行改成公开的项目就可以了&lt;/p></description></item><item><title>hugo静态博客部署到github的脚本</title><link>https://example.com/posts/30.htm</link><pubDate>Mon, 12 Apr 2021 08:18:30 +0000</pubDate><guid>https://example.com/posts/30.htm</guid><description>&lt;h2 id="hugo部署到github">hugo部署到github&lt;/h2>
+&lt;/code>&lt;/pre>&lt;p>建议大家建立两个项目，一个私人，一个公开，以上内容都在私人的项目操作，只需要将上面代码的倒数第三行改成公开的项目就可以了&lt;/p></description></item><item><title>hugo静态博客部署到github的脚本</title><link>https://hugo2.vercel.app/posts/30.htm</link><pubDate>Mon, 12 Apr 2021 08:18:30 +0000</pubDate><guid>https://hugo2.vercel.app/posts/30.htm</guid><description>&lt;h2 id="hugo部署到github">hugo部署到github&lt;/h2>
 &lt;p>建立本地和github仓库的连接
 输入github的帐户名和邮箱&lt;/p>
 &lt;pre>&lt;code>git config --global user.name &amp;quot;waimao8&amp;quot;
@@ -122,7 +122,7 @@ git push -u origin master
 &lt;pre>&lt;code>:set ff=unix
 &lt;/code>&lt;/pre>&lt;p>3.改好后，输入下面代码保存并退出编辑，这时该脚本就能成功执行。&lt;/p>
 &lt;pre>&lt;code>：wq
-&lt;/code>&lt;/pre></description></item><item><title>利用脚本安装archlinux教程</title><link>https://example.com/posts/29.html</link><pubDate>Mon, 12 Apr 2021 08:15:30 +0000</pubDate><guid>https://example.com/posts/29.html</guid><description>&lt;h2 id="脚本地址">脚本地址&lt;/h2>
+&lt;/code>&lt;/pre></description></item><item><title>利用脚本安装archlinux教程</title><link>https://hugo2.vercel.app/posts/29.html</link><pubDate>Mon, 12 Apr 2021 08:15:30 +0000</pubDate><guid>https://hugo2.vercel.app/posts/29.html</guid><description>&lt;h2 id="脚本地址">脚本地址&lt;/h2>
 &lt;p>&lt;a class="link" href="https://gitee.com/ch0769/ArchInstall" target="_blank" rel="noopener"
 >https://gitee.com/ch0769/ArchInstall&lt;/a>&lt;/p>
 &lt;p>下载最新版的archlinux镜像，通过虚拟机安装，设置GPT格式&lt;/p>
@@ -173,7 +173,7 @@ curl -O &lt;a class="link" href="https://gitee.com/ch0769/ArchInstall/raw/master
 &lt;p>输入密码两次+两次&lt;/p>
 &lt;p>一路回车， 看到 Proceed with installation? [Y/n] 输入y&lt;/p>
 &lt;p>看到重启，输入 exit | reboot&lt;/p>
-&lt;p>开机后更新系统 sudo pacman -Syu&lt;/p></description></item><item><title>这是一个forestry.io的模板</title><link>https://example.com/posts/36.html</link><pubDate>Sat, 20 Feb 2021 15:55:32 +0000</pubDate><guid>https://example.com/posts/36.html</guid><description>&lt;p>下面是代码&lt;/p>
+&lt;p>开机后更新系统 sudo pacman -Syu&lt;/p></description></item><item><title>这是一个forestry.io的模板</title><link>https://hugo2.vercel.app/posts/36.html</link><pubDate>Sat, 20 Feb 2021 15:55:32 +0000</pubDate><guid>https://hugo2.vercel.app/posts/36.html</guid><description>&lt;p>下面是代码&lt;/p>
 &lt;p>这里是测试&lt;/p>
 &lt;pre>&lt;code>name: Hugo Build and Deploy
 on:
@@ -200,7 +200,7 @@ with:
 deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }} #这里在repo settings里填入SSH私钥
 external_repository: waimao365/hugo # &amp;lt;- 改成自己的 user github page
 publish_dir: ./public # &amp;lt;- 指定成品放置文件夹
-publish_branch: gh-pages # &amp;lt;- 远端repo目标分支&lt;/code>&lt;/pre></description></item><item><title>老爷机的福音lubuntu18.04</title><link>https://example.com/posts/25.html</link><pubDate>Tue, 16 Feb 2021 15:30:08 +0000</pubDate><guid>https://example.com/posts/25.html</guid><description>&lt;img src="https://i.loli.net/2021/08/17/wSN734P98MgFE6A.jpg" alt="Featured image of post 老爷机的福音lubuntu18.04" />&lt;h2 id="前言">前言&lt;/h2>
+publish_branch: gh-pages # &amp;lt;- 远端repo目标分支&lt;/code>&lt;/pre></description></item><item><title>老爷机的福音lubuntu18.04</title><link>https://hugo2.vercel.app/posts/25.html</link><pubDate>Tue, 16 Feb 2021 15:30:08 +0000</pubDate><guid>https://hugo2.vercel.app/posts/25.html</guid><description>&lt;img src="https://i.loli.net/2021/08/17/wSN734P98MgFE6A.jpg" alt="Featured image of post 老爷机的福音lubuntu18.04" />&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>刚238入手瑞角云，系统自带win10系统稍微有点卡，看视频1080,cpu占用80～90,寻思装台linux，在lubuntu和archlinux之间纠结了很久，archlinux也玩了一段时间，各方面都挺好，就是一个缺点，时间长了不更新，容易滚挂，做服务器搭个宝塔什么的，选ubuntu会稳定些，选个最轻便的，就只能是lubuntu18.04了!!!&lt;/p>
 &lt;h2 id="安装lubuntu">安装lubuntu&lt;/h2>
 &lt;p>旧官网下载 &lt;a class="link" href="https://lubuntu.net/downloads/" target="_blank" rel="noopener"
@@ -295,7 +295,7 @@ sudo ln -s /opt/Telegram/Telegram /usr/local/bin/telegram-desktop&lt;/p>
 >http://packages.deepin.com/deepin/pool/non-free/d/&lt;/a>&lt;/p>
 &lt;h3 id="安装wine">安装wine&lt;/h3>
 &lt;p>&lt;a class="link" href="https://wiki.winehq.org/Download_zhcn" target="_blank" rel="noopener"
->https://wiki.winehq.org/Download_zhcn&lt;/a>&lt;/p></description></item><item><title>ubuntu安装hugo教程</title><link>https://example.com/posts/26.html</link><pubDate>Mon, 15 Feb 2021 15:55:32 +0000</pubDate><guid>https://example.com/posts/26.html</guid><description>&lt;h2 id="ubuntu安装hugo">ubuntu安装hugo&lt;/h2>
+>https://wiki.winehq.org/Download_zhcn&lt;/a>&lt;/p></description></item><item><title>ubuntu安装hugo教程</title><link>https://hugo2.vercel.app/posts/26.html</link><pubDate>Mon, 15 Feb 2021 15:55:32 +0000</pubDate><guid>https://hugo2.vercel.app/posts/26.html</guid><description>&lt;h2 id="ubuntu安装hugo">ubuntu安装hugo&lt;/h2>
 &lt;h3 id="安装git">安装git&lt;/h3>
 &lt;p>官网 &lt;a class="link" href="https://git-scm.com/download/linux" target="_blank" rel="noopener"
 >https://git-scm.com/download/linux&lt;/a>&lt;/p>
@@ -390,7 +390,7 @@ sudo apt-get install notepadqq
 &lt;/code>&lt;/pre>&lt;p>卸载方法:&lt;/p>
 &lt;pre>&lt;code>sudo apt-get remove notepadqq
 sudo add-apt-repository --removeppa:notepadqq-team/notepadqq
-&lt;/code>&lt;/pre></description></item><item><title>利用ssh复制粘贴安装archlinux教程</title><link>https://example.com/posts/27.html</link><pubDate>Mon, 15 Feb 2021 08:55:30 +0000</pubDate><guid>https://example.com/posts/27.html</guid><description>&lt;h2 id="官方安装教程">官方安装教程&lt;/h2>
+&lt;/code>&lt;/pre></description></item><item><title>利用ssh复制粘贴安装archlinux教程</title><link>https://hugo2.vercel.app/posts/27.html</link><pubDate>Mon, 15 Feb 2021 08:55:30 +0000</pubDate><guid>https://hugo2.vercel.app/posts/27.html</guid><description>&lt;h2 id="官方安装教程">官方安装教程&lt;/h2>
 &lt;p>&lt;a class="link" href="https://wiki.archlinux.org/index.php/Installation_guide_%28%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%29" target="_blank" rel="noopener"
 >https://wiki.archlinux.org/index.php/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)&lt;/a>&lt;/p>
 &lt;h2 id="手敲键盘部分">手敲键盘部分&lt;/h2>
@@ -724,7 +724,7 @@ sudo pacman -U xxx.tar.xz&lt;/p>
 &lt;p>&lt;a class="link" href="https://www.linzhuotech.com/" target="_blank" rel="noopener"
 >https://www.linzhuotech.com/&lt;/a>&lt;/p>
 &lt;p>系统更新
-sudo pacman -Syu&lt;/p></description></item><item><title>n1终极玩法Armbian-5.77安装docker宝塔openwrt和HomeAssistant</title><link>https://example.com/posts/23.html</link><pubDate>Tue, 02 Jun 2020 15:55:32 +0000</pubDate><guid>https://example.com/posts/23.html</guid><description>&lt;h1 id="安装armbian-577">安装Armbian-5.77&lt;/h1>
+sudo pacman -Syu&lt;/p></description></item><item><title>n1终极玩法Armbian-5.77安装docker宝塔openwrt和HomeAssistant</title><link>https://hugo2.vercel.app/posts/23.html</link><pubDate>Tue, 02 Jun 2020 15:55:32 +0000</pubDate><guid>https://hugo2.vercel.app/posts/23.html</guid><description>&lt;h1 id="安装armbian-577">安装Armbian-5.77&lt;/h1>
 &lt;p>&lt;a class="link" href="https://www.right.com.cn/forum/thread-510423-1-1.html" target="_blank" rel="noopener"
 >https://www.right.com.cn/forum/thread-510423-1-1.html&lt;/a>&lt;/p>
 &lt;h2 id="下载armbian-577写入u盘">下载Armbian-5.77写入U盘&lt;/h2>
@@ -816,7 +816,7 @@ vi /etc/config/network&lt;br>
 账号startwish&lt;/p>
 &lt;p>密码startwish&lt;/p>
 &lt;p>系统root账户的密码是startwish&lt;br>
-可以通过宝塔搭建自己的网站了！！！&lt;/p></description></item><item><title>hugo搭建和使用教程</title><link>https://example.com/posts/22.html</link><pubDate>Mon, 01 Jun 2020 15:55:32 +0000</pubDate><guid>https://example.com/posts/22.html</guid><description>&lt;h1 id="前言">前言&lt;/h1>
+可以通过宝塔搭建自己的网站了！！！&lt;/p></description></item><item><title>hugo搭建和使用教程</title><link>https://hugo2.vercel.app/posts/22.html</link><pubDate>Mon, 01 Jun 2020 15:55:32 +0000</pubDate><guid>https://hugo2.vercel.app/posts/22.html</guid><description>&lt;h1 id="前言">前言&lt;/h1>
 &lt;p>做博客就图个稳定，一次性买了10年的域名，搭配免费的github，适合做长期博客。&lt;br>
 之前安装的hexo，可玩性非常强，前面文章有写一些关于hexo的安装使用教程，用了一年多，也发现了一些问题，hexo版本更新各种不兼容，访问速度慢，，很影响心情，自己都懒得搭理博客了，国内cdn加速需要备案，只是做个小站，不想太麻烦。&lt;br>
 所幸，无意中发现荒野无灯大神把站转移到hugo，访问速度非常快，于是自己马上搭建了一个，打开文章页面基本上是秒开，之前hexo打开文章大约要5-6秒，用不同设备，不同网络测试很多次，hugo博客的访问速度要快4倍以上。并且文章越多，hugo的优势就越明显，为避免以后迁移麻烦，所以赶紧把博客迁到了hugo。主题也是我喜欢的，非常简洁。&lt;/p>
@@ -906,7 +906,7 @@ git pull &amp;ndash;rebase origin master&lt;br>
 git push origin master&lt;br>
 就可以了。
 如果还是不行，可以加入强制代码&lt;/p>
-&lt;p>git push -f origin master&lt;/p></description></item><item><title>LG V30 韩版V300L 8.0 9.0 root刷类原生系统Havoc 10.0的详细过程</title><link>https://example.com/posts/21.html</link><pubDate>Mon, 23 Mar 2020 15:18:30 +0000</pubDate><guid>https://example.com/posts/21.html</guid><description>&lt;h1 id="前言">前言&lt;/h1>
+&lt;p>git push -f origin master&lt;/p></description></item><item><title>LG V30 韩版V300L 8.0 9.0 root刷类原生系统Havoc 10.0的详细过程</title><link>https://hugo2.vercel.app/posts/21.html</link><pubDate>Mon, 23 Mar 2020 15:18:30 +0000</pubDate><guid>https://hugo2.vercel.app/posts/21.html</guid><description>&lt;h1 id="前言">前言&lt;/h1>
 &lt;p>官方系统：刷机root后，未安装其他软件，开机scene查看内存占50%，
 安装日常软件，开发者选项里面，系统可用用内存一般在200左右&lt;/p>
 &lt;p>Havoc 10：刷机root后，未安装其他任何软件，开机scene查看内存占37%
@@ -1014,7 +1014,7 @@ dd if=/dev/block/bootdevice/by-name/ftm of=/sdcard/ftm-o.img&lt;br>
 如果没有备份，先备份，备份好的ftm-o.img 复制到电脑，通过ultraedit 软件打开
 找到12000H处，修改SM码 （非常难找，找了几分钟，眼睛都花）输入自己的SN码，据说输入别人的也可以。
 修改后重启就可用了。&lt;/p>
-&lt;p>没一定把握就不要刷基带，风险大，容易9008&lt;/p></description></item><item><title>k2p老毛子固件绑定域名之 cloudflare.com</title><link>https://example.com/posts/20.html</link><pubDate>Fri, 03 Jan 2020 13:10:32 +0000</pubDate><guid>https://example.com/posts/20.html</guid><description>&lt;p>k2p老毛子固件绑定域名之 cloudflare.com&lt;/p>
+&lt;p>没一定把握就不要刷基带，风险大，容易9008&lt;/p></description></item><item><title>k2p老毛子固件绑定域名之 cloudflare.com</title><link>https://hugo2.vercel.app/posts/20.html</link><pubDate>Fri, 03 Jan 2020 13:10:32 +0000</pubDate><guid>https://hugo2.vercel.app/posts/20.html</guid><description>&lt;p>k2p老毛子固件绑定域名之 cloudflare.com&lt;/p>
 &lt;p>使用 Cloudflare 实现顶级个人域名的 ddns 服务。 &lt;a class="link" href="https://www.cloudflare.com" target="_blank" rel="noopener"
 >https://www.cloudflare.com&lt;/a>&lt;/p>
 &lt;p>使用前需要安装 curl 程序，可以安装opt后输入 opkg install curl 敲回车键安装启用opt&lt;/p>
@@ -1027,7 +1027,7 @@ dd if=/dev/block/bootdevice/by-name/ftm of=/sdcard/ftm-o.img&lt;br>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200103132545.png" alt="" />&lt;/p>
 &lt;p>输入密码和验证码，就可以获得&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/waimao8/image@master/20200103132918.png" alt="" />&lt;/p>
-&lt;p>复制到 用户 Global API Key&lt;/p></description></item><item><title>LG V30韩版 ROOT详细教程</title><link>https://example.com/posts/18.html</link><pubDate>Mon, 23 Dec 2019 15:18:30 +0000</pubDate><guid>https://example.com/posts/18.html</guid><description>&lt;h1 id="前言">前言&lt;/h1>
+&lt;p>复制到 用户 Global API Key&lt;/p></description></item><item><title>LG V30韩版 ROOT详细教程</title><link>https://hugo2.vercel.app/posts/18.html</link><pubDate>Mon, 23 Dec 2019 15:18:30 +0000</pubDate><guid>https://hugo2.vercel.app/posts/18.html</guid><description>&lt;h1 id="前言">前言&lt;/h1>
 &lt;p>2019年最火的洋垃圾LG V30，骁龙835cpu（从此告别发烧），4G内存，64G储存，能满足日用生活，能玩游戏，2k屏幕，hifi，极高的性价比。&lt;/p>
 &lt;h1 id="lg-v30韩版-root详细教程">LG V30韩版 ROOT详细教程&lt;/h1>
 &lt;p>一个非常详细的视频教程，建议大家仔细观看，全部看懂了再来操作
@@ -1182,7 +1182,7 @@ ttp://bbs.gfan.com/android-9313266-1-1.html&lt;/p>
 >https://forum.xda-developers.com/lg-v30/development/rom-pie-dot-os-3-0-t3908490&lt;/a>&lt;/p>
 &lt;p>LG-US998 20D ROM 常用底包 里面有解锁的相关链接
 &lt;a class="link" href="https://forum.xda-developers.com/lg-v30/development/rom-lg-us998-20d-rom-t3830318" target="_blank" rel="noopener"
->https://forum.xda-developers.com/lg-v30/development/rom-lg-us998-20d-rom-t3830318&lt;/a>&lt;/p></description></item><item><title>解决安卓手机卡顿 安装google商店官方软件的方法</title><link>https://example.com/posts/17.html</link><pubDate>Mon, 23 Dec 2019 12:20:32 +0000</pubDate><guid>https://example.com/posts/17.html</guid><description>&lt;p>下载play.google.com商店软件的方法
+>https://forum.xda-developers.com/lg-v30/development/rom-lg-us998-20d-rom-t3830318&lt;/a>&lt;/p></description></item><item><title>解决安卓手机卡顿 安装google商店官方软件的方法</title><link>https://hugo2.vercel.app/posts/17.html</link><pubDate>Mon, 23 Dec 2019 12:20:32 +0000</pubDate><guid>https://hugo2.vercel.app/posts/17.html</guid><description>&lt;p>下载play.google.com商店软件的方法
 国内安卓软件多数都是比较流氓，内存占用大，弹广告，要想手机流畅运行，建议尽量使用google商店下载的软件。&lt;/p>
 &lt;p>下面提到的所以资源可以到蓝奏云网盘下载，无广告，速度飞快&lt;/p>
 &lt;p>&lt;a class="link" href="https://www.lanzous.com/b059xemze" target="_blank" rel="noopener"
@@ -1291,7 +1291,7 @@ pm uninstall -k com.tencent.mm&lt;/p>
 &lt;p>携程&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/waimao8/image@master/xiecheng.png" alt="" />&lt;/p>
 &lt;p>去哪儿&lt;/p>
-&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/waimao8/image@master/qunaer.png" alt="" />&lt;/p></description></item><item><title>黑苹果给安卓手机刷入twrp recovery教程</title><link>https://example.com/posts/16.html</link><pubDate>Wed, 18 Dec 2019 01:00:32 +0000</pubDate><guid>https://example.com/posts/16.html</guid><description>&lt;h1 id="手机设置">手机设置&lt;/h1>
+&lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/waimao8/image@master/qunaer.png" alt="" />&lt;/p></description></item><item><title>黑苹果给安卓手机刷入twrp recovery教程</title><link>https://hugo2.vercel.app/posts/16.html</link><pubDate>Wed, 18 Dec 2019 01:00:32 +0000</pubDate><guid>https://hugo2.vercel.app/posts/16.html</guid><description>&lt;h1 id="手机设置">手机设置&lt;/h1>
 &lt;p>点击设置，系统，关机手机，版本号联系点击三下，进入开发者模式，找到开发者选项，打开OME解锁，打开Android调试，打开网络ADB调试。&lt;/p>
 &lt;h1 id="下载twrp">下载twrp&lt;/h1>
 &lt;p>下面以lgnexus5x为例
@@ -1337,7 +1337,7 @@ fastboot boot twrp.img
 &lt;p>adb reboot recovery &lt;br>
 进入手机恢复模式recovery&lt;/p>
 &lt;p>adb reboot system &lt;br>
-进入手机系统&lt;/p></description></item><item><title>支付宝通过三星健康修改步数的教程和注意事项</title><link>https://example.com/posts/15.html</link><pubDate>Sat, 14 Dec 2019 15:55:32 +0000</pubDate><guid>https://example.com/posts/15.html</guid><description>&lt;p>支付宝通过三星健康修改步数的教程和注意事项
+进入手机系统&lt;/p></description></item><item><title>支付宝通过三星健康修改步数的教程和注意事项</title><link>https://hugo2.vercel.app/posts/15.html</link><pubDate>Sat, 14 Dec 2019 15:55:32 +0000</pubDate><guid>https://hugo2.vercel.app/posts/15.html</guid><description>&lt;p>支付宝通过三星健康修改步数的教程和注意事项
 全部软件下载地址（担心以后新版的支付宝不能同步，所以在网盘也放了最近的三个支付宝，酷安下载的）
 &lt;a class="link" href="https://www.lanzous.com/b059xem4d" target="_blank" rel="noopener"
 >https://www.lanzous.com/b059xem4d&lt;/a>&lt;/p>
@@ -1394,7 +1394,7 @@ fastboot boot twrp.img
 &lt;p>第一次同步很快，后面同步数据大概要十几二十分钟。
 加速要快，我一般连续点两次加1万步，再点一个自定义几十步，整数不好看。
 当天加步要在下午四点前完成，下午四点后加的步会自动加到第二天。
-网友反映经常会有步数不能同步的问题，经过很多次试验，终于找到解决这个问题的方法，担心流传开会失效，暂时不公开，有需要理解的朋友可以加我微信咨询。&lt;/p></description></item><item><title>小白电脑安装windows系统，linxu和黑苹果的相关资料</title><link>https://example.com/posts/14.html</link><pubDate>Fri, 13 Dec 2019 19:05:32 +0000</pubDate><guid>https://example.com/posts/14.html</guid><description>&lt;p>电脑安装系统必备
+网友反映经常会有步数不能同步的问题，经过很多次试验，终于找到解决这个问题的方法，担心流传开会失效，暂时不公开，有需要理解的朋友可以加我微信咨询。&lt;/p></description></item><item><title>小白电脑安装windows系统，linxu和黑苹果的相关资料</title><link>https://hugo2.vercel.app/posts/14.html</link><pubDate>Fri, 13 Dec 2019 19:05:32 +0000</pubDate><guid>https://hugo2.vercel.app/posts/14.html</guid><description>&lt;p>电脑安装系统必备
 操作系统下载
 官方系统&lt;/p>
 &lt;p>&lt;a class="link" href="http://msdn.itellyou.cn/" target="_blank" rel="noopener"
@@ -1484,7 +1484,7 @@ PE&lt;br>
 &lt;a class="link" href="https://lubuntu.net/" target="_blank" rel="noopener"
 >https://lubuntu.net/&lt;/a>&lt;br>
 &lt;a class="link" href="https://elementaryos.cn/" target="_blank" rel="noopener"
->https://elementaryos.cn/&lt;/a>&lt;/p></description></item><item><title>图床搭建的最佳选择 PicGo + Github + Jsdelivr免费公用CDN加速.</title><link>https://example.com/posts/12.html</link><pubDate>Fri, 13 Dec 2019 12:33:32 +0000</pubDate><guid>https://example.com/posts/12.html</guid><description>&lt;p>&lt;strong>图床搭建的最佳选择 PicGo + Github + Jsdelivr免费公用CDN加速&lt;/strong>&lt;/p>
+>https://elementaryos.cn/&lt;/a>&lt;/p></description></item><item><title>图床搭建的最佳选择 PicGo + Github + Jsdelivr免费公用CDN加速.</title><link>https://hugo2.vercel.app/posts/12.html</link><pubDate>Fri, 13 Dec 2019 12:33:32 +0000</pubDate><guid>https://hugo2.vercel.app/posts/12.html</guid><description>&lt;p>&lt;strong>图床搭建的最佳选择 PicGo + Github + Jsdelivr免费公用CDN加速&lt;/strong>&lt;/p>
 &lt;h1 id="github创建仓库">Github创建仓库&lt;/h1>
 &lt;h2 id="点击-new-repository">点击 New repository&lt;/h2>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/waimao8/image@master/0.png" alt="" />&lt;/p>
@@ -1517,7 +1517,7 @@ PE&lt;br>
 截图会自动通过Picgo上传到Github上面了，直接粘贴到文章就可以了，真的是非常方便！&lt;/p>
 &lt;p>笔记本屏幕太小，我外接了显示器，发现点击shift+win+p后，上次图片失败，
 &lt;img src="https://cdn.jsdelivr.net/gh/waimao8/image@master/20191213175553.png" alt="" />百度了一下相关的教程
-打开mac的系统偏好设置，点击显示器，点击颜色，选择普通RGB描述文件，就可以了。&lt;/p></description></item><item><title>Nexus 5X手机在支付宝的蚂蚁森林自动收能量的过程.</title><link>https://example.com/posts/11.html</link><pubDate>Tue, 10 Dec 2019 00:21:32 +0000</pubDate><guid>https://example.com/posts/11.html</guid><description>&lt;h1 id="下载刷机包">下载刷机包&lt;/h1>
+打开mac的系统偏好设置，点击显示器，点击颜色，选择普通RGB描述文件，就可以了。&lt;/p></description></item><item><title>Nexus 5X手机在支付宝的蚂蚁森林自动收能量的过程.</title><link>https://hugo2.vercel.app/posts/11.html</link><pubDate>Tue, 10 Dec 2019 00:21:32 +0000</pubDate><guid>https://hugo2.vercel.app/posts/11.html</guid><description>&lt;h1 id="下载刷机包">下载刷机包&lt;/h1>
 &lt;p>&lt;a class="link" href="https://downloads.aospextended.com/bullhead" target="_blank" rel="noopener"
 >https://downloads.aospextended.com/bullhead&lt;/a>&lt;/p>
 &lt;p>个人觉得aospextended的rom比较省电，其他刷机包或者不刷机也是可以的，只要是手机不能杀支付宝的后台就行，如果需要用都省电模式，要在省电模式里面排除支付宝。&lt;/p>
@@ -1546,7 +1546,7 @@ PE&lt;br>
 >XQuickEnergy&lt;/a>
 安装后，在edxposed软件中勾选插件，重启手机，打开支付宝，就可以通过上面两个插件设置自动收取能量了，记得，支付宝不可以退出哦！&lt;/p>
 &lt;h1 id="下载tasker软件设定自动打开支付宝">下载tasker软件设定自动打开支付宝&lt;/h1>
-&lt;p>点击任务，新建任务，命名打开支付宝，点+号。点程序，点启动应用，点支付宝。点配置文件，点+号，点时间，点从上午6点到凌晨1点，点每30分钟。点击打开支付宝，就完成了设置，这样即使支付宝后天即使被关闭了，每30分钟也会自动打开一次，时间都是可以自己设置的。十分钟打开一次也可以，一个小时打开一次也行，主要是看支付宝多久会被杀后台。&lt;/p></description></item><item><title>百度网盘不限速下载的一些方法</title><link>https://example.com/posts/10.html</link><pubDate>Sun, 08 Dec 2019 23:28:35 +0000</pubDate><guid>https://example.com/posts/10.html</guid><description>&lt;h1 id="enfi">ENFI&lt;/h1>
+&lt;p>点击任务，新建任务，命名打开支付宝，点+号。点程序，点启动应用，点支付宝。点配置文件，点+号，点时间，点从上午6点到凌晨1点，点每30分钟。点击打开支付宝，就完成了设置，这样即使支付宝后天即使被关闭了，每30分钟也会自动打开一次，时间都是可以自己设置的。十分钟打开一次也可以，一个小时打开一次也行，主要是看支付宝多久会被杀后台。&lt;/p></description></item><item><title>百度网盘不限速下载的一些方法</title><link>https://hugo2.vercel.app/posts/10.html</link><pubDate>Sun, 08 Dec 2019 23:28:35 +0000</pubDate><guid>https://hugo2.vercel.app/posts/10.html</guid><description>&lt;h1 id="enfi">ENFI&lt;/h1>
 &lt;p>下载地址 &lt;a class="link" href="http://www.enfi.cloud/" target="_blank" rel="noopener"
 >http://www.enfi.cloud/&lt;/a> 需要搭配enfi下载助手
 用P2P下载技术，支持HTTP，BT，磁力链等各种协议，高速下载让你摆脱限速的困扰，从此告别低速&lt;/p>
@@ -1578,7 +1578,7 @@ PE&lt;br>
 >https://545c.com/dir/3994041-35240665-e1ea37&lt;/a>&lt;/p>
 &lt;h1 id="其他插件有时行有时不行比如下面的几款大家可以去尝试">其他插件有时行有时不行，比如下面的几款，大家可以去尝试&lt;/h1>
 &lt;h2 id="baidupcs-web">BaiduPCS-Web&lt;/h2>
-&lt;h2 id="proxyee-down">Proxyee Down&lt;/h2></description></item><item><title>戴尔笔记本E6430安装黑苹果的全部过程</title><link>https://example.com/posts/9.html</link><pubDate>Sun, 08 Dec 2019 19:21:42 +0000</pubDate><guid>https://example.com/posts/9.html</guid><description>&lt;h1 id="寻找efi文件">寻找EFI文件&lt;/h1>
+&lt;h2 id="proxyee-down">Proxyee Down&lt;/h2></description></item><item><title>戴尔笔记本E6430安装黑苹果的全部过程</title><link>https://hugo2.vercel.app/posts/9.html</link><pubDate>Sun, 08 Dec 2019 19:21:42 +0000</pubDate><guid>https://hugo2.vercel.app/posts/9.html</guid><description>&lt;h1 id="寻找efi文件">寻找EFI文件&lt;/h1>
 &lt;p>从黑苹果长期维护机型 EFI 及安装教程整理
 &lt;a class="link" href="https://www.jianshu.com/p/484f07b8c7fd" target="_blank" rel="noopener"
 >https://www.jianshu.com/p/484f07b8c7fd&lt;/a>
@@ -1615,7 +1615,7 @@ sudo diskutil mount disk0s1
 sudo diskutil mount disk2s1
 打开Finder，注意后面有个.
 open .
-电脑上会显示U盘和硬盘的EFI文件夹，将U盘的EFI文件复制到硬盘的EFI文件夹就可以拔掉U盘启动mac了&lt;/p></description></item><item><title>N1安装omv后安装docker+transmission+lnmp搭建网站</title><link>https://example.com/posts/8.html</link><pubDate>Sun, 08 Dec 2019 18:31:42 +0000</pubDate><guid>https://example.com/posts/8.html</guid><description>&lt;p>N1安装好omv后，
+电脑上会显示U盘和硬盘的EFI文件夹，将U盘的EFI文件复制到硬盘的EFI文件夹就可以拔掉U盘启动mac了&lt;/p></description></item><item><title>N1安装omv后安装docker+transmission+lnmp搭建网站</title><link>https://hugo2.vercel.app/posts/8.html</link><pubDate>Sun, 08 Dec 2019 18:31:42 +0000</pubDate><guid>https://hugo2.vercel.app/posts/8.html</guid><description>&lt;p>N1安装好omv后，
 进入系统，常规设置，修改web管理员密码，需要安装的lnmp搭建网站的话，还需要修改端口，自动登出时间可以设置为1天。
 进入磁盘，文件管理，挂着ext4格式的U盘或者硬盘（其他格式的不能修改权限比如777 755等）&lt;/p>
 &lt;p>进入共享文件夹，设置共享，设置ftp nfs smb 等
@@ -1669,7 +1669,7 @@ lnmp nginx restart&lt;/p>
 &lt;p>列出网站(虚拟主机)
 执行：lnmp vhost list&lt;/p>
 &lt;p>删除网站(虚拟主机)
-执行：lnmp vhost del&lt;/p></description></item><item><title>斐讯N1安Armbian安装OMV安装nginx+mysql安装typecho全过程</title><link>https://example.com/posts/7.html</link><pubDate>Sun, 08 Dec 2019 18:28:42 +0000</pubDate><guid>https://example.com/posts/7.html</guid><description>&lt;h1 id="安装armbian">安装armbian&lt;/h1>
+执行：lnmp vhost del&lt;/p></description></item><item><title>斐讯N1安Armbian安装OMV安装nginx+mysql安装typecho全过程</title><link>https://hugo2.vercel.app/posts/7.html</link><pubDate>Sun, 08 Dec 2019 18:28:42 +0000</pubDate><guid>https://hugo2.vercel.app/posts/7.html</guid><description>&lt;h1 id="安装armbian">安装armbian&lt;/h1>
 &lt;p>测试了很多版本的Armbian+omv，OMV经常会报错，改用了XQ7的N1首个支持FullCone Nat的Armbian系统，非常好用
 下面是链接
 &lt;a class="link" href="https://www.right.com.cn/forum/thread-788004-1-1.html" target="_blank" rel="noopener"
@@ -1813,7 +1813,7 @@ omv使用&lt;/p>
 >https://www.jianshu.com/p/4731a1ef01d1&lt;/a>&lt;/p>
 &lt;p>OMV安装web服务器详细教程
 &lt;a class="link" href="https://jingyan.baidu.com/article/0aa223757304e688cd0d6464.html" target="_blank" rel="noopener"
->https://jingyan.baidu.com/article/0aa223757304e688cd0d6464.html&lt;/a>&lt;/p></description></item><item><title>斐讯N1 docker安装homeassistant 配置斐讯dc1智能插座</title><link>https://example.com/posts/6.html</link><pubDate>Mon, 16 Sep 2019 12:52:42 +0000</pubDate><guid>https://example.com/posts/6.html</guid><description>&lt;p>斐讯N1 docker安装homeassistant 配置斐讯dc1智能插座&lt;/p>
+>https://jingyan.baidu.com/article/0aa223757304e688cd0d6464.html&lt;/a>&lt;/p></description></item><item><title>斐讯N1 docker安装homeassistant 配置斐讯dc1智能插座</title><link>https://hugo2.vercel.app/posts/6.html</link><pubDate>Mon, 16 Sep 2019 12:52:42 +0000</pubDate><guid>https://hugo2.vercel.app/posts/6.html</guid><description>&lt;p>斐讯N1 docker安装homeassistant 配置斐讯dc1智能插座&lt;/p>
 &lt;p>默认代码&lt;/p>
 &lt;pre>&lt;code>docker run -d --restart=always --name=&amp;quot;home-assistant&amp;quot; -e TZ=Asia/Shanghai -v /var/lib/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:latest
 &lt;/code>&lt;/pre>&lt;p>homeassistant:latest表示最新版的 用0.88.1顺手了，配置文件也有了，就不想安装最新版本的了。新版也试用过，不太好用&lt;br>
@@ -1877,7 +1877,7 @@ entity_id: switch.dc1_3_s3_template
 2、重启homeassistant&lt;br>
 3、退出homeassistant账户，重新登陆&lt;/p>
 &lt;p>可以在docker重启homeassistant ，也可以在网页重启，配置好文件后可以按下图更改，0.88.1配置是这样的，新版貌似没有配置检查。&lt;br>
-&lt;img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMTkvMDkvMTYvNzFxSWZnT2N0WFFFckI1LnBuZw?x-oss-process=image/format,png" alt="dc1配置.png" />&lt;/p></description></item><item><title>Github 绑定域名添加https的方法2019年9月更新</title><link>https://example.com/posts/5.html</link><pubDate>Sat, 14 Sep 2019 15:40:43 +0000</pubDate><guid>https://example.com/posts/5.html</guid><description>&lt;p>官方教程&lt;br>
+&lt;img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMTkvMDkvMTYvNzFxSWZnT2N0WFFFckI1LnBuZw?x-oss-process=image/format,png" alt="dc1配置.png" />&lt;/p></description></item><item><title>Github 绑定域名添加https的方法2019年9月更新</title><link>https://hugo2.vercel.app/posts/5.html</link><pubDate>Sat, 14 Sep 2019 15:40:43 +0000</pubDate><guid>https://hugo2.vercel.app/posts/5.html</guid><description>&lt;p>官方教程&lt;br>
 &lt;a class="link" href="https://help.github.com/en/articles/using-a-custom-domain-with-github-pages" target="_blank" rel="noopener"
 >https://help.github.com/en/articles/using-a-custom-domain-with-github-pages&lt;/a>&lt;br>
 打开 &lt;a class="link" href="https://github.com/" target="_blank" rel="noopener"
@@ -1907,7 +1907,7 @@ earl.ns.cloudflare.com&lt;br>
 &lt;img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMTkvMDkvMTQvalpQblh1NGhrSm1NVHkxLnBuZw?x-oss-process=image/format,png" alt="6.png" />&lt;br>
 等30分钟左右生效&lt;br>
 点击 &lt;a class="link" href="https://163168.xyz/" target="_blank" rel="noopener"
->https://163168.xyz/&lt;/a> 生效就可以访问了&lt;/p></description></item><item><title>hexo博客优化之文章置顶+置顶标签</title><link>https://example.com/posts/4.html</link><pubDate>Thu, 12 Sep 2019 13:01:23 +0000</pubDate><guid>https://example.com/posts/4.html</guid><description>&lt;p>&lt;a class="link" href="https://github.com/netcan/hexo-generator-index-pin-top" target="_blank" rel="noopener"
+>https://163168.xyz/&lt;/a> 生效就可以访问了&lt;/p></description></item><item><title>hexo博客优化之文章置顶+置顶标签</title><link>https://hugo2.vercel.app/posts/4.html</link><pubDate>Thu, 12 Sep 2019 13:01:23 +0000</pubDate><guid>https://hugo2.vercel.app/posts/4.html</guid><description>&lt;p>&lt;a class="link" href="https://github.com/netcan/hexo-generator-index-pin-top" target="_blank" rel="noopener"
 >支持置顶的仓库&lt;/a>&lt;/p>
 &lt;p>可以直接用以下命令安装&lt;/p>
 &lt;pre>&lt;code>$ npm uninstall hexo-generator-index --save
@@ -1922,7 +1922,7 @@ $ npm install hexo-generator-index-pin-top --save
 &amp;lt;font color=7D26CD&amp;gt;置顶&amp;lt;/font&amp;gt;
 &amp;lt;span class=&amp;quot;post-meta-divider&amp;quot;&amp;gt;|&amp;lt;/span&amp;gt;
 {% endif %}
-&lt;/code>&lt;/pre></description></item><item><title>chrome安装Tampermonkey，添加插件的过程</title><link>https://example.com/posts/13.html</link><pubDate>Thu, 12 Sep 2019 13:01:13 +0000</pubDate><guid>https://example.com/posts/13.html</guid><description>&lt;p>chrome安装Tampermonkey，添加插件的过程&lt;/p>
+&lt;/code>&lt;/pre></description></item><item><title>chrome安装Tampermonkey，添加插件的过程</title><link>https://hugo2.vercel.app/posts/13.html</link><pubDate>Thu, 12 Sep 2019 13:01:13 +0000</pubDate><guid>https://hugo2.vercel.app/posts/13.html</guid><description>&lt;p>chrome安装Tampermonkey，添加插件的过程&lt;/p>
 &lt;h1 id="安装谷歌访问助手">安装谷歌访问助手&lt;/h1>
 &lt;p>打开google搜索和https://play.google.com/ 的正确方式
 下载谷歌访问助手
@@ -1952,7 +1952,7 @@ $ npm install hexo-generator-index-pin-top --save
 &lt;img src="https://cdn.jsdelivr.net/gh/waimao8/image@master/20191213134811.png" alt="" />
 首次使用，随便输入一串数字，点击左边的VIP就可以观看了&lt;/p>
 &lt;p>&lt;img src="https://cdn.jsdelivr.net/gh/waimao8/image@master/20191213135010.png" alt="" />&lt;/p>
-&lt;p>还有很多的插件都可以自己安装的，这里就不一一介绍了！&lt;/p></description></item><item><title>hexo博客备份迁移教程</title><link>https://example.com/posts/3.html</link><pubDate>Wed, 11 Sep 2019 13:01:13 +0000</pubDate><guid>https://example.com/posts/3.html</guid><description>&lt;h1 id="hexo备份">hexo备份&lt;/h1>
+&lt;p>还有很多的插件都可以自己安装的，这里就不一一介绍了！&lt;/p></description></item><item><title>hexo博客备份迁移教程</title><link>https://hugo2.vercel.app/posts/3.html</link><pubDate>Wed, 11 Sep 2019 13:01:13 +0000</pubDate><guid>https://hugo2.vercel.app/posts/3.html</guid><description>&lt;h1 id="hexo备份">hexo备份&lt;/h1>
 &lt;h2 id="新建repository">新建repository&lt;/h2>
 &lt;p>在Github下创建一个新的repository，取名为myblog。(与本地的Hexo源码文件夹同名即可)
 创建的时候最好为空，不要勾选创建README.md。&lt;/p>
@@ -1988,7 +1988,7 @@ git commit -m &amp;ldquo;添加hexo源码文件作为备份&amp;rdquo;&lt;/p>
 &lt;h2 id="远程仓库合并到本地-1">远程仓库合并到本地&lt;/h2>
 &lt;p>git pull &amp;ndash;rebase origin master&lt;/p>
 &lt;h2 id="更新远程仓库-1">更新远程仓库&lt;/h2>
-&lt;p>git push -u origin master&lt;/p></description></item><item><title>github搭建hexo博客和绑定域名的详细过程</title><link>https://example.com/posts/2.html</link><pubDate>Mon, 09 Sep 2019 19:21:48 +0000</pubDate><guid>https://example.com/posts/2.html</guid><description>&lt;h2 id="1httpsgithubcom-先注册账号-比如我的是-waimao8">&lt;a class="link" href="" >&lt;/a>1、https://github.com/ 先注册账号 比如我的是 waimao8&lt;/h2>
+&lt;p>git push -u origin master&lt;/p></description></item><item><title>github搭建hexo博客和绑定域名的详细过程</title><link>https://hugo2.vercel.app/posts/2.html</link><pubDate>Mon, 09 Sep 2019 19:21:48 +0000</pubDate><guid>https://hugo2.vercel.app/posts/2.html</guid><description>&lt;h2 id="1httpsgithubcom-先注册账号-比如我的是-waimao8">&lt;a class="link" href="" >&lt;/a>1、https://github.com/ 先注册账号 比如我的是 waimao8&lt;/h2>
 &lt;h2 id="2new-repository-waimao8githubio">&lt;a class="link" href="" >&lt;/a>2、New repository waimao8.github.io&lt;/h2>
 &lt;h2 id="3下载git-httpsgit-scmcomdownloads-默认安装-安装好后用git---version-来查看一下版本">&lt;a class="link" href="" >&lt;/a>3、下载git &lt;a class="link" href="https://git-scm.com/downloads" target="_blank" rel="noopener"
 >https://git-scm.com/downloads&lt;/a> 默认安装 安装好后，用git &amp;ndash;version 来查看一下版本&lt;/h2>
@@ -2056,7 +2056,7 @@ ping waimao8.github.io&lt;br>
 ping下哪个ip的访问速度快，就A到哪里ip&lt;br>
 点击添加解析，记录类型选A或CNAME，A记录的记录值就是ip地址，github(官方文档)提供了两个IP地址，192.30.252.153和192.30.252.154，这两个IP地址为github的服务器地址，两个都要填上，解析记录设置两个www和@，线路就默认就行了，CNAME记录值填你的github博客网址 比如我的 waimao8.github.io&lt;br>
 Settings）设置，然后在 GitHub Pages的 Custom domain设置里填上购买的域名&lt;br>
-新域名配置完成，可以访问了&lt;/p></description></item><item><title>hexo安装后的使用教程</title><link>https://example.com/posts/1.html</link><pubDate>Mon, 09 Sep 2019 14:37:42 +0000</pubDate><guid>https://example.com/posts/1.html</guid><description>&lt;p>​&lt;/p>
+新域名配置完成，可以访问了&lt;/p></description></item><item><title>hexo安装后的使用教程</title><link>https://hugo2.vercel.app/posts/1.html</link><pubDate>Mon, 09 Sep 2019 14:37:42 +0000</pubDate><guid>https://hugo2.vercel.app/posts/1.html</guid><description>&lt;p>​&lt;/p>
 &lt;h1 id="安装主题next">安装主题（next）&lt;/h1>
 &lt;p>git clone &lt;a class="link" href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener"
 >https://github.com/theme-next/hexo-theme-next&lt;/a> themes/next&lt;/p>
