@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>hugo on it迷</title><link>https://hugo2.vercel.app/tags/hugo/</link><description>Recent content in hugo on it迷</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 23 Aug 2021 08:18:30 +0000</lastBuildDate><atom:link href="https://hugo2.vercel.app/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo+Github Actions实现自动化部署博客</title><link>https://hugo2.vercel.app/posts/31.html</link><pubDate>Mon, 23 Aug 2021 08:18:30 +0000</pubDate><guid>https://hugo2.vercel.app/posts/31.html</guid><description>本地电脑和github之间的连接 打开电脑文件夹 用户名/.ssh （查看，勾选隐藏的项目）
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>hugo on it迷</title><link>https://ch168.tk/tags/hugo/</link><description>Recent content in hugo on it迷</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 23 Aug 2021 08:18:30 +0000</lastBuildDate><atom:link href="https://ch168.tk/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo+Github Actions实现自动化部署博客</title><link>https://ch168.tk/posts/31.html</link><pubDate>Mon, 23 Aug 2021 08:18:30 +0000</pubDate><guid>https://ch168.tk/posts/31.html</guid><description>本地电脑和github之间的连接 打开电脑文件夹 用户名/.ssh （查看，勾选隐藏的项目）
 右键 Git Bash Here
 输入
 ssh-keygen -tecdsa
@@ -22,23 +22,23 @@ git commit -m “a1”
 rm -rf .git
 git init
 git remote add origin git@github.com:waimao365/hugo.git
-如果出现错误可以先删除之前的</description></item><item><title>hugo静态博客部署到github的脚本</title><link>https://hugo2.vercel.app/posts/30.htm</link><pubDate>Mon, 12 Apr 2021 08:18:30 +0000</pubDate><guid>https://hugo2.vercel.app/posts/30.htm</guid><description>hugo部署到github 建立本地和github仓库的连接 输入github的帐户名和邮箱
+如果出现错误可以先删除之前的</description></item><item><title>hugo静态博客部署到github的脚本</title><link>https://ch168.tk/posts/30.htm</link><pubDate>Mon, 12 Apr 2021 08:18:30 +0000</pubDate><guid>https://ch168.tk/posts/30.htm</guid><description>hugo部署到github 建立本地和github仓库的连接 输入github的帐户名和邮箱
 git config --global user.name &amp;quot;waimao8&amp;quot; git config --global user.email &amp;quot;88888@qq.com&amp;quot; 查看设置的用户名和密码
 git config --list 生成 SSH key 与 github 联系
 ssh-keygen -t rsa -C “888888@qq.com” 一路回车 ubuntu设置显示隐藏文件，在用户目录找到.ssh
 打开id_rsa.pub，复制里面的内容。 然后登录github，如果没有就注册一个账号，登录后右上角 头像 -&amp;gt; Settings —&amp;gt; SSH nd GPG keys —&amp;gt; New SSH key。把公钥(id_rsa.pub)粘贴到 key 中，填好 title 并点击 Add SSH key
 关联完之后可以在终端输入
 ssh git@github.com 部署到github cd到 /public 依次输入
-git init git add . git commit -m “yyyy/mm/dd-hh:mm” git remote add origin git@github.</description></item><item><title>这是一个forestry.io的模板</title><link>https://hugo2.vercel.app/posts/36.html</link><pubDate>Sat, 20 Feb 2021 15:55:32 +0000</pubDate><guid>https://hugo2.vercel.app/posts/36.html</guid><description>下面是代码
+git init git add . git commit -m “yyyy/mm/dd-hh:mm” git remote add origin git@github.</description></item><item><title>这是一个forestry.io的模板</title><link>https://ch168.tk/posts/36.html</link><pubDate>Sat, 20 Feb 2021 15:55:32 +0000</pubDate><guid>https://ch168.tk/posts/36.html</guid><description>下面是代码
 这里是测试
-name: Hugo Build and Deploy on: push: branches: - master jobs: build-deploy: runs-on: ubuntu-latest steps: - uses: actions/checkout@v1 # v2 does not have submodules option now with: submodules: true - name: Setup Hugo uses: peaceiris/actions-hugo@v2 with: hugo-version: latest # 应用最新的hugo extended: true # 我的主题需要应用hugo-extende - name: Build run: hugo --gc --minify - name: Deploy uses: peaceiris/actions-gh-pages@v3 with: deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }} #这里在repo settings里填入SSH私钥 external_repository: waimao365/hugo # &amp;lt;- 改成自己的 user github page publish_dir: .</description></item><item><title>ubuntu安装hugo教程</title><link>https://hugo2.vercel.app/posts/26.html</link><pubDate>Mon, 15 Feb 2021 15:55:32 +0000</pubDate><guid>https://hugo2.vercel.app/posts/26.html</guid><description>&lt;h2 id="ubuntu安装hugo">ubuntu安装hugo&lt;/h2>
+name: Hugo Build and Deploy on: push: branches: - master jobs: build-deploy: runs-on: ubuntu-latest steps: - uses: actions/checkout@v1 # v2 does not have submodules option now with: submodules: true - name: Setup Hugo uses: peaceiris/actions-hugo@v2 with: hugo-version: latest # 应用最新的hugo extended: true # 我的主题需要应用hugo-extende - name: Build run: hugo --gc --minify - name: Deploy uses: peaceiris/actions-gh-pages@v3 with: deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }} #这里在repo settings里填入SSH私钥 external_repository: waimao365/hugo # &amp;lt;- 改成自己的 user github page publish_dir: .</description></item><item><title>ubuntu安装hugo教程</title><link>https://ch168.tk/posts/26.html</link><pubDate>Mon, 15 Feb 2021 15:55:32 +0000</pubDate><guid>https://ch168.tk/posts/26.html</guid><description>&lt;h2 id="ubuntu安装hugo">ubuntu安装hugo&lt;/h2>
 &lt;h3 id="安装git">安装git&lt;/h3>
 &lt;p>官网 &lt;a class="link" href="https://git-scm.com/download/linux" target="_blank" rel="noopener"
 >https://git-scm.com/download/linux&lt;/a>&lt;/p>
 &lt;p>sudo apt-get install git&lt;/p>
 &lt;h3 id="安装go">安装go&lt;/h3>
 &lt;p>&lt;a class="link" href="https://golang.org/dl/" target="_blank" rel="noopener"
->https://golang.org/dl/&lt;/a> （有可能被墙）&lt;/p></description></item><item><title>hugo搭建和使用教程</title><link>https://hugo2.vercel.app/posts/22.html</link><pubDate>Mon, 01 Jun 2020 15:55:32 +0000</pubDate><guid>https://hugo2.vercel.app/posts/22.html</guid><description>&lt;h1 id="前言">前言&lt;/h1>
+>https://golang.org/dl/&lt;/a> （有可能被墙）&lt;/p></description></item><item><title>hugo搭建和使用教程</title><link>https://ch168.tk/posts/22.html</link><pubDate>Mon, 01 Jun 2020 15:55:32 +0000</pubDate><guid>https://ch168.tk/posts/22.html</guid><description>&lt;h1 id="前言">前言&lt;/h1>
 &lt;p>做博客就图个稳定，一次性买了10年的域名，搭配免费的github，适合做长期博客。&lt;br>
 之前安装的hexo，可玩性非常强，前面文章有写一些关于hexo的安装使用教程，用了一年多，也发现了一些问题，hexo版本更新各种不兼容，访问速度慢，，很影响心情，自己都懒得搭理博客了，国内cdn加速需要备案，只是做个小站，不想太麻烦。&lt;br>
 所幸，无意中发现荒野无灯大神把站转移到hugo，访问速度非常快，于是自己马上搭建了一个，打开文章页面基本上是秒开，之前hexo打开文章大约要5-6秒，用不同设备，不同网络测试很多次，hugo博客的访问速度要快4倍以上。并且文章越多，hugo的优势就越明显，为避免以后迁移麻烦，所以赶紧把博客迁到了hugo。主题也是我喜欢的，非常简洁。&lt;/p></description></item></channel></rss>
