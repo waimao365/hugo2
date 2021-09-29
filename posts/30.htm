@@ -74,33 +74,33 @@ Github
 <h2 id=hugo部署到github>hugo部署到github</h2>
 <p>建立本地和github仓库的连接
 输入github的帐户名和邮箱</p>
-<pre><code>git config --global user.name &quot;waimao8&quot;
+<pre tabindex=0><code>git config --global user.name &quot;waimao8&quot;
 git config --global user.email &quot;88888@qq.com&quot;
 </code></pre><p>查看设置的用户名和密码</p>
-<pre><code>git config --list
+<pre tabindex=0><code>git config --list
 </code></pre><p>生成 SSH key 与 github 联系</p>
-<pre><code>ssh-keygen -t rsa -C “888888@qq.com”
+<pre tabindex=0><code>ssh-keygen -t rsa -C “888888@qq.com”
 </code></pre><p>一路回车 ubuntu设置显示隐藏文件，在用户目录找到.ssh</p>
 <p>打开id_rsa.pub，复制里面的内容。 然后登录github，如果没有就注册一个账号，登录后右上角 头像 -> Settings —> SSH nd GPG keys —> New SSH key。把公钥(id_rsa.pub)粘贴到 key 中，填好 title 并点击 Add SSH key</p>
 <p>关联完之后可以在终端输入</p>
-<pre><code>ssh git@github.com
+<pre tabindex=0><code>ssh git@github.com
 </code></pre><p>部署到github
 cd到 /public 依次输入</p>
-<pre><code>git init
+<pre tabindex=0><code>git init
 git add .
 git commit -m “yyyy/mm/dd-hh:mm”
 git remote add origin git@github.com:waimao8/lubutu18.git
 git push -u origin master
 </code></pre><p>如果如果出现错误可以强制上传</p>
-<pre><code>git push -f origin master
+<pre tabindex=0><code>git push -f origin master
 </code></pre><h2 id=自动部署脚本>自动部署脚本</h2>
 <p>新建1.sh内容如下</p>
-<pre><code>#!/bin/bash
+<pre tabindex=0><code>#!/bin/bash
 cd /home/arch/hugo/blog/
 hugo
 hugo server
 </code></pre><p>新建2.sh内容如下</p>
-<pre><code>#!/bin/bash
+<pre tabindex=0><code>#!/bin/bash
 cd  /home/arch/hugo/blog
 hugo
 cd  /home/arch/hugo/blog/public
@@ -125,13 +125,13 @@ git push -u origin master
 <p>如果运行sh文件，老是报错"没有那个文件或目录" 路径自动出现\</p>
 <p>需要更改sh文件格式，下面以1.sh为例</p>
 <p>1.编辑1.sh文件</p>
-<pre><code>vim 1.sh
+<pre tabindex=0><code>vim 1.sh
 </code></pre><p>2.看该文件的格式</p>
-<pre><code>:set ff  
+<pre tabindex=0><code>:set ff  
 </code></pre><p>3.看该文件的格式是什么，如果是DOC格式，就是用命令 set ff=unix，将他强制转成UNIX格式。</p>
-<pre><code>:set ff=unix
+<pre tabindex=0><code>:set ff=unix
 </code></pre><p>3.改好后，输入下面代码保存并退出编辑，这时该脚本就能成功执行。</p>
-<pre><code>：wq
+<pre tabindex=0><code>：wq
 </code></pre>
 </section>
 <footer class=article-footer>

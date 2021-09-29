@@ -48,9 +48,9 @@ hexo
 <h2 id=2new-repository-waimao8githubio><a class=link href></a>2、New repository waimao8.github.io</h2>
 <h2 id=3下载git-httpsgit-scmcomdownloads-默认安装-安装好后用git---version-来查看一下版本><a class=link href></a>3、下载git <a class=link href=https://git-scm.com/downloads target=_blank rel=noopener>https://git-scm.com/downloads</a> 默认安装 安装好后，用git &ndash;version 来查看一下版本</h2>
 <h2 id=4下载-httpsnodejsorgendownload-选lts-默认安装-安装完后打开命令行><a class=link href></a>4、下载 <a class=link href=https://nodejs.org/en/download/ target=_blank rel=noopener>https://nodejs.org/en/download/</a> 选LTS 默认安装 ，安装完后，打开命令行</h2>
-<pre><code>node -v
+<pre tabindex=0><code>node -v
 
-</code></pre><pre><code>npm -v
+</code></pre><pre tabindex=0><code>npm -v
 
 </code></pre><h2 id=5安装hexo><a class=link href></a>5、安装hexo</h2>
 <p>先创建一个文件夹blog，然后cd到这个文件夹下（或者在这个文件夹下直接右键git bash打开）<br>
@@ -59,21 +59,21 @@ hexo
 初始化一下hexo<br>
 hexo init myblog 或者hexo init<br>
 cd /D/hexo/blog/myblog (每个人的安装目录都不一样，可参考我的</p>
-<pre><code>npm install
+<pre tabindex=0><code>npm install
 
-</code></pre><pre><code>hexo g
+</code></pre><pre tabindex=0><code>hexo g
 
-</code></pre><pre><code>hexo server
+</code></pre><pre tabindex=0><code>hexo server
 
 </code></pre><p>在浏览器输入localhost:4000就可以看到你生成的博客了</p>
 <h2 id=6生成ssh添加到github><a class=link href></a>6、生成SSH添加到GitHub</h2>
-<pre><code>git config --global user.name &quot;yourname&quot;
+<pre tabindex=0><code>git config --global user.name &quot;yourname&quot;
 
-</code></pre><pre><code>git config --global user.email &quot;youremail&quot;
+</code></pre><pre tabindex=0><code>git config --global user.email &quot;youremail&quot;
 
 </code></pre><p>这里的yourname输入你的GitHub用户名，youremail输入你GitHub的邮箱<br>
 检查一下你有没有输对</p>
-<pre><code>git config user.name
+<pre tabindex=0><code>git config user.name
 git config user.email
 
 </code></pre><p>然后创建SSH,一路回车<br>
@@ -83,21 +83,21 @@ ssh-keygen -t rsa -C “youremail”<br>
 GitHub的最右上角setting中，找到SSH keys的设置选项，点击New SSH key<br>
 把你的id_rsa.pub里面的信息复制进去<br>
 在gitbash中，查看是否成功</p>
-<pre><code>ssh -T git@github.com
+<pre tabindex=0><code>ssh -T git@github.com
 
 </code></pre><p>如果提示Are you sure you want to continue connecting (yes/no)?，输入yes，然后会看到：</p>
-<pre><code>Hi liuxianan! You've successfully authenticated, but GitHub does not provide shell access.
+<pre tabindex=0><code>Hi liuxianan! You've successfully authenticated, but GitHub does not provide shell access.
 
 </code></pre><p>看到这个信息说明SSH已配置成功！</p>
 <p>此时你还需要配置：</p>
-<pre><code>git config --global user.name &quot;liuxianan&quot;// 你的github用户名，非昵称
+<pre tabindex=0><code>git config --global user.name &quot;liuxianan&quot;// 你的github用户名，非昵称
 
-</code></pre><pre><code>git config --global user.email  &quot;xxx@qq.com&quot;// 填写你的github注册邮箱
+</code></pre><pre tabindex=0><code>git config --global user.email  &quot;xxx@qq.com&quot;// 填写你的github注册邮箱
 
 </code></pre><h2 id=7将hexo部署到github><a class=link href></a>7、将hexo部署到GitHub</h2>
 <p>打开站点配置文件 _config.yml，翻到最后，修改为<br>
 YourgithubName就是你的GitHub账户</p>
-<pre><code>deploy:
+<pre tabindex=0><code>deploy:
   type: git
   repo: https://github.com/YourgithubName/YourgithubName.github.io.git
   或者 
@@ -105,10 +105,10 @@ YourgithubName就是你的GitHub账户</p>
   branch: master
 
 </code></pre><p>安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub</p>
-<pre><code>npm install hexo-deployer-git --save
+<pre tabindex=0><code>npm install hexo-deployer-git --save
 
 </code></pre><p>然后</p>
-<pre><code>hexo clean
+<pre tabindex=0><code>hexo clean
 hexo generate
 hexo deploy
 

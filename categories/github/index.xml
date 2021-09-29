@@ -36,7 +36,7 @@ name: Hugo Build and Deploy on: push: branches: - master jobs: build-deploy: run
 之前安装的hexo，可玩性非常强，前面文章有写一些关于hexo的安装使用教程，用了一年多，也发现了一些问题，hexo版本更新各种不兼容，访问速度慢，，很影响心情，自己都懒得搭理博客了，国内cdn加速需要备案，只是做个小站，不想太麻烦。&lt;br>
 所幸，无意中发现荒野无灯大神把站转移到hugo，访问速度非常快，于是自己马上搭建了一个，打开文章页面基本上是秒开，之前hexo打开文章大约要5-6秒，用不同设备，不同网络测试很多次，hugo博客的访问速度要快4倍以上。并且文章越多，hugo的优势就越明显，为避免以后迁移麻烦，所以赶紧把博客迁到了hugo。主题也是我喜欢的，非常简洁。&lt;/p></description></item><item><title>图床搭建的最佳选择 PicGo + Github + Jsdelivr免费公用CDN加速.</title><link>https://ch168.tk/posts/12.html</link><pubDate>Fri, 13 Dec 2019 12:33:32 +0000</pubDate><guid>https://ch168.tk/posts/12.html</guid><description>&lt;p>&lt;strong>图床搭建的最佳选择 PicGo + Github + Jsdelivr免费公用CDN加速&lt;/strong>&lt;/p>
 &lt;h1 id="github创建仓库">Github创建仓库&lt;/h1>
-&lt;h2 id="点击-new-repository">点击 New repository&lt;/h2></description></item><item><title>Github 绑定域名添加https的方法2019年9月更新</title><link>https://ch168.tk/posts/5.html</link><pubDate>Sat, 14 Sep 2019 15:40:43 +0000</pubDate><guid>https://ch168.tk/posts/5.html</guid><description>&lt;p>官方教程&lt;br>
+&lt;h2 id="点击-new-repository">点击 New repository&lt;/h2></description></item><item><title>Github 绑定域名添加https的方法2019年9月更新</title><link>https://ch168.tk/posts/5.html</link><pubDate>Sat, 14 Sep 2019 15:40:43 +0000</pubDate><guid>https://ch168.tk/posts/5.html</guid><description>&lt;p>官方教程
 &lt;a class="link" href="https://help.github.com/en/articles/using-a-custom-domain-with-github-pages" target="_blank" rel="noopener"
 >https://help.github.com/en/articles/using-a-custom-domain-with-github-pages&lt;/a>&lt;br>
 打开 &lt;a class="link" href="https://github.com/" target="_blank" rel="noopener"

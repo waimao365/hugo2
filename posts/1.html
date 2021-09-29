@@ -110,19 +110,19 @@ hexo
 <p>1、创建“分类”选项<br>
 1.1 生成“分类”页并添加tpye属性<br>
 打开命令行，进入博客所在文件夹。执行命令</p>
-<pre><code>hexo new page categories
+<pre tabindex=0><code>hexo new page categories
 
 </code></pre><p>成功后会提示：</p>
-<pre><code>INFO  Created: ~/Documents/blog/source/categories/index.md
+<pre tabindex=0><code>INFO  Created: ~/Documents/blog/source/categories/index.md
 
 </code></pre><p>根据上面的路径，找到index.md这个文件，打开后默认内容是这样的：</p>
-<pre><code>---
+<pre tabindex=0><code>---
 title: 文章分类
 date: 2019-04-07 0:30:00
 ---
 
 </code></pre><p>添加type: &ldquo;categories"到内容中，添加后是这样的：</p>
-<pre><code>---
+<pre tabindex=0><code>---
 title: 文章分类
 date: 2019-04-07 0:30:00
 type: &quot;categories&quot;
@@ -131,7 +131,7 @@ type: &quot;categories&quot;
 </code></pre><p>保存并关闭文件。</p>
 <h1 id=给文章添加categories属性>给文章添加“categories”属性</h1>
 <p>打开需要添加分类的文章，为其添加categories属性。下方的categories: web前端表示添加这篇文章到“web前端”这个分类。注意：hexo一篇文章只能属于一个分类，也就是说如果在“- web前端”下方添加“-xxx”，hexo不会产生两个分类，而是把分类嵌套（即该文章属于 “- web前端”下的 “-xxx ”分类）。</p>
-<pre><code>---
+<pre tabindex=0><code>---
 title: jQuery对表单的操作及更多应用
 date: 2019-04-07 0:31:22
 categories: 
@@ -142,11 +142,11 @@ categories:
 <h1 id=创建标签选项>创建“标签”选项</h1>
 <p>生成“标签”页并添加tpye属性<br>
 打开命令行，进入博客所在文件夹。执行命令</p>
-<pre><code>hexo new page tags
+<pre tabindex=0><code>hexo new page tags
 
 </code></pre><p>找到 source/tags/index.md<br>
 添加type: &ldquo;tags"到内容中，添加后是这样的</p>
-<pre><code>---
+<pre tabindex=0><code>---
 title: 文章分类
 date: 2019-04-07 0:33:55
 type: &quot;tags&quot;
@@ -154,7 +154,7 @@ type: &quot;tags&quot;
 
 </code></pre><p>保存并关闭文件。</p>
 <h1 id=给文章添加标签和分类>给文章添加标签和分类</h1>
-<pre><code>title: title #文章標題
+<pre tabindex=0><code>title: title #文章標題
 date: 2019-04-07 00:43:12 #文章生成時間
 categories: &quot;Hexo教程&quot; #文章分類目錄 可以省略
 tags: #文章標籤 可以省略
@@ -185,9 +185,9 @@ $ npm install hexo-generator-index-pin-top &ndash;save
 <p>设置置顶标志
 打开：/blog/themes/next/layout/_macro 目录下的post.swig文件
 查找</p>
-<pre><code> &lt;div class=&quot;post-meta&quot;&gt;  
+<pre tabindex=0><code> &lt;div class=&quot;post-meta&quot;&gt;  
 </code></pre><p>下面添加</p>
-<pre><code>           {% if post.top %}
+<pre tabindex=0><code>           {% if post.top %}
             &lt;i class=&quot;fa fa-thumb-tack&quot;&gt;&lt;/i&gt;
             &lt;font color=7D26CD&gt;置顶&lt;/font&gt;
             &lt;span class=&quot;post-meta-divider&quot;&gt;|&lt;/span&gt;
@@ -201,7 +201,7 @@ enable: true
 修改next主题的模板文件
 需要修改的模板文件是theme/next/layout/_partials/footer.swig
 在最后面添加</p>
-<pre><code>{% if theme.footer.counter %}
+<pre tabindex=0><code>{% if theme.footer.counter %}
     &lt;script async src=&quot;//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;
 
     &lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;总访问量&lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;
@@ -217,25 +217,25 @@ enable: true
 Valine+Leancloud 国际版 <a class=link href=https://console.leancloud.app target=_blank rel=noopener>https://console.leancloud.app</a>
 在存储->结构化数据创建一个class并命名为comment。
 在设置->应用Keys可以看到自动生成的AppID和AppKey,填到下面对应的位置就可以了</p>
-<pre><code>valine:
+<pre tabindex=0><code>valine:
   enable: ture
   appid: xxxxxxx
   appkey: xxxxxx
 
 </code></pre><h1 id=添加阅读人数真实人数>添加阅读人数（真实人数）</h1>
 <p>id和key 也可以用上面Leancloud 国际版 的AppID和AppKey,</p>
-<pre><code>leancloud_visitors:
+<pre tabindex=0><code>leancloud_visitors:
   enable: true
   app_id: xxxxx
   app_key: xxxxxx
 
 </code></pre><h1 id=添加阅读人数之不蒜子虚高人数>添加阅读人数之不蒜子（虚高人数）</h1>
 <p>打开不蒜子</p>
-<pre><code>busuanzi_count:
+<pre tabindex=0><code>busuanzi_count:
   enable: ture
   
 </code></pre><p>打开 next\layout_partials 找到footer.swig文件，在最下面添加</p>
-<pre><code>
+<pre tabindex=0><code>
 {% if theme.footer.counter %}
     &lt;script async src=&quot;//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;
 

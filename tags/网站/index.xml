@@ -45,7 +45,7 @@ git init git add . git commit -m “yyyy/mm/dd-hh:mm” git remote add origin gi
 &lt;p>使用前需要安装 curl 程序，可以安装opt后输入 opkg install curl 敲回车键安装启用opt&lt;/p></description></item><item><title>hexo博客优化之文章置顶+置顶标签</title><link>https://ch168.tk/posts/4.html</link><pubDate>Thu, 12 Sep 2019 13:01:23 +0000</pubDate><guid>https://ch168.tk/posts/4.html</guid><description>&lt;p>&lt;a class="link" href="https://github.com/netcan/hexo-generator-index-pin-top" target="_blank" rel="noopener"
 >支持置顶的仓库&lt;/a>&lt;/p>
 &lt;p>可以直接用以下命令安装&lt;/p>
-&lt;pre>&lt;code>$ npm uninstall hexo-generator-index --save
+&lt;pre tabindex="0">&lt;code>$ npm uninstall hexo-generator-index --save
 $ npm install hexo-generator-index-pin-top --save
 &lt;/code>&lt;/pre>&lt;p>然后在需要置顶的文章的Front-matter中加上top: true即可。&lt;/p></description></item><item><title>hexo安装后的使用教程</title><link>https://ch168.tk/posts/1.html</link><pubDate>Mon, 09 Sep 2019 14:37:42 +0000</pubDate><guid>https://ch168.tk/posts/1.html</guid><description>&lt;p>​&lt;/p>
 &lt;h1 id="安装主题next">安装主题（next）&lt;/h1>

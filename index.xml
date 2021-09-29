@@ -33,9 +33,9 @@
 &lt;p>如果出现错误可以强制上次&lt;/p>
 &lt;p>git push -f origin master&lt;/p>
 &lt;p>在blog根目录创建&lt;/p>
-&lt;pre>&lt;code>.github\workflows\gh-pages.yml
+&lt;pre tabindex="0">&lt;code>.github\workflows\gh-pages.yml
 &lt;/code>&lt;/pre>&lt;p>内容如下&lt;/p>
-&lt;pre>&lt;code>name: Hugo Build and Deploy
+&lt;pre tabindex="0">&lt;code>name: Hugo Build and Deploy
 on:
 push:
 branches:
@@ -64,33 +64,33 @@ publish_branch: gh-pages # &amp;lt;- 远端repo目标分支
 &lt;/code>&lt;/pre>&lt;p>建议大家建立两个项目，一个私人，一个公开，以上内容都在私人的项目操作，只需要将上面代码的倒数第三行改成公开的项目就可以了&lt;/p></description></item><item><title>hugo静态博客部署到github的脚本</title><link>https://ch168.tk/posts/30.htm</link><pubDate>Mon, 12 Apr 2021 08:18:30 +0000</pubDate><guid>https://ch168.tk/posts/30.htm</guid><description>&lt;h2 id="hugo部署到github">hugo部署到github&lt;/h2>
 &lt;p>建立本地和github仓库的连接
 输入github的帐户名和邮箱&lt;/p>
-&lt;pre>&lt;code>git config --global user.name &amp;quot;waimao8&amp;quot;
+&lt;pre tabindex="0">&lt;code>git config --global user.name &amp;quot;waimao8&amp;quot;
 git config --global user.email &amp;quot;88888@qq.com&amp;quot;
 &lt;/code>&lt;/pre>&lt;p>查看设置的用户名和密码&lt;/p>
-&lt;pre>&lt;code>git config --list
+&lt;pre tabindex="0">&lt;code>git config --list
 &lt;/code>&lt;/pre>&lt;p>生成 SSH key 与 github 联系&lt;/p>
-&lt;pre>&lt;code>ssh-keygen -t rsa -C “888888@qq.com”
+&lt;pre tabindex="0">&lt;code>ssh-keygen -t rsa -C “888888@qq.com”
 &lt;/code>&lt;/pre>&lt;p>一路回车 ubuntu设置显示隐藏文件，在用户目录找到.ssh&lt;/p>
 &lt;p>打开id_rsa.pub，复制里面的内容。 然后登录github，如果没有就注册一个账号，登录后右上角 头像 -&amp;gt; Settings —&amp;gt; SSH nd GPG keys —&amp;gt; New SSH key。把公钥(id_rsa.pub)粘贴到 key 中，填好 title 并点击 Add SSH key&lt;/p>
 &lt;p>关联完之后可以在终端输入&lt;/p>
-&lt;pre>&lt;code>ssh git@github.com
+&lt;pre tabindex="0">&lt;code>ssh git@github.com
 &lt;/code>&lt;/pre>&lt;p>部署到github
 cd到 /public 依次输入&lt;/p>
-&lt;pre>&lt;code>git init
+&lt;pre tabindex="0">&lt;code>git init
 git add .
 git commit -m “yyyy/mm/dd-hh:mm”
 git remote add origin git@github.com:waimao8/lubutu18.git
 git push -u origin master
 &lt;/code>&lt;/pre>&lt;p>如果如果出现错误可以强制上传&lt;/p>
-&lt;pre>&lt;code>git push -f origin master
+&lt;pre tabindex="0">&lt;code>git push -f origin master
 &lt;/code>&lt;/pre>&lt;h2 id="自动部署脚本">自动部署脚本&lt;/h2>
 &lt;p>新建1.sh内容如下&lt;/p>
-&lt;pre>&lt;code>#!/bin/bash
+&lt;pre tabindex="0">&lt;code>#!/bin/bash
 cd /home/arch/hugo/blog/
 hugo
 hugo server
 &lt;/code>&lt;/pre>&lt;p>新建2.sh内容如下&lt;/p>
-&lt;pre>&lt;code>#!/bin/bash
+&lt;pre tabindex="0">&lt;code>#!/bin/bash
 cd /home/arch/hugo/blog
 hugo
 cd /home/arch/hugo/blog/public
@@ -115,13 +115,13 @@ git push -u origin master
 &lt;p>如果运行sh文件，老是报错&amp;quot;没有那个文件或目录&amp;quot; 路径自动出现\&lt;/p>
 &lt;p>需要更改sh文件格式，下面以1.sh为例&lt;/p>
 &lt;p>1.编辑1.sh文件&lt;/p>
-&lt;pre>&lt;code>vim 1.sh
+&lt;pre tabindex="0">&lt;code>vim 1.sh
 &lt;/code>&lt;/pre>&lt;p>2.看该文件的格式&lt;/p>
-&lt;pre>&lt;code>:set ff
+&lt;pre tabindex="0">&lt;code>:set ff
 &lt;/code>&lt;/pre>&lt;p>3.看该文件的格式是什么，如果是DOC格式，就是用命令 set ff=unix，将他强制转成UNIX格式。&lt;/p>
-&lt;pre>&lt;code>:set ff=unix
+&lt;pre tabindex="0">&lt;code>:set ff=unix
 &lt;/code>&lt;/pre>&lt;p>3.改好后，输入下面代码保存并退出编辑，这时该脚本就能成功执行。&lt;/p>
-&lt;pre>&lt;code>：wq
+&lt;pre tabindex="0">&lt;code>：wq
 &lt;/code>&lt;/pre></description></item><item><title>利用脚本安装archlinux教程</title><link>https://ch168.tk/posts/29.html</link><pubDate>Mon, 12 Apr 2021 08:15:30 +0000</pubDate><guid>https://ch168.tk/posts/29.html</guid><description>&lt;h2 id="脚本地址">脚本地址&lt;/h2>
 &lt;p>&lt;a class="link" href="https://gitee.com/ch0769/ArchInstall" target="_blank" rel="noopener"
 >https://gitee.com/ch0769/ArchInstall&lt;/a>&lt;/p>
@@ -210,9 +210,9 @@ publish_branch: gh-pages # &amp;lt;- 远端repo目标分支&lt;/code>&lt;/pre></
 &lt;h2 id="更换阿里源">更换阿里源&lt;/h2>
 &lt;p>菜单，首选项，软件和更新，下载至，其他站点，选择阿里云（也可以选清华，163等）&lt;/p>
 &lt;p>更新源&lt;/p>
-&lt;pre>&lt;code>sudo apt-get update
+&lt;pre tabindex="0">&lt;code>sudo apt-get update
 &lt;/code>&lt;/pre>&lt;p>更新软件&lt;/p>
-&lt;pre>&lt;code>sudo apt-get upgrade
+&lt;pre tabindex="0">&lt;code>sudo apt-get upgrade
 &lt;/code>&lt;/pre>&lt;h3 id="必装软件">必装软件&lt;/h3>
 &lt;p>sudo apt install git&lt;/p>
 &lt;p>sudo apt-get install vim&lt;/p>
@@ -304,20 +304,20 @@ sudo ln -s /opt/Telegram/Telegram /usr/local/bin/telegram-desktop&lt;/p>
 &lt;p>&lt;a class="link" href="https://golang.org/dl/" target="_blank" rel="noopener"
 >https://golang.org/dl/&lt;/a> （有可能被墙）&lt;/p>
 &lt;p>下载go1.15.8.linux-amd64.tar.gz&lt;/p>
-&lt;pre>&lt;code>sudo tar -C /usr/local -xzf go1.15.8.linux-amd64.tar.gz
-&lt;/code>&lt;/pre>&lt;pre>&lt;code>export PATH=$PATH:/usr/local/go/bin
+&lt;pre tabindex="0">&lt;code>sudo tar -C /usr/local -xzf go1.15.8.linux-amd64.tar.gz
+&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>export PATH=$PATH:/usr/local/go/bin
 &lt;/code>&lt;/pre>&lt;p>查看版本&lt;/p>
-&lt;pre>&lt;code>go version
+&lt;pre tabindex="0">&lt;code>go version
 &lt;/code>&lt;/pre>&lt;h3 id="下载hugo">下载hugo&lt;/h3>
 &lt;p>&lt;a class="link" href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener"
 >https://github.com/gohugoio/hugo/releases&lt;/a>&lt;/p>
 &lt;p>下载 hugo_extended_0.80.0_Linux-64bit.deb&lt;/p>
 &lt;p>终端输入&lt;/p>
-&lt;pre>&lt;code>sudo dpkg -i hugo_extended_0.80.0_Linux-64bit.deb
+&lt;pre tabindex="0">&lt;code>sudo dpkg -i hugo_extended_0.80.0_Linux-64bit.deb
 &lt;/code>&lt;/pre>&lt;p>查看版本&lt;/p>
-&lt;pre>&lt;code>hugo version
+&lt;pre tabindex="0">&lt;code>hugo version
 &lt;/code>&lt;/pre>&lt;p>创建blog&lt;/p>
-&lt;pre>&lt;code>hugo new site blog
+&lt;pre tabindex="0">&lt;code>hugo new site blog
 &lt;/code>&lt;/pre>&lt;h3 id="安装主题">安装主题&lt;/h3>
 &lt;p>去官网下载主题 &lt;a class="link" href="https://themes.gohugo.io" target="_blank" rel="noopener"
 >https://themes.gohugo.io&lt;/a>&lt;/p>
@@ -326,33 +326,33 @@ sudo ln -s /opt/Telegram/Telegram /usr/local/bin/telegram-desktop&lt;/p>
 &lt;p>再推荐一个主题 &lt;a class="link" href="https://github.com/uPagge/uBlogger" target="_blank" rel="noopener"
 >https://github.com/uPagge/uBlogger&lt;/a>&lt;/p>
 &lt;p>cd /blog&lt;/p>
-&lt;pre>&lt;code>git clone https://github.com/olOwOlo/hugo-theme-even themes/even
+&lt;pre tabindex="0">&lt;code>git clone https://github.com/olOwOlo/hugo-theme-even themes/even
 &lt;/code>&lt;/pre>&lt;p>在exampleSite目录找到config.toml和content 复制到D:\blog目录下&lt;/p>
 &lt;p>在blog根目录下，终端输入下面代码&lt;/p>
-&lt;pre>&lt;code>hugo --theme=even --baseUrl=&amp;quot;http://waimao365.github.io/&amp;quot; --buildDrafts
+&lt;pre tabindex="0">&lt;code>hugo --theme=even --baseUrl=&amp;quot;http://waimao365.github.io/&amp;quot; --buildDrafts
 &lt;/code>&lt;/pre>&lt;p>#even改成你的主题&lt;/p>
 &lt;h3 id="本地预览">本地预览&lt;/h3>
-&lt;pre>&lt;code>cd /blog
+&lt;pre tabindex="0">&lt;code>cd /blog
 hugo
 hugo server
 &lt;/code>&lt;/pre>&lt;p>http://localhost:1313&lt;/p>
 &lt;h3 id="建立本地和github仓库的连接">建立本地和github仓库的连接&lt;/h3>
 &lt;p>输入github的帐户名和邮箱&lt;/p>
-&lt;pre>&lt;code>git config --global user.name &amp;quot;waimao8&amp;quot;
+&lt;pre tabindex="0">&lt;code>git config --global user.name &amp;quot;waimao8&amp;quot;
 git config --global user.email &amp;quot;88888@qq.com&amp;quot;
 &lt;/code>&lt;/pre>&lt;p>查看设置的用户名和密码&lt;/p>
-&lt;pre>&lt;code>git config --list
+&lt;pre tabindex="0">&lt;code>git config --list
 &lt;/code>&lt;/pre>&lt;p>生成 SSH key 与 github 联系&lt;/p>
-&lt;pre>&lt;code>ssh-keygen -t rsa -C “888888@qq.com”
+&lt;pre tabindex="0">&lt;code>ssh-keygen -t rsa -C “888888@qq.com”
 &lt;/code>&lt;/pre>&lt;p>一路回车 ubuntu设置显示隐藏文件，在用户目录找到.ssh&lt;/p>
 &lt;p>打开id_rsa.pub，复制里面的内容。 然后登录github，如果没有就注册一个账号，登录后右上角 头像 -&amp;gt; Settings —&amp;gt; SSH nd GPG keys —&amp;gt; New SSH key。把公钥(id_rsa.pub)粘贴到 key 中，填好 title 并点击 Add SSH key&lt;/p>
 &lt;p>关联完之后可以在终端输入&lt;/p>
-&lt;pre>&lt;code>ssh git@github.com
+&lt;pre tabindex="0">&lt;code>ssh git@github.com
 &lt;/code>&lt;/pre>&lt;h3 id="heading">&lt;/h3>
 &lt;h3 id="上传到github">上传到github&lt;/h3>
 &lt;p>cd到 /public
 依次输入&lt;/p>
-&lt;pre>&lt;code>git init
+&lt;pre tabindex="0">&lt;code>git init
 git add .
 git commit -m “yyyy/mm/dd-hh:mm”
 git remote add origin git@github.com:waimao365/lubutu18.git
@@ -368,10 +368,10 @@ git push -u origin master
 &lt;p>git remote rm origin&lt;/p>
 &lt;h3 id="-rejected--------master---master-non-fast-forward">! [rejected] master -&amp;gt; master (non-fast-forward)&lt;/h3>
 &lt;p>本地生成ReadMe文件&lt;/p>
-&lt;pre>&lt;code>git pull --rebase origin master
+&lt;pre tabindex="0">&lt;code>git pull --rebase origin master
 git push origin master
 &lt;/code>&lt;/pre>&lt;p>如果不行，可以强制上传覆盖远程文件（慎用）&lt;/p>
-&lt;pre>&lt;code>git push -f origin master
+&lt;pre tabindex="0">&lt;code>git push -f origin master
 &lt;/code>&lt;/pre>&lt;h2 id="其他">其他&lt;/h2>
 &lt;h3 id="安装typora写文章">安装typora写文章&lt;/h3>
 &lt;p>&lt;a class="link" href="https://www.typora.io/#linux" target="_blank" rel="noopener"
@@ -384,11 +384,11 @@ git push origin master
 &lt;p>Visual Studio Code设置中文&lt;/p>
 &lt;p>打开进入软件，Ctrl + Shift + P，切入到命令行模式。输入“Configure Language”&lt;/p>
 &lt;h3 id="安装-notepad-编辑主题文件">安装 Notepad++ 编辑主题文件&lt;/h3>
-&lt;pre>&lt;code>sudo add-apt-repository ppa:notepadqq-team/notepadqq
+&lt;pre tabindex="0">&lt;code>sudo add-apt-repository ppa:notepadqq-team/notepadqq
 sudo apt-get update
 sudo apt-get install notepadqq
 &lt;/code>&lt;/pre>&lt;p>卸载方法:&lt;/p>
-&lt;pre>&lt;code>sudo apt-get remove notepadqq
+&lt;pre tabindex="0">&lt;code>sudo apt-get remove notepadqq
 sudo add-apt-repository --removeppa:notepadqq-team/notepadqq
 &lt;/code>&lt;/pre></description></item><item><title>利用ssh复制粘贴安装archlinux教程</title><link>https://ch168.tk/posts/27.html</link><pubDate>Mon, 15 Feb 2021 08:55:30 +0000</pubDate><guid>https://ch168.tk/posts/27.html</guid><description>&lt;h2 id="官方安装教程">官方安装教程&lt;/h2>
 &lt;p>&lt;a class="link" href="https://wiki.archlinux.org/index.php/Installation_guide_%28%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%29" target="_blank" rel="noopener"
@@ -1815,14 +1815,14 @@ omv使用&lt;/p>
 &lt;a class="link" href="https://jingyan.baidu.com/article/0aa223757304e688cd0d6464.html" target="_blank" rel="noopener"
 >https://jingyan.baidu.com/article/0aa223757304e688cd0d6464.html&lt;/a>&lt;/p></description></item><item><title>斐讯N1 docker安装homeassistant 配置斐讯dc1智能插座</title><link>https://ch168.tk/posts/6.html</link><pubDate>Mon, 16 Sep 2019 12:52:42 +0000</pubDate><guid>https://ch168.tk/posts/6.html</guid><description>&lt;p>斐讯N1 docker安装homeassistant 配置斐讯dc1智能插座&lt;/p>
 &lt;p>默认代码&lt;/p>
-&lt;pre>&lt;code>docker run -d --restart=always --name=&amp;quot;home-assistant&amp;quot; -e TZ=Asia/Shanghai -v /var/lib/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:latest
+&lt;pre tabindex="0">&lt;code>docker run -d --restart=always --name=&amp;quot;home-assistant&amp;quot; -e TZ=Asia/Shanghai -v /var/lib/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:latest
 &lt;/code>&lt;/pre>&lt;p>homeassistant:latest表示最新版的 用0.88.1顺手了，配置文件也有了，就不想安装最新版本的了。新版也试用过，不太好用&lt;br>
 刚开始用的代码是&lt;/p>
-&lt;pre>&lt;code>docker run -d --restart=always --name=&amp;quot;home-assistant&amp;quot; -e TZ=Asia/Shanghai -v /var/lib/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:0.88.1
+&lt;pre tabindex="0">&lt;code>docker run -d --restart=always --name=&amp;quot;home-assistant&amp;quot; -e TZ=Asia/Shanghai -v /var/lib/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:0.88.1
 &lt;/code>&lt;/pre>&lt;p>没几天发现N1omv不能登陆，查询到内存储存已满，查找到var/lib/docker/homeassistant/config 里面有一个home-assistant_v2.db文件占了2G多，而且会不断的变大，更改 /docker/homeassistant的安装目录到移动硬盘&lt;br>
 这个是我的docker的安装目录，/sharedfolders/2t/docker&lt;br>
 所以修改后的代码就是把/var/lib/docker更换成/sharedfolders/2t/docker&lt;/p>
-&lt;pre>&lt;code>docker run -d --restart=always --name=&amp;quot;home-assistant&amp;quot; -e TZ=Asia/Shanghai -v /sharedfolders/2t/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:0.88.1
+&lt;pre tabindex="0">&lt;code>docker run -d --restart=always --name=&amp;quot;home-assistant&amp;quot; -e TZ=Asia/Shanghai -v /sharedfolders/2t/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:0.88.1
 &lt;/code>&lt;/pre>&lt;p>下载DCI配网工具
 给DC1配置好网络，要在路由里面找到DC1的ip就算完成了&lt;/p>
 &lt;p>下载 20190628 HA Docker - DC1 M1.rar 里面有配置说明的&lt;br>
@@ -1840,7 +1840,7 @@ packages: !include_dir_named packages&lt;br>
 ip修改成你在路由器里面看到DC1的ip&lt;/p>
 &lt;p>配置根目录的automations.yaml&lt;br>
 我设置了饮水机06.30开 00.30关 打印机18.00开 00.00关，下面是代码&lt;/p>
-&lt;pre>&lt;code>- alias: switch_on 06.30
+&lt;pre tabindex="0">&lt;code>- alias: switch_on 06.30
 initial_state: true
 trigger:
 - platform: time
@@ -1877,7 +1877,7 @@ entity_id: switch.dc1_3_s3_template
 2、重启homeassistant&lt;br>
 3、退出homeassistant账户，重新登陆&lt;/p>
 &lt;p>可以在docker重启homeassistant ，也可以在网页重启，配置好文件后可以按下图更改，0.88.1配置是这样的，新版貌似没有配置检查。&lt;br>
-&lt;img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMTkvMDkvMTYvNzFxSWZnT2N0WFFFckI1LnBuZw?x-oss-process=image/format,png" alt="dc1配置.png" />&lt;/p></description></item><item><title>Github 绑定域名添加https的方法2019年9月更新</title><link>https://ch168.tk/posts/5.html</link><pubDate>Sat, 14 Sep 2019 15:40:43 +0000</pubDate><guid>https://ch168.tk/posts/5.html</guid><description>&lt;p>官方教程&lt;br>
+&lt;img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMTkvMDkvMTYvNzFxSWZnT2N0WFFFckI1LnBuZw?x-oss-process=image/format,png" alt="dc1配置.png" />&lt;/p></description></item><item><title>Github 绑定域名添加https的方法2019年9月更新</title><link>https://ch168.tk/posts/5.html</link><pubDate>Sat, 14 Sep 2019 15:40:43 +0000</pubDate><guid>https://ch168.tk/posts/5.html</guid><description>&lt;p>官方教程
 &lt;a class="link" href="https://help.github.com/en/articles/using-a-custom-domain-with-github-pages" target="_blank" rel="noopener"
 >https://help.github.com/en/articles/using-a-custom-domain-with-github-pages&lt;/a>&lt;br>
 打开 &lt;a class="link" href="https://github.com/" target="_blank" rel="noopener"
@@ -1886,7 +1886,7 @@ entity_id: switch.dc1_3_s3_template
 >https://github.com/waimao8/waimao8.github.io/settings&lt;/a>&lt;br>
 绑定域名：163168.xyz&lt;/p>
 &lt;p>&lt;img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMTkvMDkvMTQvT3djYURRVWxMdGQxN0Z2LnBuZw?x-oss-process=image/format,png" alt="1.png" />&lt;/p>
-&lt;p>打开你要绑定域名的项目，进入设置页面。并在 Github Pages - Custom domain 这一栏填上你的网址&lt;br>
+&lt;p>打开你要绑定域名的项目，进入设置页面。并在 Github Pages - Custom domain 这一栏填上你的网址
 163168.xyz&lt;/p>
 &lt;p>在source 目录添加一个新文件CNAME，不带任何后缀，这就是全称，里面写的是你的域名 163168.xyz&lt;br>
 &lt;img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMTkvMDkvMTQveVc1YWRzSE4zUVVEeHdxLnBuZw?x-oss-process=image/format,png" alt="2.png" />&lt;/p>
@@ -1907,17 +1907,17 @@ earl.ns.cloudflare.com&lt;br>
 &lt;img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMTkvMDkvMTQvalpQblh1NGhrSm1NVHkxLnBuZw?x-oss-process=image/format,png" alt="6.png" />&lt;br>
 等30分钟左右生效&lt;br>
 点击 &lt;a class="link" href="https://163168.xyz/" target="_blank" rel="noopener"
->https://163168.xyz/&lt;/a> 生效就可以访问了&lt;/p></description></item><item><title>hexo博客优化之文章置顶+置顶标签</title><link>https://ch168.tk/posts/4.html</link><pubDate>Thu, 12 Sep 2019 13:01:23 +0000</pubDate><guid>https://ch168.tk/posts/4.html</guid><description>&lt;p>&lt;a class="link" href="https://github.com/netcan/hexo-generator-index-pin-top" target="_blank" rel="noopener"
+>https://163168.xyz/&lt;/a> 生效就可以访问了。&lt;/p></description></item><item><title>hexo博客优化之文章置顶+置顶标签</title><link>https://ch168.tk/posts/4.html</link><pubDate>Thu, 12 Sep 2019 13:01:23 +0000</pubDate><guid>https://ch168.tk/posts/4.html</guid><description>&lt;p>&lt;a class="link" href="https://github.com/netcan/hexo-generator-index-pin-top" target="_blank" rel="noopener"
 >支持置顶的仓库&lt;/a>&lt;/p>
 &lt;p>可以直接用以下命令安装&lt;/p>
-&lt;pre>&lt;code>$ npm uninstall hexo-generator-index --save
+&lt;pre tabindex="0">&lt;code>$ npm uninstall hexo-generator-index --save
 $ npm install hexo-generator-index-pin-top --save
 &lt;/code>&lt;/pre>&lt;p>然后在需要置顶的文章的Front-matter中加上top: true即可。&lt;/p>
 &lt;p>&lt;strong>设置置顶标志&lt;/strong>&lt;/p>
 &lt;p>打开：/blog/themes/next/layout/_macro 目录下的post.swig文件，定位到&lt;/p>
-&lt;pre>&lt;code>&amp;lt;div class=&amp;quot;post-meta&amp;quot;&amp;gt;
+&lt;pre tabindex="0">&lt;code>&amp;lt;div class=&amp;quot;post-meta&amp;quot;&amp;gt;
 &lt;/code>&lt;/pre>&lt;p>下面插入如下代码：&lt;/p>
-&lt;pre>&lt;code>{% if post.top %}
+&lt;pre tabindex="0">&lt;code>{% if post.top %}
 &amp;lt;i class=&amp;quot;fa fa-thumb-tack&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;
 &amp;lt;font color=7D26CD&amp;gt;置顶&amp;lt;/font&amp;gt;
 &amp;lt;span class=&amp;quot;post-meta-divider&amp;quot;&amp;gt;|&amp;lt;/span&amp;gt;
@@ -1959,7 +1959,7 @@ $ npm install hexo-generator-index-pin-top --save
 &lt;h2 id="创建仓库">创建仓库&lt;/h2>
 &lt;p>进入本地的Hexo文件夹(D:\hexo\blog\myblog)，在这个地方使用git Bash here执行以下命令创建仓库&lt;/p>
 &lt;h2 id="创建gitignore文件">创建.gitignore文件&lt;/h2>
-&lt;pre>&lt;code>touch .gitignore
+&lt;pre tabindex="0">&lt;code>touch .gitignore
 &lt;/code>&lt;/pre>&lt;p>参考我的 .gitignore：（下面的文件不备份）
 .DS_Store
 Thumbs.db
@@ -1994,8 +1994,8 @@ git commit -m &amp;ldquo;添加hexo源码文件作为备份&amp;rdquo;&lt;/p>
 >https://git-scm.com/downloads&lt;/a> 默认安装 安装好后，用git &amp;ndash;version 来查看一下版本&lt;/h2>
 &lt;h2 id="4下载-httpsnodejsorgendownload-选lts-默认安装-安装完后打开命令行">&lt;a class="link" href="" >&lt;/a>4、下载 &lt;a class="link" href="https://nodejs.org/en/download/" target="_blank" rel="noopener"
 >https://nodejs.org/en/download/&lt;/a> 选LTS 默认安装 ，安装完后，打开命令行&lt;/h2>
-&lt;pre>&lt;code>node -v
-&lt;/code>&lt;/pre>&lt;pre>&lt;code>npm -v
+&lt;pre tabindex="0">&lt;code>node -v
+&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>npm -v
 &lt;/code>&lt;/pre>&lt;h2 id="5安装hexo">&lt;a class="link" href="" >&lt;/a>5、安装hexo&lt;/h2>
 &lt;p>先创建一个文件夹blog，然后cd到这个文件夹下（或者在这个文件夹下直接右键git bash打开）&lt;br>
 输入命令 &lt;code>npm install -g hexo-cli&lt;/code>&lt;br>
@@ -2003,16 +2003,16 @@ git commit -m &amp;ldquo;添加hexo源码文件作为备份&amp;rdquo;&lt;/p>
 初始化一下hexo&lt;br>
 hexo init myblog 或者hexo init&lt;br>
 cd /D/hexo/blog/myblog (每个人的安装目录都不一样，可参考我的&lt;/p>
-&lt;pre>&lt;code>npm install
-&lt;/code>&lt;/pre>&lt;pre>&lt;code>hexo g
-&lt;/code>&lt;/pre>&lt;pre>&lt;code>hexo server
+&lt;pre tabindex="0">&lt;code>npm install
+&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>hexo g
+&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>hexo server
 &lt;/code>&lt;/pre>&lt;p>在浏览器输入localhost:4000就可以看到你生成的博客了&lt;/p>
 &lt;h2 id="6生成ssh添加到github">&lt;a class="link" href="" >&lt;/a>6、生成SSH添加到GitHub&lt;/h2>
-&lt;pre>&lt;code>git config --global user.name &amp;quot;yourname&amp;quot;
-&lt;/code>&lt;/pre>&lt;pre>&lt;code>git config --global user.email &amp;quot;youremail&amp;quot;
+&lt;pre tabindex="0">&lt;code>git config --global user.name &amp;quot;yourname&amp;quot;
+&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>git config --global user.email &amp;quot;youremail&amp;quot;
 &lt;/code>&lt;/pre>&lt;p>这里的yourname输入你的GitHub用户名，youremail输入你GitHub的邮箱&lt;br>
 检查一下你有没有输对&lt;/p>
-&lt;pre>&lt;code>git config user.name
+&lt;pre tabindex="0">&lt;code>git config user.name
 git config user.email
 &lt;/code>&lt;/pre>&lt;p>然后创建SSH,一路回车&lt;br>
 ssh-keygen -t rsa -C “youremail”&lt;br>
@@ -2021,26 +2021,26 @@ ssh-keygen -t rsa -C “youremail”&lt;br>
 GitHub的最右上角setting中，找到SSH keys的设置选项，点击New SSH key&lt;br>
 把你的id_rsa.pub里面的信息复制进去&lt;br>
 在gitbash中，查看是否成功&lt;/p>
-&lt;pre>&lt;code>ssh -T git@github.com
+&lt;pre tabindex="0">&lt;code>ssh -T git@github.com
 &lt;/code>&lt;/pre>&lt;p>如果提示Are you sure you want to continue connecting (yes/no)?，输入yes，然后会看到：&lt;/p>
-&lt;pre>&lt;code>Hi liuxianan! You've successfully authenticated, but GitHub does not provide shell access.
+&lt;pre tabindex="0">&lt;code>Hi liuxianan! You've successfully authenticated, but GitHub does not provide shell access.
 &lt;/code>&lt;/pre>&lt;p>看到这个信息说明SSH已配置成功！&lt;/p>
 &lt;p>此时你还需要配置：&lt;/p>
-&lt;pre>&lt;code>git config --global user.name &amp;quot;liuxianan&amp;quot;// 你的github用户名，非昵称
-&lt;/code>&lt;/pre>&lt;pre>&lt;code>git config --global user.email &amp;quot;xxx@qq.com&amp;quot;// 填写你的github注册邮箱
+&lt;pre tabindex="0">&lt;code>git config --global user.name &amp;quot;liuxianan&amp;quot;// 你的github用户名，非昵称
+&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>git config --global user.email &amp;quot;xxx@qq.com&amp;quot;// 填写你的github注册邮箱
 &lt;/code>&lt;/pre>&lt;h2 id="7将hexo部署到github">&lt;a class="link" href="" >&lt;/a>7、将hexo部署到GitHub&lt;/h2>
 &lt;p>打开站点配置文件 _config.yml，翻到最后，修改为&lt;br>
 YourgithubName就是你的GitHub账户&lt;/p>
-&lt;pre>&lt;code>deploy:
+&lt;pre tabindex="0">&lt;code>deploy:
 type: git
 repo: https://github.com/YourgithubName/YourgithubName.github.io.git
 或者
 repo:git@github.com:waimao8/waimao8.github.io.git
 branch: master
 &lt;/code>&lt;/pre>&lt;p>安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub&lt;/p>
-&lt;pre>&lt;code>npm install hexo-deployer-git --save
+&lt;pre tabindex="0">&lt;code>npm install hexo-deployer-git --save
 &lt;/code>&lt;/pre>&lt;p>然后&lt;/p>
-&lt;pre>&lt;code>hexo clean
+&lt;pre tabindex="0">&lt;code>hexo clean
 hexo generate
 hexo deploy
 &lt;/code>&lt;/pre>&lt;p>hexo generate 顾名思义，生成静态文章，可以用 hexo g缩写&lt;br>
@@ -2070,16 +2070,16 @@ Settings）设置，然后在 GitHub Pages的 Custom domain设置里填上购买
 &lt;p>1、创建“分类”选项&lt;br>
 1.1 生成“分类”页并添加tpye属性&lt;br>
 打开命令行，进入博客所在文件夹。执行命令&lt;/p>
-&lt;pre>&lt;code>hexo new page categories
+&lt;pre tabindex="0">&lt;code>hexo new page categories
 &lt;/code>&lt;/pre>&lt;p>成功后会提示：&lt;/p>
-&lt;pre>&lt;code>INFO Created: ~/Documents/blog/source/categories/index.md
+&lt;pre tabindex="0">&lt;code>INFO Created: ~/Documents/blog/source/categories/index.md
 &lt;/code>&lt;/pre>&lt;p>根据上面的路径，找到index.md这个文件，打开后默认内容是这样的：&lt;/p>
-&lt;pre>&lt;code>---
+&lt;pre tabindex="0">&lt;code>---
 title: 文章分类
 date: 2019-04-07 0:30:00
 ---
 &lt;/code>&lt;/pre>&lt;p>添加type: &amp;ldquo;categories&amp;quot;到内容中，添加后是这样的：&lt;/p>
-&lt;pre>&lt;code>---
+&lt;pre tabindex="0">&lt;code>---
 title: 文章分类
 date: 2019-04-07 0:30:00
 type: &amp;quot;categories&amp;quot;
@@ -2087,7 +2087,7 @@ type: &amp;quot;categories&amp;quot;
 &lt;/code>&lt;/pre>&lt;p>保存并关闭文件。&lt;/p>
 &lt;h1 id="给文章添加categories属性">给文章添加“categories”属性&lt;/h1>
 &lt;p>打开需要添加分类的文章，为其添加categories属性。下方的categories: web前端表示添加这篇文章到“web前端”这个分类。注意：hexo一篇文章只能属于一个分类，也就是说如果在“- web前端”下方添加“-xxx”，hexo不会产生两个分类，而是把分类嵌套（即该文章属于 “- web前端”下的 “-xxx ”分类）。&lt;/p>
-&lt;pre>&lt;code>---
+&lt;pre tabindex="0">&lt;code>---
 title: jQuery对表单的操作及更多应用
 date: 2019-04-07 0:31:22
 categories:
@@ -2097,17 +2097,17 @@ categories:
 &lt;h1 id="创建标签选项">创建“标签”选项&lt;/h1>
 &lt;p>生成“标签”页并添加tpye属性&lt;br>
 打开命令行，进入博客所在文件夹。执行命令&lt;/p>
-&lt;pre>&lt;code>hexo new page tags
+&lt;pre tabindex="0">&lt;code>hexo new page tags
 &lt;/code>&lt;/pre>&lt;p>找到 source/tags/index.md&lt;br>
 添加type: &amp;ldquo;tags&amp;quot;到内容中，添加后是这样的&lt;/p>
-&lt;pre>&lt;code>---
+&lt;pre tabindex="0">&lt;code>---
 title: 文章分类
 date: 2019-04-07 0:33:55
 type: &amp;quot;tags&amp;quot;
 ---
 &lt;/code>&lt;/pre>&lt;p>保存并关闭文件。&lt;/p>
 &lt;h1 id="给文章添加标签和分类">给文章添加标签和分类&lt;/h1>
-&lt;pre>&lt;code>title: title #文章標題
+&lt;pre tabindex="0">&lt;code>title: title #文章標題
 date: 2019-04-07 00:43:12 #文章生成時間
 categories: &amp;quot;Hexo教程&amp;quot; #文章分類目錄 可以省略
 tags: #文章標籤 可以省略
@@ -2138,9 +2138,9 @@ $ npm install hexo-generator-index-pin-top &amp;ndash;save
 &lt;p>设置置顶标志
 打开：/blog/themes/next/layout/_macro 目录下的post.swig文件
 查找&lt;/p>
-&lt;pre>&lt;code> &amp;lt;div class=&amp;quot;post-meta&amp;quot;&amp;gt;
+&lt;pre tabindex="0">&lt;code> &amp;lt;div class=&amp;quot;post-meta&amp;quot;&amp;gt;
 &lt;/code>&lt;/pre>&lt;p>下面添加&lt;/p>
-&lt;pre>&lt;code> {% if post.top %}
+&lt;pre tabindex="0">&lt;code> {% if post.top %}
 &amp;lt;i class=&amp;quot;fa fa-thumb-tack&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;
 &amp;lt;font color=7D26CD&amp;gt;置顶&amp;lt;/font&amp;gt;
 &amp;lt;span class=&amp;quot;post-meta-divider&amp;quot;&amp;gt;|&amp;lt;/span&amp;gt;
@@ -2153,7 +2153,7 @@ enable: true
 修改next主题的模板文件
 需要修改的模板文件是theme/next/layout/_partials/footer.swig
 在最后面添加&lt;/p>
-&lt;pre>&lt;code>{% if theme.footer.counter %}
+&lt;pre tabindex="0">&lt;code>{% if theme.footer.counter %}
 &amp;lt;script async src=&amp;quot;//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
 &amp;lt;span id=&amp;quot;busuanzi_container_site_pv&amp;quot;&amp;gt;总访问量&amp;lt;span id=&amp;quot;busuanzi_value_site_pv&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;次&amp;lt;/span&amp;gt;
 &amp;lt;span class=&amp;quot;post-meta-divider&amp;quot;&amp;gt;|&amp;lt;/span&amp;gt;
@@ -2167,22 +2167,22 @@ Valine+Leancloud 国际版 &lt;a class="link" href="https://console.leancloud.ap
 >https://console.leancloud.app&lt;/a>
 在存储-&amp;gt;结构化数据创建一个class并命名为comment。
 在设置-&amp;gt;应用Keys可以看到自动生成的AppID和AppKey,填到下面对应的位置就可以了&lt;/p>
-&lt;pre>&lt;code>valine:
+&lt;pre tabindex="0">&lt;code>valine:
 enable: ture
 appid: xxxxxxx
 appkey: xxxxxx
 &lt;/code>&lt;/pre>&lt;h1 id="添加阅读人数真实人数">添加阅读人数（真实人数）&lt;/h1>
 &lt;p>id和key 也可以用上面Leancloud 国际版 的AppID和AppKey,&lt;/p>
-&lt;pre>&lt;code>leancloud_visitors:
+&lt;pre tabindex="0">&lt;code>leancloud_visitors:
 enable: true
 app_id: xxxxx
 app_key: xxxxxx
 &lt;/code>&lt;/pre>&lt;h1 id="添加阅读人数之不蒜子虚高人数">添加阅读人数之不蒜子（虚高人数）&lt;/h1>
 &lt;p>打开不蒜子&lt;/p>
-&lt;pre>&lt;code>busuanzi_count:
+&lt;pre tabindex="0">&lt;code>busuanzi_count:
 enable: ture
 &lt;/code>&lt;/pre>&lt;p>打开 next\layout_partials 找到footer.swig文件，在最下面添加&lt;/p>
-&lt;pre>&lt;code>
+&lt;pre tabindex="0">&lt;code>
 {% if theme.footer.counter %}
 &amp;lt;script async src=&amp;quot;//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
 &amp;lt;span id=&amp;quot;busuanzi_container_site_pv&amp;quot;&amp;gt;总访问量&amp;lt;span id=&amp;quot;busuanzi_value_site_pv&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;次&amp;lt;/span&amp;gt;

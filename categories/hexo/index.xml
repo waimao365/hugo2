@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>hexo on it迷</title><link>https://ch168.tk/categories/hexo/</link><description>Recent content in hexo on it迷</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 13 Dec 2019 12:33:32 +0000</lastBuildDate><atom:link href="https://ch168.tk/categories/hexo/index.xml" rel="self" type="application/rss+xml"/><item><title>图床搭建的最佳选择 PicGo + Github + Jsdelivr免费公用CDN加速.</title><link>https://ch168.tk/posts/12.html</link><pubDate>Fri, 13 Dec 2019 12:33:32 +0000</pubDate><guid>https://ch168.tk/posts/12.html</guid><description>&lt;p>&lt;strong>图床搭建的最佳选择 PicGo + Github + Jsdelivr免费公用CDN加速&lt;/strong>&lt;/p>
 &lt;h1 id="github创建仓库">Github创建仓库&lt;/h1>
-&lt;h2 id="点击-new-repository">点击 New repository&lt;/h2></description></item><item><title>Github 绑定域名添加https的方法2019年9月更新</title><link>https://ch168.tk/posts/5.html</link><pubDate>Sat, 14 Sep 2019 15:40:43 +0000</pubDate><guid>https://ch168.tk/posts/5.html</guid><description>&lt;p>官方教程&lt;br>
+&lt;h2 id="点击-new-repository">点击 New repository&lt;/h2></description></item><item><title>Github 绑定域名添加https的方法2019年9月更新</title><link>https://ch168.tk/posts/5.html</link><pubDate>Sat, 14 Sep 2019 15:40:43 +0000</pubDate><guid>https://ch168.tk/posts/5.html</guid><description>&lt;p>官方教程
 &lt;a class="link" href="https://help.github.com/en/articles/using-a-custom-domain-with-github-pages" target="_blank" rel="noopener"
 >https://help.github.com/en/articles/using-a-custom-domain-with-github-pages&lt;/a>&lt;br>
 打开 &lt;a class="link" href="https://github.com/" target="_blank" rel="noopener"
@@ -10,7 +10,7 @@
 绑定域名：163168.xyz&lt;/p></description></item><item><title>hexo博客优化之文章置顶+置顶标签</title><link>https://ch168.tk/posts/4.html</link><pubDate>Thu, 12 Sep 2019 13:01:23 +0000</pubDate><guid>https://ch168.tk/posts/4.html</guid><description>&lt;p>&lt;a class="link" href="https://github.com/netcan/hexo-generator-index-pin-top" target="_blank" rel="noopener"
 >支持置顶的仓库&lt;/a>&lt;/p>
 &lt;p>可以直接用以下命令安装&lt;/p>
-&lt;pre>&lt;code>$ npm uninstall hexo-generator-index --save
+&lt;pre tabindex="0">&lt;code>$ npm uninstall hexo-generator-index --save
 $ npm install hexo-generator-index-pin-top --save
 &lt;/code>&lt;/pre>&lt;p>然后在需要置顶的文章的Front-matter中加上top: true即可。&lt;/p></description></item><item><title>hexo博客备份迁移教程</title><link>https://ch168.tk/posts/3.html</link><pubDate>Wed, 11 Sep 2019 13:01:13 +0000</pubDate><guid>https://ch168.tk/posts/3.html</guid><description>&lt;h1 id="hexo备份">hexo备份&lt;/h1>
 &lt;h2 id="新建repository">新建repository&lt;/h2>

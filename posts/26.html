@@ -69,51 +69,51 @@ ubuntu
 <h3 id=安装go>安装go</h3>
 <p><a class=link href=https://golang.org/dl/ target=_blank rel=noopener>https://golang.org/dl/</a> （有可能被墙）</p>
 <p>下载go1.15.8.linux-amd64.tar.gz</p>
-<pre><code>sudo tar -C /usr/local -xzf go1.15.8.linux-amd64.tar.gz
-</code></pre><pre><code>export PATH=$PATH:/usr/local/go/bin
+<pre tabindex=0><code>sudo tar -C /usr/local -xzf go1.15.8.linux-amd64.tar.gz
+</code></pre><pre tabindex=0><code>export PATH=$PATH:/usr/local/go/bin
 </code></pre><p>查看版本</p>
-<pre><code>go version
+<pre tabindex=0><code>go version
 </code></pre><h3 id=下载hugo>下载hugo</h3>
 <p><a class=link href=https://github.com/gohugoio/hugo/releases target=_blank rel=noopener>https://github.com/gohugoio/hugo/releases</a></p>
 <p>下载 hugo_extended_0.80.0_Linux-64bit.deb</p>
 <p>终端输入</p>
-<pre><code>sudo dpkg -i hugo_extended_0.80.0_Linux-64bit.deb
+<pre tabindex=0><code>sudo dpkg -i hugo_extended_0.80.0_Linux-64bit.deb
 </code></pre><p>查看版本</p>
-<pre><code>hugo version
+<pre tabindex=0><code>hugo version
 </code></pre><p>创建blog</p>
-<pre><code>hugo new site blog
+<pre tabindex=0><code>hugo new site blog
 </code></pre><h3 id=安装主题>安装主题</h3>
 <p>去官网下载主题 <a class=link href=https://themes.gohugo.io target=_blank rel=noopener>https://themes.gohugo.io</a></p>
 <p>我下载的是even <a class=link href=https://themes.gohugo.io/hugo-theme-even target=_blank rel=noopener>https://themes.gohugo.io/hugo-theme-even</a></p>
 <p>再推荐一个主题 <a class=link href=https://github.com/uPagge/uBlogger target=_blank rel=noopener>https://github.com/uPagge/uBlogger</a></p>
 <p>cd /blog</p>
-<pre><code>git clone https://github.com/olOwOlo/hugo-theme-even themes/even
+<pre tabindex=0><code>git clone https://github.com/olOwOlo/hugo-theme-even themes/even
 </code></pre><p>在exampleSite目录找到config.toml和content 复制到D:\blog目录下</p>
 <p>在blog根目录下，终端输入下面代码</p>
-<pre><code>hugo --theme=even --baseUrl=&quot;http://waimao365.github.io/&quot; --buildDrafts
+<pre tabindex=0><code>hugo --theme=even --baseUrl=&quot;http://waimao365.github.io/&quot; --buildDrafts
 </code></pre><p>#even改成你的主题</p>
 <h3 id=本地预览>本地预览</h3>
-<pre><code>cd /blog
+<pre tabindex=0><code>cd /blog
 hugo
 hugo server
 </code></pre><p>http://localhost:1313</p>
 <h3 id=建立本地和github仓库的连接>建立本地和github仓库的连接</h3>
 <p>输入github的帐户名和邮箱</p>
-<pre><code>git config --global user.name &quot;waimao8&quot;
+<pre tabindex=0><code>git config --global user.name &quot;waimao8&quot;
 git config --global user.email &quot;88888@qq.com&quot;
 </code></pre><p>查看设置的用户名和密码</p>
-<pre><code>git config --list
+<pre tabindex=0><code>git config --list
 </code></pre><p>生成 SSH key 与 github 联系</p>
-<pre><code>ssh-keygen -t rsa -C “888888@qq.com”
+<pre tabindex=0><code>ssh-keygen -t rsa -C “888888@qq.com”
 </code></pre><p>一路回车 ubuntu设置显示隐藏文件，在用户目录找到.ssh</p>
 <p>打开id_rsa.pub，复制里面的内容。 然后登录github，如果没有就注册一个账号，登录后右上角 头像 -> Settings —> SSH nd GPG keys —> New SSH key。把公钥(id_rsa.pub)粘贴到 key 中，填好 title 并点击 Add SSH key</p>
 <p>关联完之后可以在终端输入</p>
-<pre><code>ssh git@github.com
+<pre tabindex=0><code>ssh git@github.com
 </code></pre><h3 id=heading></h3>
 <h3 id=上传到github>上传到github</h3>
 <p>cd到 /public
 依次输入</p>
-<pre><code>git init
+<pre tabindex=0><code>git init
 git add .
 git commit -m “yyyy/mm/dd-hh:mm”
 git remote add origin git@github.com:waimao365/lubutu18.git
@@ -127,10 +127,10 @@ git push -u origin master
 <p>git remote rm origin</p>
 <h3 id=-rejected--------master---master-non-fast-forward>! [rejected] master -> master (non-fast-forward)</h3>
 <p>本地生成ReadMe文件</p>
-<pre><code>git pull --rebase origin master 
+<pre tabindex=0><code>git pull --rebase origin master 
 git push origin master
 </code></pre><p>如果不行，可以强制上传覆盖远程文件（慎用）</p>
-<pre><code>git push -f origin master
+<pre tabindex=0><code>git push -f origin master
 </code></pre><h2 id=其他>其他</h2>
 <h3 id=安装typora写文章>安装typora写文章</h3>
 <p><a class=link href=https://www.typora.io/#linux target=_blank rel=noopener>https://www.typora.io/#linux</a></p>
@@ -140,11 +140,11 @@ git push origin master
 <p>Visual Studio Code设置中文</p>
 <p>打开进入软件，Ctrl + Shift + P，切入到命令行模式。输入“Configure Language”</p>
 <h3 id=安装-notepad-编辑主题文件>安装 Notepad++ 编辑主题文件</h3>
-<pre><code>sudo add-apt-repository ppa:notepadqq-team/notepadqq
+<pre tabindex=0><code>sudo add-apt-repository ppa:notepadqq-team/notepadqq
 sudo apt-get update
 sudo apt-get install notepadqq
 </code></pre><p>卸载方法:</p>
-<pre><code>sudo apt-get remove notepadqq
+<pre tabindex=0><code>sudo apt-get remove notepadqq
 sudo add-apt-repository --removeppa:notepadqq-team/notepadqq
 </code></pre>
 </section>

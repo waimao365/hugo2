@@ -87,16 +87,16 @@ on-phone--column extended">
 <section class=article-content>
 <p>斐讯N1 docker安装homeassistant 配置斐讯dc1智能插座</p>
 <p>默认代码</p>
-<pre><code>docker run -d --restart=always --name=&quot;home-assistant&quot; -e TZ=Asia/Shanghai -v /var/lib/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:latest
+<pre tabindex=0><code>docker run -d --restart=always --name=&quot;home-assistant&quot; -e TZ=Asia/Shanghai -v /var/lib/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:latest
 
 </code></pre><p>homeassistant:latest表示最新版的 用0.88.1顺手了，配置文件也有了，就不想安装最新版本的了。新版也试用过，不太好用<br>
 刚开始用的代码是</p>
-<pre><code>docker run -d --restart=always --name=&quot;home-assistant&quot; -e TZ=Asia/Shanghai -v /var/lib/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:0.88.1
+<pre tabindex=0><code>docker run -d --restart=always --name=&quot;home-assistant&quot; -e TZ=Asia/Shanghai -v /var/lib/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:0.88.1
 
 </code></pre><p>没几天发现N1omv不能登陆，查询到内存储存已满，查找到var/lib/docker/homeassistant/config 里面有一个home-assistant_v2.db文件占了2G多，而且会不断的变大，更改 /docker/homeassistant的安装目录到移动硬盘<br>
 这个是我的docker的安装目录，/sharedfolders/2t/docker<br>
 所以修改后的代码就是把/var/lib/docker更换成/sharedfolders/2t/docker</p>
-<pre><code>docker run -d --restart=always --name=&quot;home-assistant&quot; -e TZ=Asia/Shanghai -v /sharedfolders/2t/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:0.88.1
+<pre tabindex=0><code>docker run -d --restart=always --name=&quot;home-assistant&quot; -e TZ=Asia/Shanghai -v /sharedfolders/2t/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:0.88.1
 
 </code></pre><p>下载DCI配网工具
 给DC1配置好网络，要在路由里面找到DC1的ip就算完成了</p>
@@ -114,7 +114,7 @@ packages: !include_dir_named packages<br>
 ip修改成你在路由器里面看到DC1的ip</p>
 <p>配置根目录的automations.yaml<br>
 我设置了饮水机06.30开 00.30关 打印机18.00开 00.00关，下面是代码</p>
-<pre><code>- alias: switch_on 06.30
+<pre tabindex=0><code>- alias: switch_on 06.30
   initial_state: true
   trigger:
   - platform: time

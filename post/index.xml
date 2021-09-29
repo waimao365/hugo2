@@ -119,8 +119,8 @@ net.ipv4.tcp_congestion_control=bbr&lt;/p></description></item><item><title>hugo
 &lt;a class="link" href="https://www.right.com.cn/forum/thread-788004-1-1.html" target="_blank" rel="noopener"
 >https://www.right.com.cn/forum/thread-788004-1-1.html&lt;/a>&lt;/p></description></item><item><title>斐讯N1 docker安装homeassistant 配置斐讯dc1智能插座</title><link>https://ch168.tk/posts/6.html</link><pubDate>Mon, 16 Sep 2019 12:52:42 +0000</pubDate><guid>https://ch168.tk/posts/6.html</guid><description>&lt;p>斐讯N1 docker安装homeassistant 配置斐讯dc1智能插座&lt;/p>
 &lt;p>默认代码&lt;/p>
-&lt;pre>&lt;code>docker run -d --restart=always --name=&amp;quot;home-assistant&amp;quot; -e TZ=Asia/Shanghai -v /var/lib/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:latest
-&lt;/code>&lt;/pre></description></item><item><title>Github 绑定域名添加https的方法2019年9月更新</title><link>https://ch168.tk/posts/5.html</link><pubDate>Sat, 14 Sep 2019 15:40:43 +0000</pubDate><guid>https://ch168.tk/posts/5.html</guid><description>&lt;p>官方教程&lt;br>
+&lt;pre tabindex="0">&lt;code>docker run -d --restart=always --name=&amp;quot;home-assistant&amp;quot; -e TZ=Asia/Shanghai -v /var/lib/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:latest
+&lt;/code>&lt;/pre></description></item><item><title>Github 绑定域名添加https的方法2019年9月更新</title><link>https://ch168.tk/posts/5.html</link><pubDate>Sat, 14 Sep 2019 15:40:43 +0000</pubDate><guid>https://ch168.tk/posts/5.html</guid><description>&lt;p>官方教程
 &lt;a class="link" href="https://help.github.com/en/articles/using-a-custom-domain-with-github-pages" target="_blank" rel="noopener"
 >https://help.github.com/en/articles/using-a-custom-domain-with-github-pages&lt;/a>&lt;br>
 打开 &lt;a class="link" href="https://github.com/" target="_blank" rel="noopener"
@@ -130,7 +130,7 @@ net.ipv4.tcp_congestion_control=bbr&lt;/p></description></item><item><title>hugo
 绑定域名：163168.xyz&lt;/p></description></item><item><title>hexo博客优化之文章置顶+置顶标签</title><link>https://ch168.tk/posts/4.html</link><pubDate>Thu, 12 Sep 2019 13:01:23 +0000</pubDate><guid>https://ch168.tk/posts/4.html</guid><description>&lt;p>&lt;a class="link" href="https://github.com/netcan/hexo-generator-index-pin-top" target="_blank" rel="noopener"
 >支持置顶的仓库&lt;/a>&lt;/p>
 &lt;p>可以直接用以下命令安装&lt;/p>
-&lt;pre>&lt;code>$ npm uninstall hexo-generator-index --save
+&lt;pre tabindex="0">&lt;code>$ npm uninstall hexo-generator-index --save
 $ npm install hexo-generator-index-pin-top --save
 &lt;/code>&lt;/pre>&lt;p>然后在需要置顶的文章的Front-matter中加上top: true即可。&lt;/p></description></item><item><title>chrome安装Tampermonkey，添加插件的过程</title><link>https://ch168.tk/posts/13.html</link><pubDate>Thu, 12 Sep 2019 13:01:13 +0000</pubDate><guid>https://ch168.tk/posts/13.html</guid><description>&lt;p>chrome安装Tampermonkey，添加插件的过程&lt;/p>
 &lt;h1 id="安装谷歌访问助手">安装谷歌访问助手&lt;/h1>
