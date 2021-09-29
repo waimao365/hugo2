@@ -1,7 +1,7 @@
 backend:
   name: github # our repository provider
-  repo: waimao365/hugo # username/repo
-  branch: master # the main branch of our repo
+  repo: waimao365/hugo2 # username/repo
+  branch: gh-pages # the main branch of our repo
   base_url: "https://hugo-sand-five.vercel.app/" # our site's base URL 
   auth_endpoint: "api/auth" # used together with base_url for our custom endpoints (more on this later)
 media_folder: "public/images" # the folder we want to upload new images to
