@@ -1,7 +1,7 @@
 # https://www.netlifycms.org/docs/add-to-your-site/
 backend:
-  name: hugo2
-  branch: master # Branch to update (optional; defaults to master)
+  name: git-gateway
+  branch: gh-pages # Branch to update (optional; defaults to master)
   squash_merges: true # beta feature
 
  # when using the default proxy server port
