@@ -1,210 +1,29 @@
-<!doctype html><html lang=zh-cn>
-<head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="下载刷机包 https://downloads.aospextended.com/bullhead
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="下载刷机包 https://downloads.aospextended.com/bullhead
 个人觉得aospextended的rom比较省电，其他刷机包或者不刷机也是可以的，只要是手机不能杀支付宝的后台就行，如果需要用都省电模式，要在省电模式里面排除支付宝。
-"><title>Nexus 5X手机在支付宝的蚂蚁森林自动收能量的过程.</title>
-<link rel=canonical href=https://ch168.tk/posts/11.html>
-<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Nexus 5X手机在支付宝的蚂蚁森林自动收能量的过程.">
-<meta property="og:description" content="下载刷机包 https://downloads.aospextended.com/bullhead
+"><title>Nexus 5X手机在支付宝的蚂蚁森林自动收能量的过程.</title><link rel=canonical href=https://ch168.tk/posts/11.html><link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Nexus 5X手机在支付宝的蚂蚁森林自动收能量的过程."><meta property="og:description" content="下载刷机包 https://downloads.aospextended.com/bullhead
 个人觉得aospextended的rom比较省电，其他刷机包或者不刷机也是可以的，只要是手机不能杀支付宝的后台就行，如果需要用都省电模式，要在省电模式里面排除支付宝。
-">
-<meta property="og:url" content="https://ch168.tk/posts/11.html">
-<meta property="og:site_name" content="it迷">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="安卓手机"><meta property="article:tag" content="magisk"><meta property="article:tag" content="edxposed"><meta property="article:tag" content="XQuickEnergy"><meta property="article:published_time" content="2019-12-10T00:21:32+00:00"><meta property="article:modified_time" content="2019-12-10T00:21:32+00:00">
-<meta name=twitter:title content="Nexus 5X手机在支付宝的蚂蚁森林自动收能量的过程.">
-<meta name=twitter:description content="下载刷机包 https://downloads.aospextended.com/bullhead
+"><meta property="og:url" content="https://ch168.tk/posts/11.html"><meta property="og:site_name" content="it迷"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="安卓手机"><meta property="article:tag" content="magisk"><meta property="article:tag" content="edxposed"><meta property="article:tag" content="XQuickEnergy"><meta property="article:published_time" content="2019-12-10T00:21:32+00:00"><meta property="article:modified_time" content="2019-12-10T00:21:32+00:00"><meta name=twitter:title content="Nexus 5X手机在支付宝的蚂蚁森林自动收能量的过程."><meta name=twitter:description content="下载刷机包 https://downloads.aospextended.com/bullhead
 个人觉得aospextended的rom比较省电，其他刷机包或者不刷机也是可以的，只要是手机不能杀支付宝的后台就行，如果需要用都省电模式，要在省电模式里面排除支付宝。
-">
-</head>
-<body class=article-page>
-<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
-<div class="container main-container flex
-on-phone--column extended">
-<aside class="sidebar left-sidebar sticky">
-<button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
-<span class=hamburger-box>
-<span class=hamburger-inner></span>
-</span>
-</button>
-<header class=site-info>
-<figure class=site-avatar>
-<img src=/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png width=300 height=300 class=site-logo loading=lazy alt=Avatar>
-<span class=emoji>🍥</span>
-</figure>
-<h1 class=site-name><a href=https://ch168.tk>it迷</a></h1>
-<h2 class=site-description>it爱好者的小站</h2>
-</header>
-<ol class=menu id=main-menu>
-<li>
-<a href=/ target=_blank><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
-<span>Home</span>
-</a>
-</li>
-<li>
-<a href=/about/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
-<span>About</span>
-</a>
-</li>
-<li>
-<a href=/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
-<span>Archives</span>
-</a>
-</li>
-<li>
-<a href=/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
-<span>Search</span>
-</a>
-</li>
-<li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
-<span>暗色模式</span>
-</li>
-</ol>
-</aside>
-<main class="main full-width">
-<article class=main-article>
-<header class=article-header>
-<div class=article-details>
-<header class=article-category>
-<a href=/categories/%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA/>
-安卓手机
-</a>
-</header>
-<h2 class=article-title>
-<a href=/posts/11.html>Nexus 5X手机在支付宝的蚂蚁森林自动收能量的过程.</a>
-</h2>
-<footer class=article-time>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
-<time class=article-time--published>Dec 10, 2019</time>
-</div>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<time class=article-time--reading>
-阅读时长: 1 分钟
-</time>
-</div>
-</footer>
-</div>
-</header>
-<section class=article-content>
-<h1 id=下载刷机包>下载刷机包</h1>
-<p><a class=link href=https://downloads.aospextended.com/bullhead target=_blank rel=noopener>https://downloads.aospextended.com/bullhead</a></p>
-<p>个人觉得aospextended的rom比较省电，其他刷机包或者不刷机也是可以的，只要是手机不能杀支付宝的后台就行，如果需要用都省电模式，要在省电模式里面排除支付宝。</p>
-<h1 id=下载twrp>下载twrp</h1>
-<p><a class=link href=https://twrp.me/lg/lgnexus5x.html target=_blank rel=noopener>https://twrp.me/lg/lgnexus5x.html</a></p>
-<h1 id=下载magisk>下载magisk</h1>
-<p><a class=link href=https://t00y.com/file/22940096-413054846 target=_blank rel=noopener>下载MagiskManager-v7.4.0.apk</a></p>
-<p><a class=link href=https://t00y.com/file/22940096-413054839 target=_blank rel=noopener>下载Magisk-v20.1.zip</a>
+"></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex
+on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header class=site-info><figure class=site-avatar><img src=/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png width=300 height=300 class=site-logo loading=lazy alt=Avatar>
+<span class=emoji>🍥</span></figure><h1 class=site-name><a href=https://ch168.tk>it迷</a></h1><h2 class=site-description>it爱好者的小站</h2></header><ol class=menu id=main-menu><li><a href=/ target=_blank><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg><span>Home</span></a></li><li><a href=/about/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg><span>About</span></a></li><li><a href=/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg><span>Archives</span></a></li><li><a href=/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg><span>Search</span></a></li><li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><span>暗色模式</span></li></ol></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA/>安卓手机</a></header><h2 class=article-title><a href=/posts/11.html>Nexus 5X手机在支付宝的蚂蚁森林自动收能量的过程.</a></h2><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>Dec 10, 2019</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading>阅读时长: 1 分钟</time></div></footer></div></header><section class=article-content><h1 id=下载刷机包>下载刷机包</h1><p><a class=link href=https://downloads.aospextended.com/bullhead target=_blank rel=noopener>https://downloads.aospextended.com/bullhead</a></p><p>个人觉得aospextended的rom比较省电，其他刷机包或者不刷机也是可以的，只要是手机不能杀支付宝的后台就行，如果需要用都省电模式，要在省电模式里面排除支付宝。</p><h1 id=下载twrp>下载twrp</h1><p><a class=link href=https://twrp.me/lg/lgnexus5x.html target=_blank rel=noopener>https://twrp.me/lg/lgnexus5x.html</a></p><h1 id=下载magisk>下载magisk</h1><p><a class=link href=https://t00y.com/file/22940096-413054846 target=_blank rel=noopener>下载MagiskManager-v7.4.0.apk</a></p><p><a class=link href=https://t00y.com/file/22940096-413054839 target=_blank rel=noopener>下载Magisk-v20.1.zip</a>
 <a class=link href=https://t00y.com/file/22940096-413054839 target=_blank rel=noopener>https://t00y.com/file/22940096-413054839</a>
 刷入twrp
 在twrp中四清，刷入aospextended的刷机包
-在twrp中刷入Magisk-v20.1.zip</p>
-<p>手机开机
+在twrp中刷入Magisk-v20.1.zip</p><p>手机开机
 安装Magisk Manager v7.4
 在magisk中安装好riru-core，再安装riru edxposed
-在酷安下载安装edxposed installer</p>
-<h1 id=下载插件>下载插件</h1>
-<p>下载插件<a class=link href=https://t00y.com/file/22940096-413054804 target=_blank rel=noopener>小鸡炖蘑菇</a>
+在酷安下载安装edxposed installer</p><h1 id=下载插件>下载插件</h1><p>下载插件<a class=link href=https://t00y.com/file/22940096-413054804 target=_blank rel=noopener>小鸡炖蘑菇</a>
 或者<a class=link href=https://t00y.com/file/22940096-413054745 target=_blank rel=noopener>XQuickEnergy</a>
-安装后，在edxposed软件中勾选插件，重启手机，打开支付宝，就可以通过上面两个插件设置自动收取能量了，记得，支付宝不可以退出哦！</p>
-<h1 id=下载tasker软件设定自动打开支付宝>下载tasker软件设定自动打开支付宝</h1>
-<p>点击任务，新建任务，命名打开支付宝，点+号。点程序，点启动应用，点支付宝。点配置文件，点+号，点时间，点从上午6点到凌晨1点，点每30分钟。点击打开支付宝，就完成了设置，这样即使支付宝后天即使被关闭了，每30分钟也会自动打开一次，时间都是可以自己设置的。十分钟打开一次也可以，一个小时打开一次也行，主要是看支付宝多久会被杀后台。</p>
-</section>
-<footer class=article-footer>
-<section class=article-tags>
-<a href=/tags/%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA/>安卓手机</a>
+安装后，在edxposed软件中勾选插件，重启手机，打开支付宝，就可以通过上面两个插件设置自动收取能量了，记得，支付宝不可以退出哦！</p><h1 id=下载tasker软件设定自动打开支付宝>下载tasker软件设定自动打开支付宝</h1><p>点击任务，新建任务，命名打开支付宝，点+号。点程序，点启动应用，点支付宝。点配置文件，点+号，点时间，点从上午6点到凌晨1点，点每30分钟。点击打开支付宝，就完成了设置，这样即使支付宝后天即使被关闭了，每30分钟也会自动打开一次，时间都是可以自己设置的。十分钟打开一次也可以，一个小时打开一次也行，主要是看支付宝多久会被杀后台。</p></section><footer class=article-footer><section class=article-tags><a href=/tags/%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA/>安卓手机</a>
 <a href=/tags/magisk/>magisk</a>
 <a href=/tags/edxposed/>edxposed</a>
-<a href=/tags/xquickenergy/>XQuickEnergy</a>
-</section>
-<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
-<span>Licensed under CC BY-NC-SA 4.0</span>
-</section>
-</footer>
-</article>
-<aside class=related-contents--wrapper>
-<h2 class=section-title>相关文章</h2>
-<div class=related-contents>
-<div class="flex article-list--tile">
-<article>
-<a href=/posts/21.html>
-<div class=article-details>
-<h2 class=article-title>LG V30 韩版V300L 8.0 9.0 root刷类原生系统Havoc 10.0的详细过程</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/posts/18.html>
-<div class=article-details>
-<h2 class=article-title>LG V30韩版 ROOT详细教程</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/posts/17.html>
-<div class=article-details>
-<h2 class=article-title>解决安卓手机卡顿 安装google商店官方软件的方法</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/posts/16.html>
-<div class=article-details>
-<h2 class=article-title>黑苹果给安卓手机刷入twrp recovery教程</h2>
-</div>
-</a>
-</article>
-</div>
-</div>
-</aside>
-<footer class=site-footer>
-<section class=copyright>
-&copy;
+<a href=/tags/xquickenergy/>XQuickEnergy</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><aside class=related-contents--wrapper><h2 class=section-title>相关文章</h2><div class=related-contents><div class="flex article-list--tile"><article><a href=/posts/21.html><div class=article-details><h2 class=article-title>LG V30 韩版V300L 8.0 9.0 root刷类原生系统Havoc 10.0的详细过程</h2></div></a></article><article><a href=/posts/18.html><div class=article-details><h2 class=article-title>LG V30韩版 ROOT详细教程</h2></div></a></article><article><a href=/posts/17.html><div class=article-details><h2 class=article-title>解决安卓手机卡顿 安装google商店官方软件的方法</h2></div></a></article><article><a href=/posts/16.html><div class=article-details><h2 class=article-title>黑苹果给安卓手机刷入twrp recovery教程</h2></div></a></article></div></div></aside><footer class=site-footer><section class=copyright>&copy;
 2020 -
-2021 it迷
-</section>
-<section class=powerby>
-Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
-Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.1.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
-</section>
-</footer>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
-<div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
-<div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+2022 it迷</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.1.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-<div class=pswp__preloader>
-<div class=pswp__preloader__icn>
-<div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-</button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-</button>
-<div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
-</main>
-</div>
-<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
-<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
-</body>
-</html>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

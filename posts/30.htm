@@ -1,260 +1,62 @@
-<!doctype html><html lang=zh-cn>
-<head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="hugo部署到github 建立本地和github仓库的连接 输入github的帐户名和邮箱
-git config --global user.name &amp;quot;waimao8&amp;quot; git config --global user.email &amp;quot;88888@qq.com&amp;quot; 查看设置的用户名和密码
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="hugo部署到github 建立本地和github仓库的连接 输入github的帐户名和邮箱
+git config --global user.name &amp;#34;waimao8&amp;#34; git config --global user.email &amp;#34;88888@qq.com&amp;#34; 查看设置的用户名和密码
 git config --list 生成 SSH key 与 github 联系
 ssh-keygen -t rsa -C “888888@qq.com” 一路回车 ubuntu设置显示隐藏文件，在用户目录找到.ssh
 打开id_rsa.pub，复制里面的内容。 然后登录github，如果没有就注册一个账号，登录后右上角 头像 -&amp;gt; Settings —&amp;gt; SSH nd GPG keys —&amp;gt; New SSH key。把公钥(id_rsa.pub)粘贴到 key 中，填好 title 并点击 Add SSH key
 关联完之后可以在终端输入
 ssh git@github.com 部署到github cd到 /public 依次输入
-git init git add . git commit -m “yyyy/mm/dd-hh:mm” git remote add origin git@github."><title>hugo静态博客部署到github的脚本</title>
-<link rel=canonical href=https://ch168.tk/posts/30.htm>
-<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="hugo静态博客部署到github的脚本">
-<meta property="og:description" content="hugo部署到github 建立本地和github仓库的连接 输入github的帐户名和邮箱
-git config --global user.name &amp;quot;waimao8&amp;quot; git config --global user.email &amp;quot;88888@qq.com&amp;quot; 查看设置的用户名和密码
+git init git add . git commit -m “yyyy/mm/dd-hh:mm” git remote add origin git@github."><title>hugo静态博客部署到github的脚本</title><link rel=canonical href=https://ch168.tk/posts/30.htm><link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="hugo静态博客部署到github的脚本"><meta property="og:description" content="hugo部署到github 建立本地和github仓库的连接 输入github的帐户名和邮箱
+git config --global user.name &amp;#34;waimao8&amp;#34; git config --global user.email &amp;#34;88888@qq.com&amp;#34; 查看设置的用户名和密码
 git config --list 生成 SSH key 与 github 联系
 ssh-keygen -t rsa -C “888888@qq.com” 一路回车 ubuntu设置显示隐藏文件，在用户目录找到.ssh
 打开id_rsa.pub，复制里面的内容。 然后登录github，如果没有就注册一个账号，登录后右上角 头像 -&amp;gt; Settings —&amp;gt; SSH nd GPG keys —&amp;gt; New SSH key。把公钥(id_rsa.pub)粘贴到 key 中，填好 title 并点击 Add SSH key
 关联完之后可以在终端输入
 ssh git@github.com 部署到github cd到 /public 依次输入
-git init git add . git commit -m “yyyy/mm/dd-hh:mm” git remote add origin git@github.">
-<meta property="og:url" content="https://ch168.tk/posts/30.htm">
-<meta property="og:site_name" content="it迷">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="hugo"><meta property="article:tag" content="github"><meta property="article:tag" content="网站"><meta property="article:published_time" content="2021-04-12T08:18:30+00:00"><meta property="article:modified_time" content="2021-04-12T08:18:30+00:00">
-<meta name=twitter:title content="hugo静态博客部署到github的脚本">
-<meta name=twitter:description content="hugo部署到github 建立本地和github仓库的连接 输入github的帐户名和邮箱
-git config --global user.name &amp;quot;waimao8&amp;quot; git config --global user.email &amp;quot;88888@qq.com&amp;quot; 查看设置的用户名和密码
+git init git add . git commit -m “yyyy/mm/dd-hh:mm” git remote add origin git@github."><meta property="og:url" content="https://ch168.tk/posts/30.htm"><meta property="og:site_name" content="it迷"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="hugo"><meta property="article:tag" content="github"><meta property="article:tag" content="网站"><meta property="article:published_time" content="2021-04-12T08:18:30+00:00"><meta property="article:modified_time" content="2021-04-12T08:18:30+00:00"><meta name=twitter:title content="hugo静态博客部署到github的脚本"><meta name=twitter:description content="hugo部署到github 建立本地和github仓库的连接 输入github的帐户名和邮箱
+git config --global user.name &amp;#34;waimao8&amp;#34; git config --global user.email &amp;#34;88888@qq.com&amp;#34; 查看设置的用户名和密码
 git config --list 生成 SSH key 与 github 联系
 ssh-keygen -t rsa -C “888888@qq.com” 一路回车 ubuntu设置显示隐藏文件，在用户目录找到.ssh
 打开id_rsa.pub，复制里面的内容。 然后登录github，如果没有就注册一个账号，登录后右上角 头像 -&amp;gt; Settings —&amp;gt; SSH nd GPG keys —&amp;gt; New SSH key。把公钥(id_rsa.pub)粘贴到 key 中，填好 title 并点击 Add SSH key
 关联完之后可以在终端输入
 ssh git@github.com 部署到github cd到 /public 依次输入
-git init git add . git commit -m “yyyy/mm/dd-hh:mm” git remote add origin git@github.">
-</head>
-<body class="article-page has-toc">
-<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
-<div class="container main-container flex
-extended">
-<div id=article-toolbar>
-<a href=https://ch168.tk class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
-<span>返回</span>
-</a>
-</div>
-<main class="main full-width">
-<article class=main-article>
-<header class=article-header>
-<div class=article-details>
-<header class=article-category>
-<a href=/categories/hugo/>
-hugo
-</a>
-<a href=/categories/github/>
-Github
-</a>
-<a href=/categories/%E7%BD%91%E7%AB%99/>
-网站
-</a>
-</header>
-<h2 class=article-title>
-<a href=/posts/30.htm>hugo静态博客部署到github的脚本</a>
-</h2>
-<footer class=article-time>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
-<time class=article-time--published>Apr 12, 2021</time>
-</div>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<time class=article-time--reading>
-阅读时长: 1 分钟
-</time>
-</div>
-</footer>
-</div>
-</header>
-<section class=article-content>
-<h2 id=hugo部署到github>hugo部署到github</h2>
-<p>建立本地和github仓库的连接
-输入github的帐户名和邮箱</p>
-<pre tabindex=0><code>git config --global user.name &quot;waimao8&quot;
-git config --global user.email &quot;88888@qq.com&quot;
-</code></pre><p>查看设置的用户名和密码</p>
-<pre tabindex=0><code>git config --list
-</code></pre><p>生成 SSH key 与 github 联系</p>
-<pre tabindex=0><code>ssh-keygen -t rsa -C “888888@qq.com”
-</code></pre><p>一路回车 ubuntu设置显示隐藏文件，在用户目录找到.ssh</p>
-<p>打开id_rsa.pub，复制里面的内容。 然后登录github，如果没有就注册一个账号，登录后右上角 头像 -> Settings —> SSH nd GPG keys —> New SSH key。把公钥(id_rsa.pub)粘贴到 key 中，填好 title 并点击 Add SSH key</p>
-<p>关联完之后可以在终端输入</p>
-<pre tabindex=0><code>ssh git@github.com
+git init git add . git commit -m “yyyy/mm/dd-hh:mm” git remote add origin git@github."></head><body class="article-page has-toc"><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex
+extended"><div id=article-toolbar><a href=https://ch168.tk class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg><span>返回</span></a></div><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/hugo/>hugo</a>
+<a href=/categories/github/>Github</a>
+<a href=/categories/%E7%BD%91%E7%AB%99/>网站</a></header><h2 class=article-title><a href=/posts/30.htm>hugo静态博客部署到github的脚本</a></h2><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>Apr 12, 2021</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading>阅读时长: 1 分钟</time></div></footer></div></header><section class=article-content><h2 id=hugo部署到github>hugo部署到github</h2><p>建立本地和github仓库的连接
+输入github的帐户名和邮箱</p><pre tabindex=0><code>git config --global user.name &#34;waimao8&#34;
+git config --global user.email &#34;88888@qq.com&#34;
+</code></pre><p>查看设置的用户名和密码</p><pre tabindex=0><code>git config --list
+</code></pre><p>生成 SSH key 与 github 联系</p><pre tabindex=0><code>ssh-keygen -t rsa -C “888888@qq.com”
+</code></pre><p>一路回车 ubuntu设置显示隐藏文件，在用户目录找到.ssh</p><p>打开id_rsa.pub，复制里面的内容。 然后登录github，如果没有就注册一个账号，登录后右上角 头像 -> Settings —> SSH nd GPG keys —> New SSH key。把公钥(id_rsa.pub)粘贴到 key 中，填好 title 并点击 Add SSH key</p><p>关联完之后可以在终端输入</p><pre tabindex=0><code>ssh git@github.com
 </code></pre><p>部署到github
-cd到 /public 依次输入</p>
-<pre tabindex=0><code>git init
+cd到 /public 依次输入</p><pre tabindex=0><code>git init
 git add .
 git commit -m “yyyy/mm/dd-hh:mm”
 git remote add origin git@github.com:waimao8/lubutu18.git
 git push -u origin master
-</code></pre><p>如果如果出现错误可以强制上传</p>
-<pre tabindex=0><code>git push -f origin master
-</code></pre><h2 id=自动部署脚本>自动部署脚本</h2>
-<p>新建1.sh内容如下</p>
-<pre tabindex=0><code>#!/bin/bash
+</code></pre><p>如果如果出现错误可以强制上传</p><pre tabindex=0><code>git push -f origin master
+</code></pre><h2 id=自动部署脚本>自动部署脚本</h2><p>新建1.sh内容如下</p><pre tabindex=0><code>#!/bin/bash
 cd /home/arch/hugo/blog/
 hugo
 hugo server
-</code></pre><p>新建2.sh内容如下</p>
-<pre tabindex=0><code>#!/bin/bash
+</code></pre><p>新建2.sh内容如下</p><pre tabindex=0><code>#!/bin/bash
 cd  /home/arch/hugo/blog
 hugo
 cd  /home/arch/hugo/blog/public
 git add .
-git commit -m &quot;modify&quot;
+git commit -m &#34;modify&#34;
 git push -u origin master
-</code></pre><h2 id=相关代码解释>相关代码解释</h2>
-<p>把1.sh和2.sh放在终端根目录，打开终端，输入ls，能看到1.sh和2.sh即可</p>
-<p>打开终端输入sh ./1.sh</p>
-<p>生成静态博客和打开本地预览 http://localhost:1313</p>
-<p>本地预览OK后，我们就可以上次到github了</p>
-<p>打开终端输入： sh ./2.sh</p>
-<p>hugo就会自动部署到githug了。</p>
-<h2 id=1sh和2sh也可放自在hugo程序的根目录>1.sh和2.sh也可放自在hugo程序的根目录</h2>
-<p>设置1.sh、2.sh，放到终端默认的目录下， 都是为了方便，你也可以放到其他位置，改成其他名称。</p>
-<p>下面cd的目录请改成你自己的，</p>
-<p>cd /home/arch/hugo/blog 和 cd /home/arch/hugo/blog/public</p>
-<p>如果你想把1.sh和2.sh放hugo的根目录</p>
-<p>1.sh就不用cd 那行代码</p>
-<p>2.sh 把/home/arch/hugo/blog/public 改成cd /public</p>
-<h2 id=运行sh文件提示错误的解决方法>运行sh文件提示错误的解决方法</h2>
-<p>如果运行sh文件，老是报错"没有那个文件或目录" 路径自动出现\</p>
-<p>需要更改sh文件格式，下面以1.sh为例</p>
-<p>1.编辑1.sh文件</p>
-<pre tabindex=0><code>vim 1.sh
-</code></pre><p>2.看该文件的格式</p>
-<pre tabindex=0><code>:set ff  
-</code></pre><p>3.看该文件的格式是什么，如果是DOC格式，就是用命令 set ff=unix，将他强制转成UNIX格式。</p>
-<pre tabindex=0><code>:set ff=unix
-</code></pre><p>3.改好后，输入下面代码保存并退出编辑，这时该脚本就能成功执行。</p>
-<pre tabindex=0><code>：wq
-</code></pre>
-</section>
-<footer class=article-footer>
-<section class=article-tags>
-<a href=/tags/hugo/>hugo</a>
+</code></pre><h2 id=相关代码解释>相关代码解释</h2><p>把1.sh和2.sh放在终端根目录，打开终端，输入ls，能看到1.sh和2.sh即可</p><p>打开终端输入sh ./1.sh</p><p>生成静态博客和打开本地预览 http://localhost:1313</p><p>本地预览OK后，我们就可以上次到github了</p><p>打开终端输入： sh ./2.sh</p><p>hugo就会自动部署到githug了。</p><h2 id=1sh和2sh也可放自在hugo程序的根目录>1.sh和2.sh也可放自在hugo程序的根目录</h2><p>设置1.sh、2.sh，放到终端默认的目录下， 都是为了方便，你也可以放到其他位置，改成其他名称。</p><p>下面cd的目录请改成你自己的，</p><p>cd /home/arch/hugo/blog 和 cd /home/arch/hugo/blog/public</p><p>如果你想把1.sh和2.sh放hugo的根目录</p><p>1.sh就不用cd 那行代码</p><p>2.sh 把/home/arch/hugo/blog/public 改成cd /public</p><h2 id=运行sh文件提示错误的解决方法>运行sh文件提示错误的解决方法</h2><p>如果运行sh文件，老是报错"没有那个文件或目录" 路径自动出现\</p><p>需要更改sh文件格式，下面以1.sh为例</p><p>1.编辑1.sh文件</p><pre tabindex=0><code>vim 1.sh
+</code></pre><p>2.看该文件的格式</p><pre tabindex=0><code>:set ff  
+</code></pre><p>3.看该文件的格式是什么，如果是DOC格式，就是用命令 set ff=unix，将他强制转成UNIX格式。</p><pre tabindex=0><code>:set ff=unix
+</code></pre><p>3.改好后，输入下面代码保存并退出编辑，这时该脚本就能成功执行。</p><pre tabindex=0><code>：wq
+</code></pre></section><footer class=article-footer><section class=article-tags><a href=/tags/hugo/>hugo</a>
 <a href=/tags/github/>Github</a>
-<a href=/tags/%E7%BD%91%E7%AB%99/>网站</a>
-</section>
-<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
-<span>Licensed under CC BY-NC-SA 4.0</span>
-</section>
-</footer>
-</article>
-<aside class=related-contents--wrapper>
-<h2 class=section-title>相关文章</h2>
-<div class=related-contents>
-<div class="flex article-list--tile">
-<article>
-<a href=/posts/31.html>
-<div class=article-details>
-<h2 class=article-title>Hugo+Github Actions实现自动化部署博客</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/posts/22.html>
-<div class=article-details>
-<h2 class=article-title>hugo搭建和使用教程</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/posts/36.html>
-<div class=article-details>
-<h2 class=article-title>这是一个forestry.io的模板</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/posts/26.html>
-<div class=article-details>
-<h2 class=article-title>ubuntu安装hugo教程</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/posts/20.html>
-<div class=article-details>
-<h2 class=article-title>k2p老毛子固件绑定域名之 cloudflare.com</h2>
-</div>
-</a>
-</article>
-</div>
-</div>
-</aside>
-<footer class=site-footer>
-<section class=copyright>
-&copy;
+<a href=/tags/%E7%BD%91%E7%AB%99/>网站</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><aside class=related-contents--wrapper><h2 class=section-title>相关文章</h2><div class=related-contents><div class="flex article-list--tile"><article><a href=/posts/31.html><div class=article-details><h2 class=article-title>Hugo+Github Actions实现自动化部署博客</h2></div></a></article><article><a href=/posts/22.html><div class=article-details><h2 class=article-title>hugo搭建和使用教程</h2></div></a></article><article><a href=/posts/36.html><div class=article-details><h2 class=article-title>这是一个forestry.io的模板</h2></div></a></article><article><a href=/posts/26.html><div class=article-details><h2 class=article-title>ubuntu安装hugo教程</h2></div></a></article><article><a href=/posts/20.html><div class=article-details><h2 class=article-title>k2p老毛子固件绑定域名之 cloudflare.com</h2></div></a></article></div></div></aside><footer class=site-footer><section class=copyright>&copy;
 2020 -
-2021 it迷
-</section>
-<section class=powerby>
-Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
-Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.1.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
-</section>
-</footer>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
-<div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
-<div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+2022 it迷</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.1.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-<div class=pswp__preloader>
-<div class=pswp__preloader__icn>
-<div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-</button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-</button>
-<div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
-</main>
-<aside class="sidebar right-sidebar sticky">
-<section class="widget archives">
-<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
-</div>
-<h2 class="widget-title section-title">目录</h2>
-<div class=widget--toc>
-<nav id=TableOfContents>
-<ol>
-<li><a href=#hugo部署到github>hugo部署到github</a></li>
-<li><a href=#自动部署脚本>自动部署脚本</a></li>
-<li><a href=#相关代码解释>相关代码解释</a></li>
-<li><a href=#1sh和2sh也可放自在hugo程序的根目录>1.sh和2.sh也可放自在hugo程序的根目录</a></li>
-<li><a href=#运行sh文件提示错误的解决方法>运行sh文件提示错误的解决方法</a></li>
-</ol>
-</nav>
-</div>
-</section>
-</aside>
-</div>
-<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
-<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
-</body>
-</html>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous></main><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#hugo部署到github>hugo部署到github</a></li><li><a href=#自动部署脚本>自动部署脚本</a></li><li><a href=#相关代码解释>相关代码解释</a></li><li><a href=#1sh和2sh也可放自在hugo程序的根目录>1.sh和2.sh也可放自在hugo程序的根目录</a></li><li><a href=#运行sh文件提示错误的解决方法>运行sh文件提示错误的解决方法</a></li></ol></nav></div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

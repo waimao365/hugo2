@@ -23,7 +23,7 @@ rm -rf .git
 git init
 git remote add origin git@github.com:waimao365/hugo.git
 如果出现错误可以先删除之前的</description></item><item><title>hugo静态博客部署到github的脚本</title><link>https://ch168.tk/posts/30.htm</link><pubDate>Mon, 12 Apr 2021 08:18:30 +0000</pubDate><guid>https://ch168.tk/posts/30.htm</guid><description>hugo部署到github 建立本地和github仓库的连接 输入github的帐户名和邮箱
-git config --global user.name &amp;quot;waimao8&amp;quot; git config --global user.email &amp;quot;88888@qq.com&amp;quot; 查看设置的用户名和密码
+git config --global user.name &amp;#34;waimao8&amp;#34; git config --global user.email &amp;#34;88888@qq.com&amp;#34; 查看设置的用户名和密码
 git config --list 生成 SSH key 与 github 联系
 ssh-keygen -t rsa -C “888888@qq.com” 一路回车 ubuntu设置显示隐藏文件，在用户目录找到.ssh
 打开id_rsa.pub，复制里面的内容。 然后登录github，如果没有就注册一个账号，登录后右上角 头像 -&amp;gt; Settings —&amp;gt; SSH nd GPG keys —&amp;gt; New SSH key。把公钥(id_rsa.pub)粘贴到 key 中，填好 title 并点击 Add SSH key

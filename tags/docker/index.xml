@@ -11,5 +11,5 @@ net.ipv4.tcp_congestion_control=bbr&lt;/p></description></item><item><title>N1�
 进入系统，常规设置，修改web管理员密码，需要安装的lnmp搭建网站的话，还需要修改端口，自动登出时间可以设置为1天。
 进入磁盘，文件管理，挂着ext4格式的U盘或者硬盘（其他格式的不能修改权限比如777 755等）&lt;/p></description></item><item><title>斐讯N1 docker安装homeassistant 配置斐讯dc1智能插座</title><link>https://ch168.tk/posts/6.html</link><pubDate>Mon, 16 Sep 2019 12:52:42 +0000</pubDate><guid>https://ch168.tk/posts/6.html</guid><description>&lt;p>斐讯N1 docker安装homeassistant 配置斐讯dc1智能插座&lt;/p>
 &lt;p>默认代码&lt;/p>
-&lt;pre tabindex="0">&lt;code>docker run -d --restart=always --name=&amp;quot;home-assistant&amp;quot; -e TZ=Asia/Shanghai -v /var/lib/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:latest
+&lt;pre tabindex="0">&lt;code>docker run -d --restart=always --name=&amp;#34;home-assistant&amp;#34; -e TZ=Asia/Shanghai -v /var/lib/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:latest
 &lt;/code>&lt;/pre></description></item></channel></rss>

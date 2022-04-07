@@ -1,128 +1,42 @@
-<!doctype html><html lang=zh-cn>
-<head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="安装armbian 测试了很多版本的Armbian+omv，OMV经常会报错，改用了XQ7的N1首个支持FullCone Nat的Armbian系统，非常好用 下面是链接 https://www.right.com.cn/forum/thread-788004-1-1.html
-"><title>斐讯N1安Armbian安装OMV安装nginx+mysql安装typecho全过程</title>
-<link rel=canonical href=https://ch168.tk/posts/7.html>
-<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="斐讯N1安Armbian安装OMV安装nginx+mysql安装typecho全过程">
-<meta property="og:description" content="安装armbian 测试了很多版本的Armbian+omv，OMV经常会报错，改用了XQ7的N1首个支持FullCone Nat的Armbian系统，非常好用 下面是链接 https://www.right.com.cn/forum/thread-788004-1-1.html
-">
-<meta property="og:url" content="https://ch168.tk/posts/7.html">
-<meta property="og:site_name" content="it迷">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="斐讯N1"><meta property="article:tag" content="omv"><meta property="article:tag" content="typecho"><meta property="article:tag" content="lnmp"><meta property="article:tag" content="mysql"><meta property="article:tag" content="nginx"><meta property="article:published_time" content="2019-12-08T18:28:42+00:00"><meta property="article:modified_time" content="2019-12-08T18:28:42+00:00">
-<meta name=twitter:title content="斐讯N1安Armbian安装OMV安装nginx+mysql安装typecho全过程">
-<meta name=twitter:description content="安装armbian 测试了很多版本的Armbian+omv，OMV经常会报错，改用了XQ7的N1首个支持FullCone Nat的Armbian系统，非常好用 下面是链接 https://www.right.com.cn/forum/thread-788004-1-1.html
-">
-</head>
-<body class="article-page has-toc">
-<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
-<div class="container main-container flex
-extended">
-<div id=article-toolbar>
-<a href=https://ch168.tk class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
-<span>返回</span>
-</a>
-</div>
-<main class="main full-width">
-<article class=main-article>
-<header class=article-header>
-<div class=article-details>
-<header class=article-category>
-<a href=/categories/%E6%96%90%E8%AE%AFn1/>
-斐讯N1
-</a>
-<a href=/categories/omv/>
-omv
-</a>
-<a href=/categories/typecho/>
-typecho
-</a>
-<a href=/categories/lnmp/>
-lnmp
-</a>
-<a href=/categories/mysql/>
-mysql
-</a>
-<a href=/categories/nginx/>
-nginx
-</a>
-</header>
-<h2 class=article-title>
-<a href=/posts/7.html>斐讯N1安Armbian安装OMV安装nginx+mysql安装typecho全过程</a>
-</h2>
-<footer class=article-time>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
-<time class=article-time--published>Dec 08, 2019</time>
-</div>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<time class=article-time--reading>
-阅读时长: 2 分钟
-</time>
-</div>
-</footer>
-</div>
-</header>
-<section class=article-content>
-<h1 id=安装armbian>安装armbian</h1>
-<p>测试了很多版本的Armbian+omv，OMV经常会报错，改用了XQ7的N1首个支持FullCone Nat的Armbian系统，非常好用
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="安装armbian 测试了很多版本的Armbian+omv，OMV经常会报错，改用了XQ7的N1首个支持FullCone Nat的Armbian系统，非常好用 下面是链接 https://www.right.com.cn/forum/thread-788004-1-1.html
+"><title>斐讯N1安Armbian安装OMV安装nginx+mysql安装typecho全过程</title><link rel=canonical href=https://ch168.tk/posts/7.html><link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="斐讯N1安Armbian安装OMV安装nginx+mysql安装typecho全过程"><meta property="og:description" content="安装armbian 测试了很多版本的Armbian+omv，OMV经常会报错，改用了XQ7的N1首个支持FullCone Nat的Armbian系统，非常好用 下面是链接 https://www.right.com.cn/forum/thread-788004-1-1.html
+"><meta property="og:url" content="https://ch168.tk/posts/7.html"><meta property="og:site_name" content="it迷"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="斐讯N1"><meta property="article:tag" content="omv"><meta property="article:tag" content="typecho"><meta property="article:tag" content="lnmp"><meta property="article:tag" content="mysql"><meta property="article:tag" content="nginx"><meta property="article:published_time" content="2019-12-08T18:28:42+00:00"><meta property="article:modified_time" content="2019-12-08T18:28:42+00:00"><meta name=twitter:title content="斐讯N1安Armbian安装OMV安装nginx+mysql安装typecho全过程"><meta name=twitter:description content="安装armbian 测试了很多版本的Armbian+omv，OMV经常会报错，改用了XQ7的N1首个支持FullCone Nat的Armbian系统，非常好用 下面是链接 https://www.right.com.cn/forum/thread-788004-1-1.html
+"></head><body class="article-page has-toc"><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex
+extended"><div id=article-toolbar><a href=https://ch168.tk class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg><span>返回</span></a></div><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/%E6%96%90%E8%AE%AFn1/>斐讯N1</a>
+<a href=/categories/omv/>omv</a>
+<a href=/categories/typecho/>typecho</a>
+<a href=/categories/lnmp/>lnmp</a>
+<a href=/categories/mysql/>mysql</a>
+<a href=/categories/nginx/>nginx</a></header><h2 class=article-title><a href=/posts/7.html>斐讯N1安Armbian安装OMV安装nginx+mysql安装typecho全过程</a></h2><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>Dec 08, 2019</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading>阅读时长: 2 分钟</time></div></footer></div></header><section class=article-content><h1 id=安装armbian>安装armbian</h1><p>测试了很多版本的Armbian+omv，OMV经常会报错，改用了XQ7的N1首个支持FullCone Nat的Armbian系统，非常好用
 下面是链接
-<a class=link href=https://www.right.com.cn/forum/thread-788004-1-1.html target=_blank rel=noopener>https://www.right.com.cn/forum/thread-788004-1-1.html</a></p>
-<p>ROM下载地址：链接：https://share.weiyun.com/5IsYMcO 密码：fop0i5
-需要说明的是img制作成U盘后，不需要替换dtb，不需要更换内核，直接使用就可以，一步到位。</p>
-<p>先把镜像写入U盘，从U盘启动后，从路由器找到N1的ip地址
+<a class=link href=https://www.right.com.cn/forum/thread-788004-1-1.html target=_blank rel=noopener>https://www.right.com.cn/forum/thread-788004-1-1.html</a></p><p>ROM下载地址：链接：https://share.weiyun.com/5IsYMcO 密码：fop0i5
+需要说明的是img制作成U盘后，不需要替换dtb，不需要更换内核，直接使用就可以，一步到位。</p><p>先把镜像写入U盘，从U盘启动后，从路由器找到N1的ip地址
 通过Xshell登陆 输入N1的ip 账号root 密码1234
 第一次进入需要修改密码
 再写入N1的内置存储，用下面的命令就可以了
 /boot/create-mbr-linux.sh
 /root/install.sh
-写入完成后，断电，拔U盘，插电重启</p>
-<p>切换中国时间
-ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo &ldquo;Asia/Shanghai&rdquo; > /etc/timezone</p>
-<p>运行
+写入完成后，断电，拔U盘，插电重启</p><p>切换中国时间
+ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo &ldquo;Asia/Shanghai&rdquo; > /etc/timezone</p><p>运行
 nano /etc/apt/sources.list
 修改源为国内源
 deb <a class=link href=http://mirrors.tuna.tsinghua.edu.cn/debian target=_blank rel=noopener>http://mirrors.tuna.tsinghua.edu.cn/debian</a> stretch main contrib non-free
 deb <a class=link href=http://mirrors.tuna.tsinghua.edu.cn/debian target=_blank rel=noopener>http://mirrors.tuna.tsinghua.edu.cn/debian</a> stretch-updates main contrib non-free
 deb <a class=link href=http://mirrors.tuna.tsinghua.edu.cn/debian-security target=_blank rel=noopener>http://mirrors.tuna.tsinghua.edu.cn/debian-security</a> stretch/updates main contrib non-free
-deb <a class=link href=http://mirrors.tuna.tsinghua.edu.cn/debian target=_blank rel=noopener>http://mirrors.tuna.tsinghua.edu.cn/debian</a> stretch-backports main</p>
-<p>或者</p>
-<p>deb <a class=link href=http://mirrors.ustc.edu.cn/debian target=_blank rel=noopener>http://mirrors.ustc.edu.cn/debian</a> stretch main contrib non-free
+deb <a class=link href=http://mirrors.tuna.tsinghua.edu.cn/debian target=_blank rel=noopener>http://mirrors.tuna.tsinghua.edu.cn/debian</a> stretch-backports main</p><p>或者</p><p>deb <a class=link href=http://mirrors.ustc.edu.cn/debian target=_blank rel=noopener>http://mirrors.ustc.edu.cn/debian</a> stretch main contrib non-free
 deb <a class=link href=http://mirrors.ustc.edu.cn/debian target=_blank rel=noopener>http://mirrors.ustc.edu.cn/debian</a> stretch-updates main contrib non-free
 deb <a class=link href=http://mirrors.ustc.edu.cn/debian target=_blank rel=noopener>http://mirrors.ustc.edu.cn/debian</a> stretch-backports main contrib non-free
-deb <a class=link href=http://mirrors.ustc.edu.cn/debian-security/ target=_blank rel=noopener>http://mirrors.ustc.edu.cn/debian-security/</a> stretch/updates main contrib non-free</p>
-<p>保存后，更新源
+deb <a class=link href=http://mirrors.ustc.edu.cn/debian-security/ target=_blank rel=noopener>http://mirrors.ustc.edu.cn/debian-security/</a> stretch/updates main contrib non-free</p><p>保存后，更新源
 执行 apt-get update 命令即可更新源
-执行 apt-get upgrade 更新软件</p>
-<h2 id=做一个补充切换国内源后安装omv和插件有一定概率会出问题官方的也是一样最稳的做法是外国ip官方源稳定速度又快>做一个补充，切换国内源后安装omv和插件有一定概率会出问题，官方的也是一样，最稳的做法是，外国ip，官方源，稳定，速度又快。</h2>
-<h1 id=安装omv>安装omv</h1>
-<p>armbian-config</p>
-<p>选择Software，回车确认 接着选择Softy，回车确认 最后选择OMV，空格勾选，回车确认开始安装</p>
-<p>然后，按tab键，选择OK，回车确认 最后等OMV程序自动安装完成</p>
-<p>依次选择Exit、Cancel，返回命令行
-至此OMV安装完毕，正常的话，浏览器输入N1 ip或http://aml/ ,会看到OpenMediaVault登陆界面</p>
-<p>此时使用默认用户名：admin 默认密码：openmediavault ，登陆即可</p>
-<p>OMV安装OMVEXTRAS
+执行 apt-get upgrade 更新软件</p><h2 id=做一个补充切换国内源后安装omv和插件有一定概率会出问题官方的也是一样最稳的做法是外国ip官方源稳定速度又快>做一个补充，切换国内源后安装omv和插件有一定概率会出问题，官方的也是一样，最稳的做法是，外国ip，官方源，稳定，速度又快。</h2><h1 id=安装omv>安装omv</h1><p>armbian-config</p><p>选择Software，回车确认 接着选择Softy，回车确认 最后选择OMV，空格勾选，回车确认开始安装</p><p>然后，按tab键，选择OK，回车确认 最后等OMV程序自动安装完成</p><p>依次选择Exit、Cancel，返回命令行
+至此OMV安装完毕，正常的话，浏览器输入N1 ip或http://aml/ ,会看到OpenMediaVault登陆界面</p><p>此时使用默认用户名：admin 默认密码：openmediavault ，登陆即可</p><p>OMV安装OMVEXTRAS
 官方教程 <a class=link href=https://www.openmediavault.cn/read-omvextrasorg.html target=_blank rel=noopener>https://www.openmediavault.cn/read-omvextrasorg.html</a>
-安装好后，按下图设置</p>
-<p><img src=https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112165303.png alt></p>
-<h1 id=安装typecho>安装Typecho</h1>
-<h2 id=在文件管理找到自己的usb设备我的是移动2t的移动硬盘选择挂载>在文件管理，找到自己的usb设备，我的是移动2T的移动硬盘，选择挂载。</h2>
-<p><img src=https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112170829.png alt></p>
-<p>用winscp软件，到2t下面建www文件夹，在www下面建typecho文件夹，在typecho下面建public_html 文件夹 都设置777权限，如下图</p>
-<p><img src=https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112170108.png alt>
-<img src=https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112170222.png alt></p>
-<h2 id=安装nginx和mysql>安装nginx和mysql</h2>
-<p>在插件找插件，点安装就可以的，先安装nginx，再安装mysql，安装好后入下图</p>
-<p><img src=https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112171153.png alt></p>
-<h3 id=设置nginx-点击pools添加typecho>设置nginx 点击pools，添加typecho</h3>
-<p><img src=https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112171656.png alt>
+安装好后，按下图设置</p><p><img src=https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112165303.png alt></p><h1 id=安装typecho>安装Typecho</h1><h2 id=在文件管理找到自己的usb设备我的是移动2t的移动硬盘选择挂载>在文件管理，找到自己的usb设备，我的是移动2T的移动硬盘，选择挂载。</h2><p><img src=https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112170829.png alt></p><p>用winscp软件，到2t下面建www文件夹，在www下面建typecho文件夹，在typecho下面建public_html 文件夹 都设置777权限，如下图</p><p><img src=https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112170108.png alt>
+<img src=https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112170222.png alt></p><h2 id=安装nginx和mysql>安装nginx和mysql</h2><p>在插件找插件，点安装就可以的，先安装nginx，再安装mysql，安装好后入下图</p><p><img src=https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112171153.png alt></p><h3 id=设置nginx-点击pools添加typecho>设置nginx 点击pools，添加typecho</h3><p><img src=https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112171656.png alt>
 点击服务器，添加后保存
 <img src=https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112171847.png alt>
-应用更改后再设置，选择typecho目录，选择公共目录，选择public_html，启用php，php-fpm-pool选择刚刚建立的typecho</p>
-<p><img src=https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112172404.png alt></p>
-<p>Index下面的三个选项都打开</p>
-<p>这里先打乱一些顺序，我发现安装好typecho后，只能打开前台，文件页面和管理后台都出现404，下面就是解决方法
-下面有个扩展选项，填入下面代码</p>
-<p>if (-f $request_filename/index.html){
+应用更改后再设置，选择typecho目录，选择公共目录，选择public_html，启用php，php-fpm-pool选择刚刚建立的typecho</p><p><img src=https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112172404.png alt></p><p>Index下面的三个选项都打开</p><p>这里先打乱一些顺序，我发现安装好typecho后，只能打开前台，文件页面和管理后台都出现404，下面就是解决方法
+下面有个扩展选项，填入下面代码</p><p>if (-f $request_filename/index.html){
 rewrite (.<em>) $1/index.html break;
 }
 if (-f $request_filename/index.php){
@@ -130,175 +44,38 @@ rewrite (.</em>) $1/index.php;
 }
 if (!-f $request_filename){
 rewrite (.*) /index.php;
-}</p>
-<p><img src=https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112173220.png alt></p>
-<p>也可以直接在配置 /etc/nginx/sites-available/zzz-omv-nginx 最后面加上面的代码
-就可以了</p>
-<p>最后在General点击启用，nginx 就配置好了
-下面配置数据库</p>
-<h3 id=omv安装数据库>omv安装数据库</h3>
-<p><a class=link href=https://www.openmediavault.cn/read-omv-install-mysql.html target=_blank rel=noopener>https://www.openmediavault.cn/read-omv-install-mysql.html</a></p>
-<p>打开mysql，重设密码。绑定ip改成n1的ip</p>
-<p><img src=https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112174209.png alt></p>
-<p>点击show
+}</p><p><img src=https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112173220.png alt></p><p>也可以直接在配置 /etc/nginx/sites-available/zzz-omv-nginx 最后面加上面的代码
+就可以了</p><p>最后在General点击启用，nginx 就配置好了
+下面配置数据库</p><h3 id=omv安装数据库>omv安装数据库</h3><p><a class=link href=https://www.openmediavault.cn/read-omv-install-mysql.html target=_blank rel=noopener>https://www.openmediavault.cn/read-omv-install-mysql.html</a></p><p>打开mysql，重设密码。绑定ip改成n1的ip</p><p><img src=https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112174209.png alt></p><p>点击show
 用户ID：omvadmin
 密码：刚修改过的
 登陆后，创建数据库
 <img src=https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112174527.png alt>
-官方下载 <a class=link href=http://typecho.org/ target=_blank rel=noopener>http://typecho.org/</a><br>
-解压后，将文件上传到前面建立都public_html文件夹，就可以安装了。</p>
-<h3 id=mysql自动启动>mysql自动启动</h3>
-<p>安装配置完nginx和mysql后默认mysql是不能自启动的。所以还要配置数据库自启动。用winscp连接OMV系统【默认用户名root密码openmediavault】。连接后打开etc-找到rc.loal,右键点编辑，在exit 0上一行添加service mysqld start保存退出。就可以了</p>
-<h3 id=备份数据库和还原数据库>备份数据库和还原数据库</h3>
-<p><img src=https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112182628.png alt></p>
-<h1 id=顺便推荐一个非常漂亮的主题>顺便推荐一个非常漂亮的主题</h1>
-<p><a class=link href=https://zhebk.cn/Web/Akina.html target=_blank rel=noopener>https://zhebk.cn/Web/Akina.html</a></p>
-<h1 id=下面是相关命令和教程>下面是相关命令和教程</h1>
-<p>omv-firstaid
-First aid 界面翻译</p>
-<p>configure network interface 配置网络界面</p>
-<p>configure web control panel 配置Web控制面板</p>
-<p>change control panel administrator password 更改控制面板管理员密码</p>
-<p>restore failed login attempt counter 恢复失败登录尝试计数器</p>
-<p>restore configuration backup 恢复配置备份</p>
-<p>check configuration status file 检查配置状态文件</p>
-<p>check RRD database 检查RRD数据库</p>
-<p>clear local upload package repository 清除本地上传包存储库</p>
-<p>clean apt 清除apt</p>
-<p>clear web control panel cache 清除Web控制面板缓存</p>
-<p>submit diagnostic report to administrator 向管理员提交诊断
+官方下载 <a class=link href=http://typecho.org/ target=_blank rel=noopener>http://typecho.org/</a><br>解压后，将文件上传到前面建立都public_html文件夹，就可以安装了。</p><h3 id=mysql自动启动>mysql自动启动</h3><p>安装配置完nginx和mysql后默认mysql是不能自启动的。所以还要配置数据库自启动。用winscp连接OMV系统【默认用户名root密码openmediavault】。连接后打开etc-找到rc.loal,右键点编辑，在exit 0上一行添加service mysqld start保存退出。就可以了</p><h3 id=备份数据库和还原数据库>备份数据库和还原数据库</h3><p><img src=https://cdn.jsdelivr.net/gh/waimao8/image@master/20200112182628.png alt></p><h1 id=顺便推荐一个非常漂亮的主题>顺便推荐一个非常漂亮的主题</h1><p><a class=link href=https://zhebk.cn/Web/Akina.html target=_blank rel=noopener>https://zhebk.cn/Web/Akina.html</a></p><h1 id=下面是相关命令和教程>下面是相关命令和教程</h1><p>omv-firstaid
+First aid 界面翻译</p><p>configure network interface 配置网络界面</p><p>configure web control panel 配置Web控制面板</p><p>change control panel administrator password 更改控制面板管理员密码</p><p>restore failed login attempt counter 恢复失败登录尝试计数器</p><p>restore configuration backup 恢复配置备份</p><p>check configuration status file 检查配置状态文件</p><p>check RRD database 检查RRD数据库</p><p>clear local upload package repository 清除本地上传包存储库</p><p>clean apt 清除apt</p><p>clear web control panel cache 清除Web控制面板缓存</p><p>submit diagnostic report to administrator 向管理员提交诊断
 卸载相关
 apt-get remove 会删除软件包而保留软件的配置文件
 apt-get purge 会同时清除软件包和软件的配置文件
 卸载openmediavault命令
-apt-get purge openmediavault</p>
-<p>armbian-config可视化操作里面有许多快捷的系统设置，
+apt-get purge openmediavault</p><p>armbian-config可视化操作里面有许多快捷的系统设置，
 比如说基本的时间设置、网络设置，Wi-Fi设置，设置热点、安装桌面和远程、安装热门的第三方软件（诸如nginx Nextcloud、Plex、OpenMediaVault、Pi-hole、Transmission、Docker等热门软件）
 下面收集了一些omv的相关教程，可以参考
-omv使用</p>
-<p>OMV安装NextCloud
-<a class=link href=https://www.openmediavault.cn/read-omv-an-zhuang-nextcloud.html target=_blank rel=noopener>https://www.openmediavault.cn/read-omv-an-zhuang-nextcloud.html</a></p>
-<p>phicomm N1 armbian环境下安装功能丰富的开源NAS系统 OpenMediaVault
-<a class=link href=https://www.right.com.cn/forum/thread-342164-1-1.html target=_blank rel=noopener>https://www.right.com.cn/forum/thread-342164-1-1.html</a></p>
-<p>N1 OpenMediaVault 使用DLNA+VLC多媒体应用的小白教程
-<a class=link href=https://www.right.com.cn/forum/thread-342841-1-1.html target=_blank rel=noopener>https://www.right.com.cn/forum/thread-342841-1-1.html</a></p>
-<p>OpenMediaVault(OMV)配置Docker
-<a class=link href=https://www.jianshu.com/p/5b0eacc61527 target=_blank rel=noopener>https://www.jianshu.com/p/5b0eacc61527</a></p>
-<p>OMV安装可道云(kodexplorer)
-<a class=link href=https://www.jianshu.com/p/4731a1ef01d1 target=_blank rel=noopener>https://www.jianshu.com/p/4731a1ef01d1</a></p>
-<p>OMV安装web服务器详细教程
-<a class=link href=https://jingyan.baidu.com/article/0aa223757304e688cd0d6464.html target=_blank rel=noopener>https://jingyan.baidu.com/article/0aa223757304e688cd0d6464.html</a></p>
-</section>
-<footer class=article-footer>
-<section class=article-tags>
-<a href=/tags/%E6%96%90%E8%AE%AFn1/>斐讯N1</a>
+omv使用</p><p>OMV安装NextCloud
+<a class=link href=https://www.openmediavault.cn/read-omv-an-zhuang-nextcloud.html target=_blank rel=noopener>https://www.openmediavault.cn/read-omv-an-zhuang-nextcloud.html</a></p><p>phicomm N1 armbian环境下安装功能丰富的开源NAS系统 OpenMediaVault
+<a class=link href=https://www.right.com.cn/forum/thread-342164-1-1.html target=_blank rel=noopener>https://www.right.com.cn/forum/thread-342164-1-1.html</a></p><p>N1 OpenMediaVault 使用DLNA+VLC多媒体应用的小白教程
+<a class=link href=https://www.right.com.cn/forum/thread-342841-1-1.html target=_blank rel=noopener>https://www.right.com.cn/forum/thread-342841-1-1.html</a></p><p>OpenMediaVault(OMV)配置Docker
+<a class=link href=https://www.jianshu.com/p/5b0eacc61527 target=_blank rel=noopener>https://www.jianshu.com/p/5b0eacc61527</a></p><p>OMV安装可道云(kodexplorer)
+<a class=link href=https://www.jianshu.com/p/4731a1ef01d1 target=_blank rel=noopener>https://www.jianshu.com/p/4731a1ef01d1</a></p><p>OMV安装web服务器详细教程
+<a class=link href=https://jingyan.baidu.com/article/0aa223757304e688cd0d6464.html target=_blank rel=noopener>https://jingyan.baidu.com/article/0aa223757304e688cd0d6464.html</a></p></section><footer class=article-footer><section class=article-tags><a href=/tags/%E6%96%90%E8%AE%AFn1/>斐讯N1</a>
 <a href=/tags/omv/>omv</a>
 <a href=/tags/typecho/>typecho</a>
 <a href=/tags/lnmp/>lnmp</a>
 <a href=/tags/mysql/>mysql</a>
-<a href=/tags/nginx/>nginx</a>
-</section>
-<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
-<span>Licensed under CC BY-NC-SA 4.0</span>
-</section>
-</footer>
-</article>
-<aside class=related-contents--wrapper>
-<h2 class=section-title>相关文章</h2>
-<div class=related-contents>
-<div class="flex article-list--tile">
-<article>
-<a href=/posts/8.html>
-<div class=article-details>
-<h2 class=article-title>N1安装omv后安装docker+transmission+lnmp搭建网站</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/posts/6.html>
-<div class=article-details>
-<h2 class=article-title>斐讯N1 docker安装homeassistant 配置斐讯dc1智能插座</h2>
-</div>
-</a>
-</article>
-</div>
-</div>
-</aside>
-<footer class=site-footer>
-<section class=copyright>
-&copy;
+<a href=/tags/nginx/>nginx</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><aside class=related-contents--wrapper><h2 class=section-title>相关文章</h2><div class=related-contents><div class="flex article-list--tile"><article><a href=/posts/8.html><div class=article-details><h2 class=article-title>N1安装omv后安装docker+transmission+lnmp搭建网站</h2></div></a></article><article><a href=/posts/6.html><div class=article-details><h2 class=article-title>斐讯N1 docker安装homeassistant 配置斐讯dc1智能插座</h2></div></a></article></div></div></aside><footer class=site-footer><section class=copyright>&copy;
 2020 -
-2021 it迷
-</section>
-<section class=powerby>
-Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
-Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.1.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
-</section>
-</footer>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
-<div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
-<div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+2022 it迷</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.1.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-<div class=pswp__preloader>
-<div class=pswp__preloader__icn>
-<div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-</button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-</button>
-<div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
-</main>
-<aside class="sidebar right-sidebar sticky">
-<section class="widget archives">
-<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
-</div>
-<h2 class="widget-title section-title">目录</h2>
-<div class=widget--toc>
-<nav id=TableOfContents>
-<ol>
-<li><a href=#做一个补充切换国内源后安装omv和插件有一定概率会出问题官方的也是一样最稳的做法是外国ip官方源稳定速度又快>做一个补充，切换国内源后安装omv和插件有一定概率会出问题，官方的也是一样，最稳的做法是，外国ip，官方源，稳定，速度又快。</a></li>
-</ol>
-<ol>
-<li><a href=#在文件管理找到自己的usb设备我的是移动2t的移动硬盘选择挂载>在文件管理，找到自己的usb设备，我的是移动2T的移动硬盘，选择挂载。</a></li>
-<li><a href=#安装nginx和mysql>安装nginx和mysql</a>
-<ol>
-<li><a href=#设置nginx-点击pools添加typecho>设置nginx 点击pools，添加typecho</a></li>
-<li><a href=#omv安装数据库>omv安装数据库</a></li>
-<li><a href=#mysql自动启动>mysql自动启动</a></li>
-<li><a href=#备份数据库和还原数据库>备份数据库和还原数据库</a></li>
-</ol>
-</li>
-</ol>
-</nav>
-</div>
-</section>
-</aside>
-</div>
-<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
-<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
-</body>
-</html>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous></main><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#做一个补充切换国内源后安装omv和插件有一定概率会出问题官方的也是一样最稳的做法是外国ip官方源稳定速度又快>做一个补充，切换国内源后安装omv和插件有一定概率会出问题，官方的也是一样，最稳的做法是，外国ip，官方源，稳定，速度又快。</a></li></ol><ol><li><a href=#在文件管理找到自己的usb设备我的是移动2t的移动硬盘选择挂载>在文件管理，找到自己的usb设备，我的是移动2T的移动硬盘，选择挂载。</a></li><li><a href=#安装nginx和mysql>安装nginx和mysql</a><ol><li><a href=#设置nginx-点击pools添加typecho>设置nginx 点击pools，添加typecho</a></li><li><a href=#omv安装数据库>omv安装数据库</a></li><li><a href=#mysql自动启动>mysql自动启动</a></li><li><a href=#备份数据库和还原数据库>备份数据库和还原数据库</a></li></ol></li></ol></nav></div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

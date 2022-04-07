@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>it迷</title><link>https://ch168.tk/</link><description>Recent content on it迷</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 10 Oct 2021 17:47:37 +0000</lastBuildDate><atom:link href="https://ch168.tk/index.xml" rel="self" type="application/rss+xml"/><item><title>5555555555</title><link>https://ch168.tk/p/555/</link><pubDate>Sun, 10 Oct 2021 17:47:37 +0000</pubDate><guid>https://ch168.tk/p/555/</guid><description>&lt;p>5555555555555&lt;/p></description></item><item><title>333333333</title><link>https://ch168.tk/p/333333333/</link><pubDate>Sun, 10 Oct 2021 16:11:56 +0000</pubDate><guid>https://ch168.tk/p/333333333/</guid><description>&lt;p>333333333333333333&lt;/p></description></item><item><title>Hugo+Github Actions实现自动化部署博客</title><link>https://ch168.tk/posts/31.html</link><pubDate>Mon, 23 Aug 2021 08:18:30 +0000</pubDate><guid>https://ch168.tk/posts/31.html</guid><description>&lt;h1 id="本地电脑和github之间的连接">本地电脑和github之间的连接&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>it迷</title><link>https://ch168.tk/</link><description>Recent content on it迷</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 10 Oct 2021 17:47:37 +0000</lastBuildDate><atom:link href="https://ch168.tk/index.xml" rel="self" type="application/rss+xml"/><item><title>5555555555</title><link>https://ch168.tk/p/555/</link><pubDate>Sun, 10 Oct 2021 17:47:37 +0000</pubDate><guid>https://ch168.tk/p/555/</guid><description>&lt;p>5555555555555&lt;/p></description></item><item><title>2022</title><link>https://ch168.tk/p/2022/</link><pubDate>Sun, 10 Oct 2021 16:11:56 +0000</pubDate><guid>https://ch168.tk/p/2022/</guid><description>&lt;p>202204071331&lt;/p></description></item><item><title>Hugo+Github Actions实现自动化部署博客</title><link>https://ch168.tk/posts/31.html</link><pubDate>Mon, 23 Aug 2021 08:18:30 +0000</pubDate><guid>https://ch168.tk/posts/31.html</guid><description>&lt;h1 id="本地电脑和github之间的连接">本地电脑和github之间的连接&lt;/h1>
 &lt;p>打开电脑文件夹 用户名/.ssh （查看，勾选隐藏的项目）&lt;/p>
 &lt;p>右键 Git Bash Here&lt;/p>
 &lt;p>输入&lt;/p>
@@ -64,8 +64,8 @@ publish_branch: gh-pages # &amp;lt;- 远端repo目标分支
 &lt;/code>&lt;/pre>&lt;p>建议大家建立两个项目，一个私人，一个公开，以上内容都在私人的项目操作，只需要将上面代码的倒数第三行改成公开的项目就可以了&lt;/p></description></item><item><title>hugo静态博客部署到github的脚本</title><link>https://ch168.tk/posts/30.htm</link><pubDate>Mon, 12 Apr 2021 08:18:30 +0000</pubDate><guid>https://ch168.tk/posts/30.htm</guid><description>&lt;h2 id="hugo部署到github">hugo部署到github&lt;/h2>
 &lt;p>建立本地和github仓库的连接
 输入github的帐户名和邮箱&lt;/p>
-&lt;pre tabindex="0">&lt;code>git config --global user.name &amp;quot;waimao8&amp;quot;
-git config --global user.email &amp;quot;88888@qq.com&amp;quot;
+&lt;pre tabindex="0">&lt;code>git config --global user.name &amp;#34;waimao8&amp;#34;
+git config --global user.email &amp;#34;88888@qq.com&amp;#34;
 &lt;/code>&lt;/pre>&lt;p>查看设置的用户名和密码&lt;/p>
 &lt;pre tabindex="0">&lt;code>git config --list
 &lt;/code>&lt;/pre>&lt;p>生成 SSH key 与 github 联系&lt;/p>
@@ -95,7 +95,7 @@ cd /home/arch/hugo/blog
 hugo
 cd /home/arch/hugo/blog/public
 git add .
-git commit -m &amp;quot;modify&amp;quot;
+git commit -m &amp;#34;modify&amp;#34;
 git push -u origin master
 &lt;/code>&lt;/pre>&lt;h2 id="相关代码解释">相关代码解释&lt;/h2>
 &lt;p>把1.sh和2.sh放在终端根目录，打开终端，输入ls，能看到1.sh和2.sh即可&lt;/p>
@@ -329,7 +329,7 @@ sudo ln -s /opt/Telegram/Telegram /usr/local/bin/telegram-desktop&lt;/p>
 &lt;pre tabindex="0">&lt;code>git clone https://github.com/olOwOlo/hugo-theme-even themes/even
 &lt;/code>&lt;/pre>&lt;p>在exampleSite目录找到config.toml和content 复制到D:\blog目录下&lt;/p>
 &lt;p>在blog根目录下，终端输入下面代码&lt;/p>
-&lt;pre tabindex="0">&lt;code>hugo --theme=even --baseUrl=&amp;quot;http://waimao365.github.io/&amp;quot; --buildDrafts
+&lt;pre tabindex="0">&lt;code>hugo --theme=even --baseUrl=&amp;#34;http://waimao365.github.io/&amp;#34; --buildDrafts
 &lt;/code>&lt;/pre>&lt;p>#even改成你的主题&lt;/p>
 &lt;h3 id="本地预览">本地预览&lt;/h3>
 &lt;pre tabindex="0">&lt;code>cd /blog
@@ -338,8 +338,8 @@ hugo server
 &lt;/code>&lt;/pre>&lt;p>http://localhost:1313&lt;/p>
 &lt;h3 id="建立本地和github仓库的连接">建立本地和github仓库的连接&lt;/h3>
 &lt;p>输入github的帐户名和邮箱&lt;/p>
-&lt;pre tabindex="0">&lt;code>git config --global user.name &amp;quot;waimao8&amp;quot;
-git config --global user.email &amp;quot;88888@qq.com&amp;quot;
+&lt;pre tabindex="0">&lt;code>git config --global user.name &amp;#34;waimao8&amp;#34;
+git config --global user.email &amp;#34;88888@qq.com&amp;#34;
 &lt;/code>&lt;/pre>&lt;p>查看设置的用户名和密码&lt;/p>
 &lt;pre tabindex="0">&lt;code>git config --list
 &lt;/code>&lt;/pre>&lt;p>生成 SSH key 与 github 联系&lt;/p>
@@ -408,7 +408,7 @@ pacman -S net-tools openssh&lt;/p>
 &lt;p>systemctl start sshd&lt;/p>
 &lt;p>dhcpcd #网线
 wifi-menu # wifi
-ping &lt;a class="link" href="http://www.baidu.com" target="_blank" rel="noopener"
+ping &lt;a class="link" href="https://www.baidu.com" target="_blank" rel="noopener"
 >www.baidu.com&lt;/a>&lt;/p>
 &lt;p>ctrt+c #退出ping&lt;/p>
 &lt;h2 id="复制粘帖部分">复制粘帖部分&lt;/h2>
@@ -1629,10 +1629,10 @@ open .
 &lt;!-- raw HTML omitted -->
 &lt;p>docker安装portainer&lt;/p>
 &lt;blockquote>
-&lt;p>docker run -d -p 9888:9000&lt;br>
-&amp;ndash;restart=always&lt;br>
--v /var/run/docker.sock:/var/run/docker.sock&lt;br>
-&amp;ndash;name prtainer-test&lt;br>
+&lt;p>docker run -d -p 9888:9000 &lt;br>
+&amp;ndash;restart=always &lt;br>
+-v /var/run/docker.sock:/var/run/docker.sock &lt;br>
+&amp;ndash;name prtainer-test &lt;br>
 docker.io/portainer/portainer&lt;/p>
 &lt;/blockquote>
 &lt;p>docker run -d -p 9888:9000 &amp;ndash;restart=always &amp;ndash;name portainer -v /var/run/docker.sock:/var/run/docker.sock -v /Users/lee/dev/docker_file/portainer/data:/data docker.io/portainer/portainer
@@ -1815,14 +1815,14 @@ omv使用&lt;/p>
 &lt;a class="link" href="https://jingyan.baidu.com/article/0aa223757304e688cd0d6464.html" target="_blank" rel="noopener"
 >https://jingyan.baidu.com/article/0aa223757304e688cd0d6464.html&lt;/a>&lt;/p></description></item><item><title>斐讯N1 docker安装homeassistant 配置斐讯dc1智能插座</title><link>https://ch168.tk/posts/6.html</link><pubDate>Mon, 16 Sep 2019 12:52:42 +0000</pubDate><guid>https://ch168.tk/posts/6.html</guid><description>&lt;p>斐讯N1 docker安装homeassistant 配置斐讯dc1智能插座&lt;/p>
 &lt;p>默认代码&lt;/p>
-&lt;pre tabindex="0">&lt;code>docker run -d --restart=always --name=&amp;quot;home-assistant&amp;quot; -e TZ=Asia/Shanghai -v /var/lib/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:latest
+&lt;pre tabindex="0">&lt;code>docker run -d --restart=always --name=&amp;#34;home-assistant&amp;#34; -e TZ=Asia/Shanghai -v /var/lib/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:latest
 &lt;/code>&lt;/pre>&lt;p>homeassistant:latest表示最新版的 用0.88.1顺手了，配置文件也有了，就不想安装最新版本的了。新版也试用过，不太好用&lt;br>
 刚开始用的代码是&lt;/p>
-&lt;pre tabindex="0">&lt;code>docker run -d --restart=always --name=&amp;quot;home-assistant&amp;quot; -e TZ=Asia/Shanghai -v /var/lib/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:0.88.1
+&lt;pre tabindex="0">&lt;code>docker run -d --restart=always --name=&amp;#34;home-assistant&amp;#34; -e TZ=Asia/Shanghai -v /var/lib/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:0.88.1
 &lt;/code>&lt;/pre>&lt;p>没几天发现N1omv不能登陆，查询到内存储存已满，查找到var/lib/docker/homeassistant/config 里面有一个home-assistant_v2.db文件占了2G多，而且会不断的变大，更改 /docker/homeassistant的安装目录到移动硬盘&lt;br>
 这个是我的docker的安装目录，/sharedfolders/2t/docker&lt;br>
 所以修改后的代码就是把/var/lib/docker更换成/sharedfolders/2t/docker&lt;/p>
-&lt;pre tabindex="0">&lt;code>docker run -d --restart=always --name=&amp;quot;home-assistant&amp;quot; -e TZ=Asia/Shanghai -v /sharedfolders/2t/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:0.88.1
+&lt;pre tabindex="0">&lt;code>docker run -d --restart=always --name=&amp;#34;home-assistant&amp;#34; -e TZ=Asia/Shanghai -v /sharedfolders/2t/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:0.88.1
 &lt;/code>&lt;/pre>&lt;p>下载DCI配网工具
 给DC1配置好网络，要在路由里面找到DC1的ip就算完成了&lt;/p>
 &lt;p>下载 20190628 HA Docker - DC1 M1.rar 里面有配置说明的&lt;br>
@@ -1844,7 +1844,7 @@ ip修改成你在路由器里面看到DC1的ip&lt;/p>
 initial_state: true
 trigger:
 - platform: time
-at: '06:30:00'
+at: &amp;#39;06:30:00&amp;#39;
 action:
 - service: switch.turn_on
 entity_id: switch.dc1_s1_template
@@ -1852,7 +1852,7 @@ entity_id: switch.dc1_s1_template
 initial_state: true
 trigger:
 - platform: time
-at: '00:30:00'
+at: &amp;#39;00:30:00&amp;#39;
 action:
 - service: switch.turn_off
 entity_id: switch.dc1_s1_template
@@ -1860,7 +1860,7 @@ entity_id: switch.dc1_s1_template
 initial_state: true
 trigger:
 - platform: time
-at: '18:00:00'
+at: &amp;#39;18:00:00&amp;#39;
 action:
 - service: switch.turn_on
 entity_id: switch.dc1_3_s3_template
@@ -1868,7 +1868,7 @@ entity_id: switch.dc1_3_s3_template
 initial_state: true
 trigger:
 - platform: time
-at: '00:00:00'
+at: &amp;#39;00:00:00&amp;#39;
 action:
 - service: switch.turn_off
 entity_id: switch.dc1_3_s3_template
@@ -1915,12 +1915,12 @@ $ npm install hexo-generator-index-pin-top --save
 &lt;/code>&lt;/pre>&lt;p>然后在需要置顶的文章的Front-matter中加上top: true即可。&lt;/p>
 &lt;p>&lt;strong>设置置顶标志&lt;/strong>&lt;/p>
 &lt;p>打开：/blog/themes/next/layout/_macro 目录下的post.swig文件，定位到&lt;/p>
-&lt;pre tabindex="0">&lt;code>&amp;lt;div class=&amp;quot;post-meta&amp;quot;&amp;gt;
+&lt;pre tabindex="0">&lt;code>&amp;lt;div class=&amp;#34;post-meta&amp;#34;&amp;gt;
 &lt;/code>&lt;/pre>&lt;p>下面插入如下代码：&lt;/p>
 &lt;pre tabindex="0">&lt;code>{% if post.top %}
-&amp;lt;i class=&amp;quot;fa fa-thumb-tack&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;i class=&amp;#34;fa fa-thumb-tack&amp;#34;&amp;gt;&amp;lt;/i&amp;gt;
 &amp;lt;font color=7D26CD&amp;gt;置顶&amp;lt;/font&amp;gt;
-&amp;lt;span class=&amp;quot;post-meta-divider&amp;quot;&amp;gt;|&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;#34;post-meta-divider&amp;#34;&amp;gt;|&amp;lt;/span&amp;gt;
 {% endif %}
 &lt;/code>&lt;/pre></description></item><item><title>chrome安装Tampermonkey，添加插件的过程</title><link>https://ch168.tk/posts/13.html</link><pubDate>Thu, 12 Sep 2019 13:01:13 +0000</pubDate><guid>https://ch168.tk/posts/13.html</guid><description>&lt;p>chrome安装Tampermonkey，添加插件的过程&lt;/p>
 &lt;h1 id="安装谷歌访问助手">安装谷歌访问助手&lt;/h1>
@@ -2008,8 +2008,8 @@ cd /D/hexo/blog/myblog (每个人的安装目录都不一样，可参考我的&l
 &lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>hexo server
 &lt;/code>&lt;/pre>&lt;p>在浏览器输入localhost:4000就可以看到你生成的博客了&lt;/p>
 &lt;h2 id="6生成ssh添加到github">&lt;a class="link" href="" >&lt;/a>6、生成SSH添加到GitHub&lt;/h2>
-&lt;pre tabindex="0">&lt;code>git config --global user.name &amp;quot;yourname&amp;quot;
-&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>git config --global user.email &amp;quot;youremail&amp;quot;
+&lt;pre tabindex="0">&lt;code>git config --global user.name &amp;#34;yourname&amp;#34;
+&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>git config --global user.email &amp;#34;youremail&amp;#34;
 &lt;/code>&lt;/pre>&lt;p>这里的yourname输入你的GitHub用户名，youremail输入你GitHub的邮箱&lt;br>
 检查一下你有没有输对&lt;/p>
 &lt;pre tabindex="0">&lt;code>git config user.name
@@ -2023,11 +2023,11 @@ GitHub的最右上角setting中，找到SSH keys的设置选项，点击New SSH 
 在gitbash中，查看是否成功&lt;/p>
 &lt;pre tabindex="0">&lt;code>ssh -T git@github.com
 &lt;/code>&lt;/pre>&lt;p>如果提示Are you sure you want to continue connecting (yes/no)?，输入yes，然后会看到：&lt;/p>
-&lt;pre tabindex="0">&lt;code>Hi liuxianan! You've successfully authenticated, but GitHub does not provide shell access.
+&lt;pre tabindex="0">&lt;code>Hi liuxianan! You&amp;#39;ve successfully authenticated, but GitHub does not provide shell access.
 &lt;/code>&lt;/pre>&lt;p>看到这个信息说明SSH已配置成功！&lt;/p>
 &lt;p>此时你还需要配置：&lt;/p>
-&lt;pre tabindex="0">&lt;code>git config --global user.name &amp;quot;liuxianan&amp;quot;// 你的github用户名，非昵称
-&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>git config --global user.email &amp;quot;xxx@qq.com&amp;quot;// 填写你的github注册邮箱
+&lt;pre tabindex="0">&lt;code>git config --global user.name &amp;#34;liuxianan&amp;#34;// 你的github用户名，非昵称
+&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>git config --global user.email &amp;#34;xxx@qq.com&amp;#34;// 填写你的github注册邮箱
 &lt;/code>&lt;/pre>&lt;h2 id="7将hexo部署到github">&lt;a class="link" href="" >&lt;/a>7、将hexo部署到GitHub&lt;/h2>
 &lt;p>打开站点配置文件 _config.yml，翻到最后，修改为&lt;br>
 YourgithubName就是你的GitHub账户&lt;/p>
@@ -2082,7 +2082,7 @@ date: 2019-04-07 0:30:00
 &lt;pre tabindex="0">&lt;code>---
 title: 文章分类
 date: 2019-04-07 0:30:00
-type: &amp;quot;categories&amp;quot;
+type: &amp;#34;categories&amp;#34;
 ---
 &lt;/code>&lt;/pre>&lt;p>保存并关闭文件。&lt;/p>
 &lt;h1 id="给文章添加categories属性">给文章添加“categories”属性&lt;/h1>
@@ -2103,13 +2103,13 @@ categories:
 &lt;pre tabindex="0">&lt;code>---
 title: 文章分类
 date: 2019-04-07 0:33:55
-type: &amp;quot;tags&amp;quot;
+type: &amp;#34;tags&amp;#34;
 ---
 &lt;/code>&lt;/pre>&lt;p>保存并关闭文件。&lt;/p>
 &lt;h1 id="给文章添加标签和分类">给文章添加标签和分类&lt;/h1>
 &lt;pre tabindex="0">&lt;code>title: title #文章標題
 date: 2019-04-07 00:43:12 #文章生成時間
-categories: &amp;quot;Hexo教程&amp;quot; #文章分類目錄 可以省略
+categories: &amp;#34;Hexo教程&amp;#34; #文章分類目錄 可以省略
 tags: #文章標籤 可以省略
 - 标签1
 - 标签2
@@ -2138,12 +2138,12 @@ $ npm install hexo-generator-index-pin-top &amp;ndash;save
 &lt;p>设置置顶标志
 打开：/blog/themes/next/layout/_macro 目录下的post.swig文件
 查找&lt;/p>
-&lt;pre tabindex="0">&lt;code> &amp;lt;div class=&amp;quot;post-meta&amp;quot;&amp;gt;
+&lt;pre tabindex="0">&lt;code> &amp;lt;div class=&amp;#34;post-meta&amp;#34;&amp;gt;
 &lt;/code>&lt;/pre>&lt;p>下面添加&lt;/p>
 &lt;pre tabindex="0">&lt;code> {% if post.top %}
-&amp;lt;i class=&amp;quot;fa fa-thumb-tack&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;
+&amp;lt;i class=&amp;#34;fa fa-thumb-tack&amp;#34;&amp;gt;&amp;lt;/i&amp;gt;
 &amp;lt;font color=7D26CD&amp;gt;置顶&amp;lt;/font&amp;gt;
-&amp;lt;span class=&amp;quot;post-meta-divider&amp;quot;&amp;gt;|&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;#34;post-meta-divider&amp;#34;&amp;gt;|&amp;lt;/span&amp;gt;
 {% endif %}
 &lt;/code>&lt;/pre>&lt;p>需要置顶文章需要添加 top: true&lt;/p>
 &lt;h1 id="添加不蒜子访问统计">添加不蒜子访问统计&lt;/h1>
@@ -2154,11 +2154,11 @@ enable: true
 需要修改的模板文件是theme/next/layout/_partials/footer.swig
 在最后面添加&lt;/p>
 &lt;pre tabindex="0">&lt;code>{% if theme.footer.counter %}
-&amp;lt;script async src=&amp;quot;//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;span id=&amp;quot;busuanzi_container_site_pv&amp;quot;&amp;gt;总访问量&amp;lt;span id=&amp;quot;busuanzi_value_site_pv&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;次&amp;lt;/span&amp;gt;
-&amp;lt;span class=&amp;quot;post-meta-divider&amp;quot;&amp;gt;|&amp;lt;/span&amp;gt;
-&amp;lt;span id=&amp;quot;busuanzi_container_site_uv&amp;quot;&amp;gt;总访客&amp;lt;span id=&amp;quot;busuanzi_value_site_uv&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;人&amp;lt;/span&amp;gt;
-&amp;lt;span class=&amp;quot;post-meta-divider&amp;quot;&amp;gt;|&amp;lt;/span&amp;gt;
+&amp;lt;script async src=&amp;#34;//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;span id=&amp;#34;busuanzi_container_site_pv&amp;#34;&amp;gt;总访问量&amp;lt;span id=&amp;#34;busuanzi_value_site_pv&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;次&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;#34;post-meta-divider&amp;#34;&amp;gt;|&amp;lt;/span&amp;gt;
+&amp;lt;span id=&amp;#34;busuanzi_container_site_uv&amp;#34;&amp;gt;总访客&amp;lt;span id=&amp;#34;busuanzi_value_site_uv&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;人&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;#34;post-meta-divider&amp;#34;&amp;gt;|&amp;lt;/span&amp;gt;
 {% endif %}
 &lt;/code>&lt;/pre>&lt;h1 id="添加评论">添加评论&lt;/h1>
 &lt;p>Github大礼包：gitment， gitalk（推荐），gitter（推荐）; 三个都支持Markdown；基于leancloud的无后端评论系统：Valine（推荐，支持Markdown）
@@ -2184,10 +2184,10 @@ enable: ture
 &lt;/code>&lt;/pre>&lt;p>打开 next\layout_partials 找到footer.swig文件，在最下面添加&lt;/p>
 &lt;pre tabindex="0">&lt;code>
 {% if theme.footer.counter %}
-&amp;lt;script async src=&amp;quot;//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;span id=&amp;quot;busuanzi_container_site_pv&amp;quot;&amp;gt;总访问量&amp;lt;span id=&amp;quot;busuanzi_value_site_pv&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;次&amp;lt;/span&amp;gt;
-&amp;lt;span class=&amp;quot;post-meta-divider&amp;quot;&amp;gt;|&amp;lt;/span&amp;gt;
-&amp;lt;span id=&amp;quot;busuanzi_container_site_uv&amp;quot;&amp;gt;总访客&amp;lt;span id=&amp;quot;busuanzi_value_site_uv&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;人&amp;lt;/span&amp;gt;
-&amp;lt;span class=&amp;quot;post-meta-divider&amp;quot;&amp;gt;|&amp;lt;/span&amp;gt;
+&amp;lt;script async src=&amp;#34;//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;span id=&amp;#34;busuanzi_container_site_pv&amp;#34;&amp;gt;总访问量&amp;lt;span id=&amp;#34;busuanzi_value_site_pv&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;次&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;#34;post-meta-divider&amp;#34;&amp;gt;|&amp;lt;/span&amp;gt;
+&amp;lt;span id=&amp;#34;busuanzi_container_site_uv&amp;#34;&amp;gt;总访客&amp;lt;span id=&amp;#34;busuanzi_value_site_uv&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;人&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;#34;post-meta-divider&amp;#34;&amp;gt;|&amp;lt;/span&amp;gt;
 {% endif %}
 &lt;/code>&lt;/pre></description></item></channel></rss>

@@ -1,113 +1,21 @@
-<!doctype html><html lang=zh-cn>
-<head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="寻找EFI文件 从黑苹果长期维护机型 EFI 及安装教程整理 https://www.jianshu.com/p/484f07b8c7fd 找到 https://github.com/kinoute/Hack-Dell-Latitude-E6430 下载EFI文件夹
-"><title>戴尔笔记本E6430安装黑苹果的全部过程</title>
-<link rel=canonical href=https://ch168.tk/posts/9.html>
-<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="戴尔笔记本E6430安装黑苹果的全部过程">
-<meta property="og:description" content="寻找EFI文件 从黑苹果长期维护机型 EFI 及安装教程整理 https://www.jianshu.com/p/484f07b8c7fd 找到 https://github.com/kinoute/Hack-Dell-Latitude-E6430 下载EFI文件夹
-">
-<meta property="og:url" content="https://ch168.tk/posts/9.html">
-<meta property="og:site_name" content="it迷">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="黑苹果"><meta property="article:tag" content="Mac"><meta property="article:tag" content="戴尔E6430"><meta property="article:tag" content="lnmp"><meta property="article:published_time" content="2019-12-08T19:21:42+00:00"><meta property="article:modified_time" content="2019-12-08T19:21:42+00:00">
-<meta name=twitter:title content="戴尔笔记本E6430安装黑苹果的全部过程">
-<meta name=twitter:description content="寻找EFI文件 从黑苹果长期维护机型 EFI 及安装教程整理 https://www.jianshu.com/p/484f07b8c7fd 找到 https://github.com/kinoute/Hack-Dell-Latitude-E6430 下载EFI文件夹
-">
-</head>
-<body class=article-page>
-<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
-<div class="container main-container flex
-on-phone--column extended">
-<aside class="sidebar left-sidebar sticky">
-<button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
-<span class=hamburger-box>
-<span class=hamburger-inner></span>
-</span>
-</button>
-<header class=site-info>
-<figure class=site-avatar>
-<img src=/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png width=300 height=300 class=site-logo loading=lazy alt=Avatar>
-<span class=emoji>🍥</span>
-</figure>
-<h1 class=site-name><a href=https://ch168.tk>it迷</a></h1>
-<h2 class=site-description>it爱好者的小站</h2>
-</header>
-<ol class=menu id=main-menu>
-<li>
-<a href=/ target=_blank><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
-<span>Home</span>
-</a>
-</li>
-<li>
-<a href=/about/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
-<span>About</span>
-</a>
-</li>
-<li>
-<a href=/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
-<span>Archives</span>
-</a>
-</li>
-<li>
-<a href=/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
-<span>Search</span>
-</a>
-</li>
-<li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
-<span>暗色模式</span>
-</li>
-</ol>
-</aside>
-<main class="main full-width">
-<article class=main-article>
-<header class=article-header>
-<div class=article-details>
-<header class=article-category>
-<a href=/categories/%E9%BB%91%E8%8B%B9%E6%9E%9C/>
-黑苹果
-</a>
-</header>
-<h2 class=article-title>
-<a href=/posts/9.html>戴尔笔记本E6430安装黑苹果的全部过程</a>
-</h2>
-<footer class=article-time>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
-<time class=article-time--published>Dec 08, 2019</time>
-</div>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<time class=article-time--reading>
-阅读时长: 1 分钟
-</time>
-</div>
-</footer>
-</div>
-</header>
-<section class=article-content>
-<h1 id=寻找efi文件>寻找EFI文件</h1>
-<p>从黑苹果长期维护机型 EFI 及安装教程整理
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="寻找EFI文件 从黑苹果长期维护机型 EFI 及安装教程整理 https://www.jianshu.com/p/484f07b8c7fd 找到 https://github.com/kinoute/Hack-Dell-Latitude-E6430 下载EFI文件夹
+"><title>戴尔笔记本E6430安装黑苹果的全部过程</title><link rel=canonical href=https://ch168.tk/posts/9.html><link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="戴尔笔记本E6430安装黑苹果的全部过程"><meta property="og:description" content="寻找EFI文件 从黑苹果长期维护机型 EFI 及安装教程整理 https://www.jianshu.com/p/484f07b8c7fd 找到 https://github.com/kinoute/Hack-Dell-Latitude-E6430 下载EFI文件夹
+"><meta property="og:url" content="https://ch168.tk/posts/9.html"><meta property="og:site_name" content="it迷"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="黑苹果"><meta property="article:tag" content="Mac"><meta property="article:tag" content="戴尔E6430"><meta property="article:tag" content="lnmp"><meta property="article:published_time" content="2019-12-08T19:21:42+00:00"><meta property="article:modified_time" content="2019-12-08T19:21:42+00:00"><meta name=twitter:title content="戴尔笔记本E6430安装黑苹果的全部过程"><meta name=twitter:description content="寻找EFI文件 从黑苹果长期维护机型 EFI 及安装教程整理 https://www.jianshu.com/p/484f07b8c7fd 找到 https://github.com/kinoute/Hack-Dell-Latitude-E6430 下载EFI文件夹
+"></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex
+on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header class=site-info><figure class=site-avatar><img src=/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png width=300 height=300 class=site-logo loading=lazy alt=Avatar>
+<span class=emoji>🍥</span></figure><h1 class=site-name><a href=https://ch168.tk>it迷</a></h1><h2 class=site-description>it爱好者的小站</h2></header><ol class=menu id=main-menu><li><a href=/ target=_blank><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg><span>Home</span></a></li><li><a href=/about/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg><span>About</span></a></li><li><a href=/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg><span>Archives</span></a></li><li><a href=/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg><span>Search</span></a></li><li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><span>暗色模式</span></li></ol></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/%E9%BB%91%E8%8B%B9%E6%9E%9C/>黑苹果</a></header><h2 class=article-title><a href=/posts/9.html>戴尔笔记本E6430安装黑苹果的全部过程</a></h2><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>Dec 08, 2019</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading>阅读时长: 1 分钟</time></div></footer></div></header><section class=article-content><h1 id=寻找efi文件>寻找EFI文件</h1><p>从黑苹果长期维护机型 EFI 及安装教程整理
 <a class=link href=https://www.jianshu.com/p/484f07b8c7fd target=_blank rel=noopener>https://www.jianshu.com/p/484f07b8c7fd</a>
-找到 <a class=link href=https://github.com/kinoute/Hack-Dell-Latitude-E6430 target=_blank rel=noopener>https://github.com/kinoute/Hack-Dell-Latitude-E6430</a> 下载EFI文件夹</p>
-<h1 id=下载系统>下载系统</h1>
-<p>从黑果小兵下载macOS Mojave 10.14.6，自带Clover的
-<a class=link href=https://blog.daliansky.net/macOS-Mojave-10.14.6-18G87-Release-version-with-Clover-5033-original-image.html target=_blank rel=noopener>https://blog.daliansky.net/macOS-Mojave-10.14.6-18G87-Release-version-with-Clover-5033-original-image.html</a></p>
-<h1 id=制作启动u盘>制作启动U盘</h1>
-<p>下载etcher软件，https://www.balena.io/etcher 选择U盘，点击Flash即可。（10分钟左右）
-也可以用TransMac制作启动盘（比较麻烦），用管理员权限打开，在软件的左侧找到自己的U盘，然后右键 ，选择Formar Disk for Mac意思是将U盘格式化为Mac格式，然后右键选择Restore with Disk Image来将准备的dmg镜像写入到U盘中（要30分钟左右）</p>
-<h1 id=替换efi文件>替换EFI文件</h1>
-<p>​ 拔下U盘重新插上，会发现有一个EFI文件夹，将里面的文件删除，把下载好的适合自己机型的EFI文件复制进去就可以了，如果找不到EFI文件夹，可以用DiskGenius读取，并强制删除里面的EFI文件，Ctrl+V粘贴自己的EFI文件夹</p>
-<h1 id=设置bios>设置bios</h1>
-<p>拥有正确的BIOS版本后，请使用F12启动时的密钥进入BIOS 。单击“加载默认值”，然后将SATAOperations设置为AHCI，将Boot List Option设置为UEFI并禁用Secure Boot</p>
-<h1 id=安装mac>安装mac</h1>
-<p>参考 <a class=link href=https://blog.daliansky.net/MacOS-installation-tutorial-XiaoMi-Pro-installation-process-records.html target=_blank rel=noopener>https://blog.daliansky.net/MacOS-installation-tutorial-XiaoMi-Pro-installation-process-records.html</a></p>
-<p>启动U盘插入电脑，开机按F12，选择USB启动安装程序，选择macOS Install、选择磁盘工具，点击左侧，切换到显示所有设备，然后找到我们要安装系统的硬盘，点击抹掉，名称随便写，格式选mac os扩展（日志式），方案选择GUID 分区图，点击抹掉。
+找到 <a class=link href=https://github.com/kinoute/Hack-Dell-Latitude-E6430 target=_blank rel=noopener>https://github.com/kinoute/Hack-Dell-Latitude-E6430</a> 下载EFI文件夹</p><h1 id=下载系统>下载系统</h1><p>从黑果小兵下载macOS Mojave 10.14.6，自带Clover的
+<a class=link href=https://blog.daliansky.net/macOS-Mojave-10.14.6-18G87-Release-version-with-Clover-5033-original-image.html target=_blank rel=noopener>https://blog.daliansky.net/macOS-Mojave-10.14.6-18G87-Release-version-with-Clover-5033-original-image.html</a></p><h1 id=制作启动u盘>制作启动U盘</h1><p>下载etcher软件，https://www.balena.io/etcher 选择U盘，点击Flash即可。（10分钟左右）
+也可以用TransMac制作启动盘（比较麻烦），用管理员权限打开，在软件的左侧找到自己的U盘，然后右键 ，选择Formar Disk for Mac意思是将U盘格式化为Mac格式，然后右键选择Restore with Disk Image来将准备的dmg镜像写入到U盘中（要30分钟左右）</p><h1 id=替换efi文件>替换EFI文件</h1><p>​ 拔下U盘重新插上，会发现有一个EFI文件夹，将里面的文件删除，把下载好的适合自己机型的EFI文件复制进去就可以了，如果找不到EFI文件夹，可以用DiskGenius读取，并强制删除里面的EFI文件，Ctrl+V粘贴自己的EFI文件夹</p><h1 id=设置bios>设置bios</h1><p>拥有正确的BIOS版本后，请使用F12启动时的密钥进入BIOS 。单击“加载默认值”，然后将SATAOperations设置为AHCI，将Boot List Option设置为UEFI并禁用Secure Boot</p><h1 id=安装mac>安装mac</h1><p>参考 <a class=link href=https://blog.daliansky.net/MacOS-installation-tutorial-XiaoMi-Pro-installation-process-records.html target=_blank rel=noopener>https://blog.daliansky.net/MacOS-installation-tutorial-XiaoMi-Pro-installation-process-records.html</a></p><p>启动U盘插入电脑，开机按F12，选择USB启动安装程序，选择macOS Install、选择磁盘工具，点击左侧，切换到显示所有设备，然后找到我们要安装系统的硬盘，点击抹掉，名称随便写，格式选mac os扩展（日志式），方案选择GUID 分区图，点击抹掉。
 安装Mac OS ，提示:应用程序副本不能验证 它在下载过程中可能已遭破坏或篡改
 先关闭电脑的网络, 如关闭右上角的WIFI或者拔掉网线 然后在终端里面修改时间
 请完全复制下面代码，按回车键确认:
 date 122014102015.30
 输入上面的代码按回车后返回的是 Sun Dec 20 14:10:30 PST 2015
 其他就都简单了，都是中文的，第一次走完进度条后，会自动重启一次，整个安装过程大概20来分钟。
-安装完成后，每次启动都是要从U盘启动的，要想设置成从电脑启动。我们需要下面的操作。</p>
-<h1 id=将u盘内的efi文件复制到电脑>将U盘内的EFI文件复制到电脑</h1>
-<p>查看磁盘分区表
+安装完成后，每次启动都是要从U盘启动的，要想设置成从电脑启动。我们需要下面的操作。</p><h1 id=将u盘内的efi文件复制到电脑>将U盘内的EFI文件复制到电脑</h1><p>查看磁盘分区表
 diskutil list
 挂载磁盘EFI分区
 sudo diskutil mount disk0s1
@@ -115,91 +23,14 @@ sudo diskutil mount disk0s1
 sudo diskutil mount disk2s1
 打开Finder，注意后面有个.
 open .
-电脑上会显示U盘和硬盘的EFI文件夹，将U盘的EFI文件复制到硬盘的EFI文件夹就可以拔掉U盘启动mac了</p>
-</section>
-<footer class=article-footer>
-<section class=article-tags>
-<a href=/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/>黑苹果</a>
+电脑上会显示U盘和硬盘的EFI文件夹，将U盘的EFI文件复制到硬盘的EFI文件夹就可以拔掉U盘启动mac了</p></section><footer class=article-footer><section class=article-tags><a href=/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/>黑苹果</a>
 <a href=/tags/mac/>mac</a>
 <a href=/tags/%E6%88%B4%E5%B0%94e6430/>戴尔E6430</a>
-<a href=/tags/lnmp/>lnmp</a>
-</section>
-<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
-<span>Licensed under CC BY-NC-SA 4.0</span>
-</section>
-</footer>
-</article>
-<aside class=related-contents--wrapper>
-<h2 class=section-title>相关文章</h2>
-<div class=related-contents>
-<div class="flex article-list--tile">
-<article>
-<a href=/posts/16.html>
-<div class=article-details>
-<h2 class=article-title>黑苹果给安卓手机刷入twrp recovery教程</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/posts/14.html>
-<div class=article-details>
-<h2 class=article-title>小白电脑安装windows系统，linxu和黑苹果的相关资料</h2>
-</div>
-</a>
-</article>
-</div>
-</div>
-</aside>
-<footer class=site-footer>
-<section class=copyright>
-&copy;
+<a href=/tags/lnmp/>lnmp</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><aside class=related-contents--wrapper><h2 class=section-title>相关文章</h2><div class=related-contents><div class="flex article-list--tile"><article><a href=/posts/16.html><div class=article-details><h2 class=article-title>黑苹果给安卓手机刷入twrp recovery教程</h2></div></a></article><article><a href=/posts/14.html><div class=article-details><h2 class=article-title>小白电脑安装windows系统，linxu和黑苹果的相关资料</h2></div></a></article></div></div></aside><footer class=site-footer><section class=copyright>&copy;
 2020 -
-2021 it迷
-</section>
-<section class=powerby>
-Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
-Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.1.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
-</section>
-</footer>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
-<div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
-<div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+2022 it迷</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.1.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-<div class=pswp__preloader>
-<div class=pswp__preloader__icn>
-<div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-</button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-</button>
-<div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
-</main>
-</div>
-<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
-<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
-</body>
-</html>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

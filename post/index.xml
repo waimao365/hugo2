@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on it迷</title><link>https://ch168.tk/post/</link><description>Recent content in Posts on it迷</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 10 Oct 2021 17:47:37 +0000</lastBuildDate><atom:link href="https://ch168.tk/post/index.xml" rel="self" type="application/rss+xml"/><item><title>5555555555</title><link>https://ch168.tk/p/555/</link><pubDate>Sun, 10 Oct 2021 17:47:37 +0000</pubDate><guid>https://ch168.tk/p/555/</guid><description>5555555555555</description></item><item><title>333333333</title><link>https://ch168.tk/p/333333333/</link><pubDate>Sun, 10 Oct 2021 16:11:56 +0000</pubDate><guid>https://ch168.tk/p/333333333/</guid><description>333333333333333333</description></item><item><title>Hugo+Github Actions实现自动化部署博客</title><link>https://ch168.tk/posts/31.html</link><pubDate>Mon, 23 Aug 2021 08:18:30 +0000</pubDate><guid>https://ch168.tk/posts/31.html</guid><description>本地电脑和github之间的连接 打开电脑文件夹 用户名/.ssh （查看，勾选隐藏的项目）
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on it迷</title><link>https://ch168.tk/post/</link><description>Recent content in Posts on it迷</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 10 Oct 2021 17:47:37 +0000</lastBuildDate><atom:link href="https://ch168.tk/post/index.xml" rel="self" type="application/rss+xml"/><item><title>5555555555</title><link>https://ch168.tk/p/555/</link><pubDate>Sun, 10 Oct 2021 17:47:37 +0000</pubDate><guid>https://ch168.tk/p/555/</guid><description>5555555555555</description></item><item><title>2022</title><link>https://ch168.tk/p/2022/</link><pubDate>Sun, 10 Oct 2021 16:11:56 +0000</pubDate><guid>https://ch168.tk/p/2022/</guid><description>202204071331</description></item><item><title>Hugo+Github Actions实现自动化部署博客</title><link>https://ch168.tk/posts/31.html</link><pubDate>Mon, 23 Aug 2021 08:18:30 +0000</pubDate><guid>https://ch168.tk/posts/31.html</guid><description>本地电脑和github之间的连接 打开电脑文件夹 用户名/.ssh （查看，勾选隐藏的项目）
 右键 Git Bash Here
 输入
 ssh-keygen -tecdsa
@@ -23,7 +23,7 @@ rm -rf .git
 git init
 git remote add origin git@github.com:waimao365/hugo.git
 如果出现错误可以先删除之前的</description></item><item><title>hugo静态博客部署到github的脚本</title><link>https://ch168.tk/posts/30.htm</link><pubDate>Mon, 12 Apr 2021 08:18:30 +0000</pubDate><guid>https://ch168.tk/posts/30.htm</guid><description>hugo部署到github 建立本地和github仓库的连接 输入github的帐户名和邮箱
-git config --global user.name &amp;quot;waimao8&amp;quot; git config --global user.email &amp;quot;88888@qq.com&amp;quot; 查看设置的用户名和密码
+git config --global user.name &amp;#34;waimao8&amp;#34; git config --global user.email &amp;#34;88888@qq.com&amp;#34; 查看设置的用户名和密码
 git config --list 生成 SSH key 与 github 联系
 ssh-keygen -t rsa -C “888888@qq.com” 一路回车 ubuntu设置显示隐藏文件，在用户目录找到.ssh
 打开id_rsa.pub，复制里面的内容。 然后登录github，如果没有就注册一个账号，登录后右上角 头像 -&amp;gt; Settings —&amp;gt; SSH nd GPG keys —&amp;gt; New SSH key。把公钥(id_rsa.pub)粘贴到 key 中，填好 title 并点击 Add SSH key
@@ -119,7 +119,7 @@ net.ipv4.tcp_congestion_control=bbr&lt;/p></description></item><item><title>hugo
 &lt;a class="link" href="https://www.right.com.cn/forum/thread-788004-1-1.html" target="_blank" rel="noopener"
 >https://www.right.com.cn/forum/thread-788004-1-1.html&lt;/a>&lt;/p></description></item><item><title>斐讯N1 docker安装homeassistant 配置斐讯dc1智能插座</title><link>https://ch168.tk/posts/6.html</link><pubDate>Mon, 16 Sep 2019 12:52:42 +0000</pubDate><guid>https://ch168.tk/posts/6.html</guid><description>&lt;p>斐讯N1 docker安装homeassistant 配置斐讯dc1智能插座&lt;/p>
 &lt;p>默认代码&lt;/p>
-&lt;pre tabindex="0">&lt;code>docker run -d --restart=always --name=&amp;quot;home-assistant&amp;quot; -e TZ=Asia/Shanghai -v /var/lib/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:latest
+&lt;pre tabindex="0">&lt;code>docker run -d --restart=always --name=&amp;#34;home-assistant&amp;#34; -e TZ=Asia/Shanghai -v /var/lib/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:latest
 &lt;/code>&lt;/pre></description></item><item><title>Github 绑定域名添加https的方法2019年9月更新</title><link>https://ch168.tk/posts/5.html</link><pubDate>Sat, 14 Sep 2019 15:40:43 +0000</pubDate><guid>https://ch168.tk/posts/5.html</guid><description>&lt;p>官方教程
 &lt;a class="link" href="https://help.github.com/en/articles/using-a-custom-domain-with-github-pages" target="_blank" rel="noopener"
 >https://help.github.com/en/articles/using-a-custom-domain-with-github-pages&lt;/a>&lt;br>

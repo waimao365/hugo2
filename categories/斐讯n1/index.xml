@@ -6,5 +6,5 @@
 &lt;a class="link" href="https://www.right.com.cn/forum/thread-788004-1-1.html" target="_blank" rel="noopener"
 >https://www.right.com.cn/forum/thread-788004-1-1.html&lt;/a>&lt;/p></description></item><item><title>斐讯N1 docker安装homeassistant 配置斐讯dc1智能插座</title><link>https://ch168.tk/posts/6.html</link><pubDate>Mon, 16 Sep 2019 12:52:42 +0000</pubDate><guid>https://ch168.tk/posts/6.html</guid><description>&lt;p>斐讯N1 docker安装homeassistant 配置斐讯dc1智能插座&lt;/p>
 &lt;p>默认代码&lt;/p>
-&lt;pre tabindex="0">&lt;code>docker run -d --restart=always --name=&amp;quot;home-assistant&amp;quot; -e TZ=Asia/Shanghai -v /var/lib/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:latest
+&lt;pre tabindex="0">&lt;code>docker run -d --restart=always --name=&amp;#34;home-assistant&amp;#34; -e TZ=Asia/Shanghai -v /var/lib/docker/homeassistant:/config -p 8123:8123 -v /etc/localtime:/etc/localtime:ro --net=host homeassistant/aarch64-homeassistant:latest
 &lt;/code>&lt;/pre></description></item></channel></rss>
